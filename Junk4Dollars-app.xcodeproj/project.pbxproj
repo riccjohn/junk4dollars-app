@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
+		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
+		E9BA21002360D9D000127076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FF2360D9D000127076 /* ViewController.swift */; };
+		E9BA21032360D9D000127076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21012360D9D000127076 /* Main.storyboard */; };
+		E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */; };
+		E9BA21082360D9D100127076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21072360D9D100127076 /* Assets.xcassets */; };
+		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
+		E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */; };
+		E9BA21212360D9D100127076 /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21202360D9D100127076 /* Junk4Dollars_appUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E9BA21122360D9D100127076 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA20F02360D9D000127076 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9BA20F72360D9D000127076;
+			remoteInfo = "Junk4Dollars-app";
+		};
+		E9BA211D2360D9D100127076 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA20F02360D9D000127076 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9BA20F72360D9D000127076;
+			remoteInfo = "Junk4Dollars-app";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BA20FB2360D9D000127076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E9BA20FD2360D9D000127076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		E9BA20FF2360D9D000127076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E9BA21022360D9D000127076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9BA21052360D9D000127076 /* Junk4Dollars_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Junk4Dollars_app.xcdatamodel; sourceTree = "<group>"; };
+		E9BA21072360D9D100127076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E9BA210A2360D9D100127076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9BA210C2360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appTests.swift; sourceTree = "<group>"; };
+		E9BA21172360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9BA211C2360D9D100127076 /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9BA21202360D9D100127076 /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
+		E9BA21222360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9BA20F52360D9D000127076 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BA210E2360D9D100127076 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BA21192360D9D100127076 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9BA20EF2360D9D000127076 = {
+			isa = PBXGroup;
+			children = (
+				E9BA20FA2360D9D000127076 /* Junk4Dollars-app */,
+				E9BA21142360D9D100127076 /* Junk4Dollars-appTests */,
+				E9BA211F2360D9D100127076 /* Junk4Dollars-appUITests */,
+				E9BA20F92360D9D000127076 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9BA20F92360D9D000127076 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */,
+				E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */,
+				E9BA211C2360D9D100127076 /* Junk4Dollars-appUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
+				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
+				E9BA20FF2360D9D000127076 /* ViewController.swift */,
+				E9BA21012360D9D000127076 /* Main.storyboard */,
+				E9BA21072360D9D100127076 /* Assets.xcassets */,
+				E9BA21092360D9D100127076 /* LaunchScreen.storyboard */,
+				E9BA210C2360D9D100127076 /* Info.plist */,
+				E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */,
+			);
+			path = "Junk4Dollars-app";
+			sourceTree = "<group>";
+		};
+		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */,
+				E9BA21172360D9D100127076 /* Info.plist */,
+			);
+			path = "Junk4Dollars-appTests";
+			sourceTree = "<group>";
+		};
+		E9BA211F2360D9D100127076 /* Junk4Dollars-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E9BA21202360D9D100127076 /* Junk4Dollars_appUITests.swift */,
+				E9BA21222360D9D100127076 /* Info.plist */,
+			);
+			path = "Junk4Dollars-appUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9BA20F72360D9D000127076 /* Junk4Dollars-app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BA21252360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-app" */;
+			buildPhases = (
+				E9BA20F42360D9D000127076 /* Sources */,
+				E9BA20F52360D9D000127076 /* Frameworks */,
+				E9BA20F62360D9D000127076 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Junk4Dollars-app";
+			productName = "Junk4Dollars-app";
+			productReference = E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E9BA21102360D9D100127076 /* Junk4Dollars-appTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BA21282360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-appTests" */;
+			buildPhases = (
+				E9BA210D2360D9D100127076 /* Sources */,
+				E9BA210E2360D9D100127076 /* Frameworks */,
+				E9BA210F2360D9D100127076 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9BA21132360D9D100127076 /* PBXTargetDependency */,
+			);
+			name = "Junk4Dollars-appTests";
+			productName = "Junk4Dollars-appTests";
+			productReference = E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E9BA211B2360D9D100127076 /* Junk4Dollars-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9BA212B2360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-appUITests" */;
+			buildPhases = (
+				E9BA21182360D9D100127076 /* Sources */,
+				E9BA21192360D9D100127076 /* Frameworks */,
+				E9BA211A2360D9D100127076 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E9BA211E2360D9D100127076 /* PBXTargetDependency */,
+			);
+			name = "Junk4Dollars-appUITests";
+			productName = "Junk4Dollars-appUITests";
+			productReference = E9BA211C2360D9D100127076 /* Junk4Dollars-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9BA20F02360D9D000127076 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "John Riccardi";
+				TargetAttributes = {
+					E9BA20F72360D9D000127076 = {
+						CreatedOnToolsVersion = 11.1;
+					};
+					E9BA21102360D9D100127076 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = E9BA20F72360D9D000127076;
+					};
+					E9BA211B2360D9D100127076 = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = E9BA20F72360D9D000127076;
+					};
+				};
+			};
+			buildConfigurationList = E9BA20F32360D9D000127076 /* Build configuration list for PBXProject "Junk4Dollars-app" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E9BA20EF2360D9D000127076;
+			productRefGroup = E9BA20F92360D9D000127076 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9BA20F72360D9D000127076 /* Junk4Dollars-app */,
+				E9BA21102360D9D100127076 /* Junk4Dollars-appTests */,
+				E9BA211B2360D9D100127076 /* Junk4Dollars-appUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9BA20F62360D9D000127076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */,
+				E9BA21082360D9D100127076 /* Assets.xcassets in Resources */,
+				E9BA21032360D9D000127076 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BA210F2360D9D100127076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BA211A2360D9D100127076 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9BA20F42360D9D000127076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BA21002360D9D000127076 /* ViewController.swift in Sources */,
+				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
+				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
+				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BA210D2360D9D100127076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E9BA21182360D9D100127076 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9BA21212360D9D100127076 /* Junk4Dollars_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E9BA21132360D9D100127076 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9BA20F72360D9D000127076 /* Junk4Dollars-app */;
+			targetProxy = E9BA21122360D9D100127076 /* PBXContainerItemProxy */;
+		};
+		E9BA211E2360D9D100127076 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9BA20F72360D9D000127076 /* Junk4Dollars-app */;
+			targetProxy = E9BA211D2360D9D100127076 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E9BA21012360D9D000127076 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9BA21022360D9D000127076 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E9BA21092360D9D100127076 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9BA210A2360D9D100127076 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9BA21232360D9D100127076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		E9BA21242360D9D100127076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9BA21262360D9D100127076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E9BA21272360D9D100127076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-app/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		E9BA21292360D9D100127076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Junk4Dollars-app.app/Junk4Dollars-app";
+			};
+			name = Debug;
+		};
+		E9BA212A2360D9D100127076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Junk4Dollars-app.app/Junk4Dollars-app";
+			};
+			name = Release;
+		};
+		E9BA212C2360D9D100127076 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Junk4Dollars-app";
+			};
+			name = Debug;
+		};
+		E9BA212D2360D9D100127076 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Junk4Dollars-app";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9BA20F32360D9D000127076 /* Build configuration list for PBXProject "Junk4Dollars-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BA21232360D9D100127076 /* Debug */,
+				E9BA21242360D9D100127076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9BA21252360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BA21262360D9D100127076 /* Debug */,
+				E9BA21272360D9D100127076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9BA21282360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-appTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BA21292360D9D100127076 /* Debug */,
+				E9BA212A2360D9D100127076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9BA212B2360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9BA212C2360D9D100127076 /* Debug */,
+				E9BA212D2360D9D100127076 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E9BA21052360D9D000127076 /* Junk4Dollars_app.xcdatamodel */,
+			);
+			currentVersion = E9BA21052360D9D000127076 /* Junk4Dollars_app.xcdatamodel */;
+			path = Junk4Dollars_app.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E9BA20F02360D9D000127076 /* Project object */;
+}
