@@ -23,10 +23,8 @@ class ViewController: UIViewController {
     @IBAction func tapSayHello(_ sender: UIButton) {
         if let text = textInput.text {
             if (text.count > 0) {
-                print(text.count)
                 label.text = "Hello, \(text)!"
             } else {
-                print(text.count)
                 label.text = "Hello!"
             }
         }
