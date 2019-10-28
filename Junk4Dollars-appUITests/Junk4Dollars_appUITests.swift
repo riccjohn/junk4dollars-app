@@ -19,25 +19,35 @@ class Junk4Dollars_appUITests: XCTestCase {
         let helloLabel = app.staticTexts["output_label"]
         XCTAssert(helloLabel.exists)
     }
-    
+
     func testHelloName() {
 
         let textInput = app.textFields["text_input"]
         textInput.tap()
-        textInput.typeText("John")
+        let textToType = "John"
+        textInput.typeText(textToType)
         app.buttons["hello_btn"].tap()
-        let helloJohnLabel = app.staticTexts["Hello, John!"]
+        let helloJohnLabel = app.staticTexts["Hello, " + textToType + "!"]
         XCTAssert(helloJohnLabel.exists)
     }
-    
-    func testResetButton() {
+
+    func testResetButtonClearsOutput() {
         let textInput = app.textFields["text_input"]
         textInput.tap()
-        textInput.typeText("John")
+        let textToType = "John"
+        textInput.typeText(textToType)
         app.buttons["hello_btn"].tap()
         app.buttons["reset_btn"].tap()
         app.buttons["hello_btn"].tap()
         XCTAssert(app.staticTexts["Hello!"].exists)
+    }
+    
+    func testResetButtonClearsInput() {
+        let textInput = app.textFields["text_input"]
+        textInput.tap()
+        let textToType = "John"
+        textInput.typeText(textToType)
+        XCTAssertEqual(textInput.value as! String, textToType)
     }
 
     func testLaunchPerformance() {
