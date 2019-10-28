@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E967C5552367744A00FD0EEF /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E967C5542367744A00FD0EEF /* Junk4Dollars_appUITests.swift */; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
 		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
 		E9BA21002360D9D000127076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FF2360D9D000127076 /* ViewController.swift */; };
@@ -18,6 +19,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E967C5572367744A00FD0EEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA20F02360D9D000127076 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9BA20F72360D9D000127076;
+			remoteInfo = "Junk4Dollars-app";
+		};
 		E9BA21122360D9D100127076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9BA20F02360D9D000127076 /* Project object */;
@@ -28,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E967C5522367744A00FD0EEF /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E967C5542367744A00FD0EEF /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
+		E967C5562367744A00FD0EEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA20FB2360D9D000127076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BA20FD2360D9D000127076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +54,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E967C54F2367744A00FD0EEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9BA20F52360D9D000127076 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,11 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E967C5532367744A00FD0EEF /* Junk4Dollars-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E967C5542367744A00FD0EEF /* Junk4Dollars_appUITests.swift */,
+				E967C5562367744A00FD0EEF /* Info.plist */,
+			);
+			path = "Junk4Dollars-appUITests";
+			sourceTree = "<group>";
+		};
 		E9BA20EF2360D9D000127076 = {
 			isa = PBXGroup;
 			children = (
 				E9BA20FA2360D9D000127076 /* Junk4Dollars-app */,
 				E9BA21142360D9D100127076 /* Junk4Dollars-appTests */,
+				E967C5532367744A00FD0EEF /* Junk4Dollars-appUITests */,
 				E9BA20F92360D9D000127076 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +102,7 @@
 			children = (
 				E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */,
 				E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */,
+				E967C5522367744A00FD0EEF /* Junk4Dollars-appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +134,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E967C5512367744A00FD0EEF /* Junk4Dollars-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E967C5592367744A00FD0EEF /* Build configuration list for PBXNativeTarget "Junk4Dollars-appUITests" */;
+			buildPhases = (
+				E967C54E2367744A00FD0EEF /* Sources */,
+				E967C54F2367744A00FD0EEF /* Frameworks */,
+				E967C5502367744A00FD0EEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E967C5582367744A00FD0EEF /* PBXTargetDependency */,
+			);
+			name = "Junk4Dollars-appUITests";
+			productName = "Junk4Dollars-appUITests";
+			productReference = E967C5522367744A00FD0EEF /* Junk4Dollars-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E9BA20F72360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9BA21252360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-app" */;
@@ -150,6 +197,10 @@
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "John Riccardi";
 				TargetAttributes = {
+					E967C5512367744A00FD0EEF = {
+						CreatedOnToolsVersion = 11.1;
+						TestTargetID = E9BA20F72360D9D000127076;
+					};
 					E9BA20F72360D9D000127076 = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -174,11 +225,19 @@
 			targets = (
 				E9BA20F72360D9D000127076 /* Junk4Dollars-app */,
 				E9BA21102360D9D100127076 /* Junk4Dollars-appTests */,
+				E967C5512367744A00FD0EEF /* Junk4Dollars-appUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E967C5502367744A00FD0EEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9BA20F62360D9D000127076 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,6 +258,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E967C54E2367744A00FD0EEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E967C5552367744A00FD0EEF /* Junk4Dollars_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9BA20F42360D9D000127076 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -221,6 +288,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E967C5582367744A00FD0EEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9BA20F72360D9D000127076 /* Junk4Dollars-app */;
+			targetProxy = E967C5572367744A00FD0EEF /* PBXContainerItemProxy */;
+		};
 		E9BA21132360D9D100127076 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E9BA20F72360D9D000127076 /* Junk4Dollars-app */;
@@ -248,6 +320,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E967C55A2367744A00FD0EEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Junk4Dollars-app";
+			};
+			name = Debug;
+		};
+		E967C55B2367744A00FD0EEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Junk4Dollars-app";
+			};
+			name = Release;
+		};
 		E9BA21232360D9D100127076 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -441,6 +549,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E967C5592367744A00FD0EEF /* Build configuration list for PBXNativeTarget "Junk4Dollars-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E967C55A2367744A00FD0EEF /* Debug */,
+				E967C55B2367744A00FD0EEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E9BA20F32360D9D000127076 /* Build configuration list for PBXProject "Junk4Dollars-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
