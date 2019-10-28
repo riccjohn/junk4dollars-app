@@ -20,17 +20,21 @@ class ViewController: UIViewController {
         label.text = ""
     }
 
-    
     @IBAction func tapSayHello(_ sender: UIButton) {
         if let text = textInput.text {
-            label.text = "Hello, \(text)!"
+            if (text.count > 0) {
+                print(text.count)
+                label.text = "Hello, \(text)!"
+            } else {
+                print(text.count)
+                label.text = "Hello!"
+            }
         }
     }
     
-    
     @IBAction func tapReset(_ sender: UIButton) {
         textInput.text = ""
-        label.text = "Hello!"
+        label.text = ""
     }
     
 }
