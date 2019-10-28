@@ -1,4 +1,5 @@
 language: swift
 xcode_project: Junk4Dollars-app.xcodeproj # path to your xcodeproj folder
 xcode_scheme: Junk4Dollars-app
-xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 11 Pro Max
+xcode_destination: platform=iOS Simulator,OS=11.3,name=iPhone X
+
