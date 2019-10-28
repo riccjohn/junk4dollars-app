@@ -12,18 +12,18 @@ class Junk4Dollars_appUITests: XCTestCase {
     func testHelloDefault() {
         let app = XCUIApplication()
         app.launch()
-        app.buttons["Say hello"].tap()
-        let helloLabel = app.staticTexts["Hello!"]
+        app.buttons["hello_btn"].tap()
+        let helloLabel = app.staticTexts["output_label"]
         XCTAssert(helloLabel.exists)
     }
     
     func testHelloName() {
         let app = XCUIApplication()
         app.launch()
-        let textInput = app.textFields["Name"]
+        let textInput = app.textFields["text_input"]
         textInput.tap()
         textInput.typeText("John")
-        app.buttons["Say hello"].tap()
+        app.buttons["hello_btn"].tap()
         let helloJohnLabel = app.staticTexts["Hello, John!"]
         XCTAssert(helloJohnLabel.exists)
     }
@@ -31,12 +31,12 @@ class Junk4Dollars_appUITests: XCTestCase {
     func testResetButton() {
         let app = XCUIApplication()
         app.launch()
-        let textInput = app.textFields["Name"]
+        let textInput = app.textFields["text_input"]
         textInput.tap()
         textInput.typeText("John")
-        app.buttons["Say hello"].tap()
-        app.buttons["Reset"].tap()
-        app.buttons["Say hello"].tap()
+        app.buttons["hello_btn"].tap()
+        app.buttons["reset_btn"].tap()
+        app.buttons["hello_btn"].tap()
         XCTAssert(app.staticTexts["Hello!"].exists)
     }
 
