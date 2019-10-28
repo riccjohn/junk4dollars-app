@@ -1,25 +1,27 @@
-//
-//  Junk4Dollars_appUITests.swift
-//  Junk4Dollars-appUITests
-//
-//  Created by John Riccardi on 10/28/19.
-//  Copyright © 2019 John Riccardi. All rights reserved.
-//
-
 import XCTest
 
 class Junk4Dollars_appUITests: XCTestCase {
-    func testHelloDefault() {
-        let app = XCUIApplication()
+    var app: XCUIApplication!
+    
+    override func setUp() {
+        super.setUp()
+        continueAfterFailure = false
+        app = XCUIApplication()
         app.launch()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+    func testHelloDefault() {
         app.buttons["hello_btn"].tap()
         let helloLabel = app.staticTexts["output_label"]
         XCTAssert(helloLabel.exists)
     }
     
     func testHelloName() {
-        let app = XCUIApplication()
-        app.launch()
+
         let textInput = app.textFields["text_input"]
         textInput.tap()
         textInput.typeText("John")
@@ -29,8 +31,6 @@ class Junk4Dollars_appUITests: XCTestCase {
     }
     
     func testResetButton() {
-        let app = XCUIApplication()
-        app.launch()
         let textInput = app.textFields["text_input"]
         textInput.tap()
         textInput.typeText("John")
@@ -41,8 +41,7 @@ class Junk4Dollars_appUITests: XCTestCase {
     }
 
     func testLaunchPerformance() {
-        if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
-            // This measures how long it takes to launch your application.
+        if #available(iOS 13.1, *) {
             measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
                 XCUIApplication().launch()
             }
