@@ -47,7 +47,8 @@ class Junk4Dollars_appUITests: XCTestCase {
         textInput.tap()
         let textToType = "John"
         textInput.typeText(textToType)
-        XCTAssertEqual(textInput.value as! String, textToType)
+        app.buttons["reset_btn"].tap()
+        XCTAssertEqual(textInput.value as! String, "Name")
     }
 
     func testLaunchPerformance() {
