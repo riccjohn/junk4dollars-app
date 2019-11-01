@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Junk4Dollars-app
-//
-//  Created by John Riccardi on 10/23/19.
-//  Copyright © 2019 John Riccardi. All rights reserved.
-//
-
 import UIKit
 
 public class ViewController: UIViewController {
@@ -20,7 +12,7 @@ public class ViewController: UIViewController {
         label.text = ""
     }
 
-    @IBAction func tapSayHello(_ sender: UIButton) {
+    @IBAction func tapSayHello() {
         if let text = textInput.text {
             if (text.count > 0) {
                 label.text = "Hello, \(text)!"
@@ -30,7 +22,7 @@ public class ViewController: UIViewController {
         }
     }
     
-    @IBAction func tapReset(_ sender: UIButton) {
+    @IBAction func tapReset() {
         textInput.text = ""
         label.text = ""
     }

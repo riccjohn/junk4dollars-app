@@ -36,7 +36,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="hello_btn"/>
                                 <state key="normal" title="Say hello"/>
                                 <connections>
-                                    <action selector="tapSayHello:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5r-VD-zSD"/>
+                                    <action selector="tapSayHello" destination="BYZ-38-t0r" eventType="touchUpInside" id="Oqo-1Q-8z8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07R-gb-8nF">
@@ -45,7 +45,7 @@
                                 <accessibility key="accessibilityConfiguration" identifier="reset_btn"/>
                                 <state key="normal" title="Reset"/>
                                 <connections>
-                                    <action selector="tapReset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4V-Ce-oS2"/>
+                                    <action selector="tapReset" destination="BYZ-38-t0r" eventType="touchUpInside" id="OR4-HU-5vQ"/>
                                 </connections>
                             </button>
                         </subviews>

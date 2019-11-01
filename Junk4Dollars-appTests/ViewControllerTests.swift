@@ -12,4 +12,8 @@ class ViewControllerTests: XCTestCase {
         controller.viewDidLoad()
         XCTAssertEqual("", controller.label.text)
     }
+    
+    func testSayHello() {
+        print('TESTING SAY HELLO')
+    }
 }
