@@ -16,6 +16,8 @@
 		E9BA21082360D9D100127076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21072360D9D100127076 /* Assets.xcassets */; };
 		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
 		E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */; };
+		E9F12B94236B725D00497CD6 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F12B93236B725D00497CD6 /* ViewControllerTests.swift */; };
+		E9F12BB5236C781E00497CD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FF2360D9D000127076 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 		E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appTests.swift; sourceTree = "<group>"; };
 		E9BA21172360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9F12B93236B725D00497CD6 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,7 @@
 			children = (
 				E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */,
 				E9BA21172360D9D100127076 /* Info.plist */,
+				E9F12B93236B725D00497CD6 /* ViewControllerTests.swift */,
 			);
 			path = "Junk4Dollars-appTests";
 			sourceTree = "<group>";
@@ -281,6 +285,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F12BB5236C781E00497CD6 /* ViewController.swift in Sources */,
+				E9F12B94236B725D00497CD6 /* ViewControllerTests.swift in Sources */,
 				E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

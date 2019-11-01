@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+public class ViewController: UIViewController {
 
     
     @IBOutlet var textInput: UITextField!
-    @IBOutlet var label: UILabel!
+    @IBOutlet public var label: UILabel!
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         label.text = ""
