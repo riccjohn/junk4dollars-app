@@ -31,7 +31,7 @@ class Junk4Dollars_appUITests: XCTestCase {
         XCTAssert(helloJohnLabel.exists)
     }
 
-    func testResetButtonClearsOutput() {
+    func testResetButtonClearsLabelAndInput() {
         let textInput = app.textFields["text_input"]
         textInput.tap()
         let textToType = "John"
@@ -40,14 +40,6 @@ class Junk4Dollars_appUITests: XCTestCase {
         app.buttons["reset_btn"].tap()
         app.buttons["hello_btn"].tap()
         XCTAssert(app.staticTexts["Hello!"].exists)
-    }
-    
-    func testResetButtonClearsInput() {
-        let textInput = app.textFields["text_input"]
-        textInput.tap()
-        let textToType = "John"
-        textInput.typeText(textToType)
-        app.buttons["reset_btn"].tap()
         XCTAssertEqual(textInput.value as! String, "Name")
     }
 
