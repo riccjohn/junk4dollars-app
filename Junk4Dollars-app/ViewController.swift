@@ -4,7 +4,7 @@ public class ViewController: UIViewController {
 
     
     @IBOutlet var textInput: UITextField!
-    @IBOutlet public var label: UILabel!
+    @IBOutlet var label: UILabel!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
