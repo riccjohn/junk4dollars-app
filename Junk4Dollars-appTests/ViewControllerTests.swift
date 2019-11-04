@@ -4,10 +4,17 @@ import Junk4Dollars_app
 
 
 class ViewControllerTests: XCTestCase {
-    func testLabelDefaultValue() {
-        let controller = ViewController()
-        // Need to manually instantiate a new label here using UIKit
+    var controller: ViewController!
+    
+    func setUpController() {
+        controller = ViewController()
         controller.label = UILabel()
+        controller.textInput = UITextField()
+    }
+    
+    
+    func testLabelResetsDefaultValue() {
+        setUpController()
         controller.label.text = "foo"
         
         controller.viewDidLoad()
@@ -15,20 +22,15 @@ class ViewControllerTests: XCTestCase {
         XCTAssertEqual("", controller.label.text)
     }
     
-    func testSayHelloDefault() {
-        let controller = ViewController()
-        controller.label = UILabel()
-        controller.textInput = UITextField()
-        
+    func testSayHelloWithNoInput() {
+        setUpController()
         controller.tapSayHello()
         
         XCTAssertEqual("Hello!", controller.label.text)
     }
     
-    func testSayHelloWithName() {
-        let controller = ViewController()
-        controller.label = UILabel()
-        controller.textInput = UITextField()
+    func testSayHelloWithNameInput() {
+        setUpController()
         controller.textInput.text = "John"
         
         controller.tapSayHello()
@@ -36,10 +38,8 @@ class ViewControllerTests: XCTestCase {
         XCTAssertEqual("Hello, John!", controller.label.text)
     }
     
-    func testResetButton() {
-        let controller = ViewController()
-        controller.label = UILabel()
-        controller.textInput = UITextField()
+    func testResetButtonClearsInputAndLabel() {
+        setUpController()
         controller.textInput.text = "John"
         controller.label.text = "Hello!"
 
