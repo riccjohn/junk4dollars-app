@@ -8,32 +8,31 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    
-    @IBOutlet var textInput: UITextField!
-    @IBOutlet var label: UILabel!
+class ViewController: UITableViewController {
+    struct Auction {
+        var title: String
+        var description: String
+        var starting_price: Int
+        var ends_at: String
+    }
+        
+    var auctions: [Auction] = [
+        Auction(title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", starting_price: 8500, ends_at: "2019-11-01 15:35:21 -0500"),
+        Auction(title: "Oko, Theif of Crowns", description: "Brand new. Single card", starting_price: 1000, ends_at: "2019-11-01 15:35:21 -0500"),
+        Auction(title: "MTG M20 Booster Box", description: "Magic the Gathering MTG Core Set 2020 Booster Box", starting_price: 9000, ends_at: "2019-11-01 15:35:21 -0500")
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        label.text = ""
-    }
-
-    @IBAction func tapSayHello(_ sender: UIButton) {
-        if let text = textInput.text {
-            if (text.count > 0) {
-                label.text = "Hello, \(text)!"
-            } else {
-                label.text = "Hello!"
-            }
-        }
     }
     
-    @IBAction func tapReset(_ sender: UIButton) {
-        textInput.text = ""
-        label.text = ""
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return auctions.count
     }
     
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Auction", for: indexPath)
+        cell.textLabel?.text = auctions[indexPath.row].title
+        return cell
+    }
 }
-
