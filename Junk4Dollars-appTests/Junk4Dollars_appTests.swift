@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Junk4Dollars_app
+import Junk4Dollars_app
 
 class Junk4Dollars_appTests: XCTestCase {
 

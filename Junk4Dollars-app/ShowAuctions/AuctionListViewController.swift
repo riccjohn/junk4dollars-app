@@ -9,8 +9,4 @@ class AuctionListViewController: UIViewController {
         super.viewDidLoad()
         auctionTableView.dataSource = auctionsDataSource
     }
-    
-    
-    
-    
 }
