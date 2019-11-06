@@ -2,9 +2,9 @@ import XCTest
 import UIKit
 import Junk4Dollars_app
 
-class AuctionTableDataSourceTests: XCTestCase {
+class AuctionListTableViewDataSourceTests: XCTestCase {
     func numberOfRowsHardcodedToThree() {
-        let dataSource = AuctionTableViewDataSource()
+        let dataSource = AuctionListTableViewDataSource()
         XCTAssertEqual(3, dataSource.tableView(UITableView(), numberOfRowsInSection: 0))
     }
 }

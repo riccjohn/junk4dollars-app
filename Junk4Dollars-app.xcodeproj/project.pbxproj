@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
-		E9AA197723732D0100136975 /* AuctionTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionTableViewDataSourceTests.swift */; };
+		E9AA197723732D0100136975 /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
+		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
 		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
 		E9BA21032360D9D000127076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21012360D9D000127076 /* Main.storyboard */; };
@@ -31,8 +32,9 @@
 
 /* Begin PBXFileReference section */
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
-		E9AA197623732D0100136975 /* AuctionTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
+		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
 		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA20FB2360D9D000127076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BA20FD2360D9D000127076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */,
 				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
 				E9AA197823732FA300136975 /* Auction.swift */,
+				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
 			);
 			path = "Junk4Dollars-app";
 			sourceTree = "<group>";
@@ -103,7 +106,7 @@
 			children = (
 				E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */,
 				E9BA21172360D9D100127076 /* Info.plist */,
-				E9AA197623732D0100136975 /* AuctionTableViewDataSourceTests.swift */,
+				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
 			);
 			path = "Junk4Dollars-appTests";
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
+				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +225,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9AA197723732D0100136975 /* AuctionTableViewDataSourceTests.swift in Sources */,
+				E9AA197723732D0100136975 /* AuctionListTableViewDataSourceTests.swift in Sources */,
 				E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
