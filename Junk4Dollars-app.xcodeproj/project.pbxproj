@@ -66,6 +66,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E9AA197C2373310A00136975 /* ShowAuctions */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
+				E9AA197823732FA300136975 /* Auction.swift */,
+				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
+			);
+			path = ShowAuctions;
+			sourceTree = "<group>";
+		};
+		E9AA197D2373313E00136975 /* ShowAuctions */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
+			);
+			path = ShowAuctions;
+			sourceTree = "<group>";
+		};
 		E9BA20EF2360D9D000127076 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +105,7 @@
 		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXGroup;
 			children = (
+				E9AA197C2373310A00136975 /* ShowAuctions */,
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
 				E9BA21012360D9D000127076 /* Main.storyboard */,
@@ -94,9 +113,6 @@
 				E9BA21092360D9D100127076 /* LaunchScreen.storyboard */,
 				E9BA210C2360D9D100127076 /* Info.plist */,
 				E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */,
-				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
-				E9AA197823732FA300136975 /* Auction.swift */,
-				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
 			);
 			path = "Junk4Dollars-app";
 			sourceTree = "<group>";
@@ -104,9 +120,9 @@
 		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9AA197D2373313E00136975 /* ShowAuctions */,
 				E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */,
 				E9BA21172360D9D100127076 /* Info.plist */,
-				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
 			);
 			path = "Junk4Dollars-appTests";
 			sourceTree = "<group>";
