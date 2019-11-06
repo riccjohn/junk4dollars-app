@@ -18,5 +18,4 @@ class Junk4Dollars_appTests: XCTestCase {
         XCTAssertEqual(123, 123)
     }
 
-
 }

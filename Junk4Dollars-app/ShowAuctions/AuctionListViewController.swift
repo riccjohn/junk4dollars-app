@@ -1,11 +1,11 @@
 import UIKit
 
-class AuctionListViewController: UIViewController {
-    @IBOutlet var auctionTableView: UITableView!
+public class AuctionListViewController: UIViewController {
+    @IBOutlet public var auctionTableView: UITableView!
     
     let auctionsDataSource = AuctionListTableViewDataSource()
     
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         auctionTableView.dataSource = auctionsDataSource
     }

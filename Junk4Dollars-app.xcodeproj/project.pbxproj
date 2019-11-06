@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; };
 		E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
+				E910118D2373541F00018D22 /* AuctionListViewController.swift */,
 			);
 			path = ShowAuctions;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */,
+				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,
 				E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
