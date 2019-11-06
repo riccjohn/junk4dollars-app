@@ -9,7 +9,6 @@ public class AuctionTableViewDataSource: NSObject, UITableViewDataSource {
     ]
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Auction", for: indexPath)
         let cell = UITableViewCell()
         cell.textLabel?.text = auctions[indexPath.row].title
         return cell

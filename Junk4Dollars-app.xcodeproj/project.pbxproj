@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197723732D0100136975 /* AuctionTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionTableViewDataSourceTests.swift */; };
+		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
 		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
-		E9BA21002360D9D000127076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FF2360D9D000127076 /* ViewController.swift */; };
 		E9BA21032360D9D000127076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21012360D9D000127076 /* Main.storyboard */; };
 		E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */; };
 		E9BA21082360D9D100127076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21072360D9D100127076 /* Assets.xcassets */; };
@@ -32,10 +32,10 @@
 /* Begin PBXFileReference section */
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197623732D0100136975 /* AuctionTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA20FB2360D9D000127076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BA20FD2360D9D000127076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9BA20FF2360D9D000127076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9BA21022360D9D000127076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9BA21052360D9D000127076 /* Junk4Dollars_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Junk4Dollars_app.xcdatamodel; sourceTree = "<group>"; };
 		E9BA21072360D9D100127076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,13 +87,13 @@
 			children = (
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
-				E9BA20FF2360D9D000127076 /* ViewController.swift */,
 				E9BA21012360D9D000127076 /* Main.storyboard */,
 				E9BA21072360D9D100127076 /* Assets.xcassets */,
 				E9BA21092360D9D100127076 /* LaunchScreen.storyboard */,
 				E9BA210C2360D9D100127076 /* Info.plist */,
 				E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */,
 				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
+				E9AA197823732FA300136975 /* Auction.swift */,
 			);
 			path = "Junk4Dollars-app";
 			sourceTree = "<group>";
@@ -209,10 +209,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9BA21002360D9D000127076 /* ViewController.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
+				E9AA197923732FA300136975 /* Auction.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
