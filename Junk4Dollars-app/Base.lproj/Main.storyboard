@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IpV-Zo-xDc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05P-fW-icy">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -43,6 +44,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ar1-os-9C2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="997.10144927536237" y="119.86607142857142"/>
+        </scene>
+        <!--Auction List View Controller-->
+        <scene sceneID="eM5-6E-PRy">
+            <objects>
+                <viewController id="05P-fW-icy" customClass="AuctionListViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p3l-0W-0pk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-Mc-QE0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XAJ-gM-C4G" firstAttribute="trailing" secondItem="g1V-Mc-QE0" secondAttribute="trailing" id="OPa-jB-eYq"/>
+                            <constraint firstItem="g1V-Mc-QE0" firstAttribute="top" secondItem="XAJ-gM-C4G" secondAttribute="top" id="RR5-Uu-nNH"/>
+                            <constraint firstItem="XAJ-gM-C4G" firstAttribute="bottom" secondItem="g1V-Mc-QE0" secondAttribute="bottom" id="Zeh-h9-bT8"/>
+                            <constraint firstItem="g1V-Mc-QE0" firstAttribute="leading" secondItem="XAJ-gM-C4G" secondAttribute="leading" id="zdf-7e-OV9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="XAJ-gM-C4G"/>
+                    </view>
+                    <connections>
+                        <outlet property="auctionTableView" destination="g1V-Mc-QE0" id="Yzt-Qo-YZc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FO9-6n-m64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1786" y="120"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mYy-Gw-BTC">
