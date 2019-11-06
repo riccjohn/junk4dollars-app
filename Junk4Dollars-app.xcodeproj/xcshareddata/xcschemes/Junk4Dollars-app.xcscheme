@@ -38,6 +38,16 @@
                ReferencedContainer = "container:Junk4Dollars-app.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E93215D523734E900073D3BD"
+               BuildableName = "Junk4Dollars-appUITests.xctest"
+               BlueprintName = "Junk4Dollars-appUITests"
+               ReferencedContainer = "container:Junk4Dollars-app.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
