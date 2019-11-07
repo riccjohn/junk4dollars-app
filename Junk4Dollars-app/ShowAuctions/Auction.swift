@@ -1,6 +1,6 @@
 import Foundation
 
-struct Auction {
+public struct Auction {
     var title: String
     var description: String
     var startingPrice: Int
