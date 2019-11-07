@@ -11,13 +11,17 @@ public class AuctionsApiService {
         return auctions
     }
 
-    public static func getAllAuctionsFromAPI(callback: @escaping (Data?, URLResponse?, Error?) -> Void) -> [Auction] {
-        var session =   URLSession.shared
+    public static func getAllAuctionsFromAPI(callback: @escaping ([Auction], Error?) -> Void) -> Void {
+        let session = URLSession.shared
+        // create new request hitting Google (for now), pass in a callback
+        let task = session.dataTask(with: URL(string: "https://www.google.com")!) {data, response, error in
+            let auctions = [Auction(title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date())]
 
-        let task = session.dataTask(with: URL(string: "https://www.google.com")!, completionHandler: callback)
+            // call callback using the fake data instead of the data coming back from the URL
+            callback(auctions, error)
+        }
 
         task.resume()
 
-        return [Auction(title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date())]
     }
 }
