@@ -3,9 +3,9 @@ import UIKit
 public class AuctionListTableViewDataSource: NSObject, UITableViewDataSource {
     
     var auctions: [Auction] = [
-        Auction(title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", starting_price: 8500, ends_at: "2019-11-01 15:35:21 -0500"),
-        Auction(title: "Oko, Theif of Crowns", description: "Brand new. Single card", starting_price: 1000, ends_at: "2019-11-01 15:35:21 -0500"),
-        Auction(title: "MTG M20 Booster Box", description: "Magic the Gathering MTG Core Set 2020 Booster Box", starting_price: 9000, ends_at: "2019-11-01 15:35:21 -0500")
+        Auction(title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: "2019-11-01 15:35:21 -0500"),
+        Auction(title: "Oko, Theif of Crowns", description: "Brand new. Single card", startingPrice: 1000, endsAt: "2019-11-01 15:35:21 -0500"),
+        Auction(title: "MTG M20 Booster Box", description: "Magic the Gathering MTG Core Set 2020 Booster Box", startingPrice: 9000, endsAt: "2019-11-01 15:35:21 -0500")
     ]
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

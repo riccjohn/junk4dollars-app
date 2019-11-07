@@ -8,12 +8,18 @@ class AuctionListViewControllerTests: XCTestCase {
         controller = AuctionListViewController()
         let tableView = UITableView()
         controller.auctionTableView = tableView
-        controller.viewDidLoad()
         return controller
     }
 
-    func testControllerSetsDataSource() {
+    func testControllerSetsTableViewDataSource() {
         let controller = buildController()
-        XCTAssertFalse(controller.auctionTableView.dataSource == nil)
+        controller.viewDidLoad()
+        XCTAssertNotNil(controller.auctionTableView.dataSource)
+    }
+
+    func testDataSourceIs() {
+        let controller = buildController()
+        controller.viewDidLoad()
+        XCTAssert(controller.auctionsDataSource === controller.auctionTableView.dataSource)
     }
 }
