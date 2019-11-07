@@ -7,17 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; };
+		E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */; };
+		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; };
+		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
+		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
+		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
 		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
-		E9BA21002360D9D000127076 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FF2360D9D000127076 /* ViewController.swift */; };
 		E9BA21032360D9D000127076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21012360D9D000127076 /* Main.storyboard */; };
 		E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */; };
 		E9BA21082360D9D100127076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21072360D9D100127076 /* Assets.xcassets */; };
 		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
-		E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		E93215DB23734E900073D3BD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E9BA20F02360D9D000127076 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E9BA20F72360D9D000127076;
+			remoteInfo = "Junk4Dollars-app";
+		};
 		E9BA21122360D9D100127076 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = E9BA20F02360D9D000127076 /* Project object */;
@@ -28,21 +39,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
+		E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
+		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
+		E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
+		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
+		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
 		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA20FB2360D9D000127076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BA20FD2360D9D000127076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E9BA20FF2360D9D000127076 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9BA21022360D9D000127076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9BA21052360D9D000127076 /* Junk4Dollars_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Junk4Dollars_app.xcdatamodel; sourceTree = "<group>"; };
 		E9BA21072360D9D100127076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9BA210A2360D9D100127076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9BA210C2360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appTests.swift; sourceTree = "<group>"; };
 		E9BA21172360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E93215D323734E900073D3BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9BA20F52360D9D000127076 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -60,11 +84,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E93215D723734E900073D3BD /* Junk4Dollars-appUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */,
+				E93215DA23734E900073D3BD /* Info.plist */,
+			);
+			path = "Junk4Dollars-appUITests";
+			sourceTree = "<group>";
+		};
+		E9AA197C2373310A00136975 /* ShowAuctions */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
+				E9AA197823732FA300136975 /* Auction.swift */,
+				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
+			);
+			path = ShowAuctions;
+			sourceTree = "<group>";
+		};
+		E9AA197D2373313E00136975 /* ShowAuctions */ = {
+			isa = PBXGroup;
+			children = (
+				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
+				E910118D2373541F00018D22 /* AuctionListViewController.swift */,
+			);
+			path = ShowAuctions;
+			sourceTree = "<group>";
+		};
 		E9BA20EF2360D9D000127076 = {
 			isa = PBXGroup;
 			children = (
 				E9BA20FA2360D9D000127076 /* Junk4Dollars-app */,
 				E9BA21142360D9D100127076 /* Junk4Dollars-appTests */,
+				E93215D723734E900073D3BD /* Junk4Dollars-appUITests */,
 				E9BA20F92360D9D000127076 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +127,7 @@
 			children = (
 				E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */,
 				E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */,
+				E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -81,9 +135,9 @@
 		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXGroup;
 			children = (
+				E9AA197C2373310A00136975 /* ShowAuctions */,
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
-				E9BA20FF2360D9D000127076 /* ViewController.swift */,
 				E9BA21012360D9D000127076 /* Main.storyboard */,
 				E9BA21072360D9D100127076 /* Assets.xcassets */,
 				E9BA21092360D9D100127076 /* LaunchScreen.storyboard */,
@@ -96,7 +150,7 @@
 		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9BA21152360D9D100127076 /* Junk4Dollars_appTests.swift */,
+				E9AA197D2373313E00136975 /* ShowAuctions */,
 				E9BA21172360D9D100127076 /* Info.plist */,
 			);
 			path = "Junk4Dollars-appTests";
@@ -105,6 +159,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E93215D523734E900073D3BD /* Junk4Dollars-appUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E93215DD23734E900073D3BD /* Build configuration list for PBXNativeTarget "Junk4Dollars-appUITests" */;
+			buildPhases = (
+				E93215D223734E900073D3BD /* Sources */,
+				E93215D323734E900073D3BD /* Frameworks */,
+				E93215D423734E900073D3BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E93215DC23734E900073D3BD /* PBXTargetDependency */,
+			);
+			name = "Junk4Dollars-appUITests";
+			productName = "Junk4Dollars-appUITests";
+			productReference = E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		E9BA20F72360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9BA21252360D9D100127076 /* Build configuration list for PBXNativeTarget "Junk4Dollars-app" */;
@@ -146,10 +218,14 @@
 		E9BA20F02360D9D000127076 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1110;
+				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1110;
 				ORGANIZATIONNAME = "John Riccardi";
 				TargetAttributes = {
+					E93215D523734E900073D3BD = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = E9BA20F72360D9D000127076;
+					};
 					E9BA20F72360D9D000127076 = {
 						CreatedOnToolsVersion = 11.1;
 					};
@@ -174,11 +250,19 @@
 			targets = (
 				E9BA20F72360D9D000127076 /* Junk4Dollars-app */,
 				E9BA21102360D9D100127076 /* Junk4Dollars-appTests */,
+				E93215D523734E900073D3BD /* Junk4Dollars-appUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E93215D423734E900073D3BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9BA20F62360D9D000127076 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -199,13 +283,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E93215D223734E900073D3BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9BA20F42360D9D000127076 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9BA21002360D9D000127076 /* ViewController.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
+				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
+				E9AA197923732FA300136975 /* Auction.swift in Sources */,
+				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,13 +308,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9BA21162360D9D100127076 /* Junk4Dollars_appTests.swift in Sources */,
+				E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */,
+				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		E93215DC23734E900073D3BD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E9BA20F72360D9D000127076 /* Junk4Dollars-app */;
+			targetProxy = E93215DB23734E900073D3BD /* PBXContainerItemProxy */;
+		};
 		E9BA21132360D9D100127076 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E9BA20F72360D9D000127076 /* Junk4Dollars-app */;
@@ -248,6 +348,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E93215DE23734E900073D3BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Junk4Dollars-app";
+			};
+			name = Debug;
+		};
+		E93215DF23734E900073D3BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Junk4Dollars-appUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.Junk4Dollars-appUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Junk4Dollars-app";
+			};
+			name = Release;
+		};
 		E9BA21232360D9D100127076 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -441,6 +579,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E93215DD23734E900073D3BD /* Build configuration list for PBXNativeTarget "Junk4Dollars-appUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E93215DE23734E900073D3BD /* Debug */,
+				E93215DF23734E900073D3BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E9BA20F32360D9D000127076 /* Build configuration list for PBXProject "Junk4Dollars-app" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
