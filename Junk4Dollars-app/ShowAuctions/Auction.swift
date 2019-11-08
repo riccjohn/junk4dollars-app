@@ -23,6 +23,5 @@ extension Auction: Equatable {
             lhs.title == rhs.title &&
             lhs.description == rhs.description &&
             lhs.startingPrice == rhs.startingPrice
-//            lhs.endsAt == rhs.endsAt
     }
 }
