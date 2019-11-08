@@ -15,10 +15,15 @@ public class AuctionsApiService {
         let session = URLSession.shared
         // create new request hitting Google (for now), pass in a callback
         let task = session.dataTask(with: URL(string: "https://www.google.com")!) {data, response, error in
+
+            if let error = error {
+                print("ERROR: \(error)")
+            }
+
             let auctions = [Auction(title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date())]
 
             // call callback using the fake data instead of the data coming back from the URL
-            callback(auctions, error)
+            callback(auctions, nil)
         }
 
         task.resume()
