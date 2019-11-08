@@ -13,12 +13,16 @@ public class AuctionsApiService {
 
     public static func getAllAuctionsFromAPI(callback: @escaping ([Auction], Error?) -> Void) -> Void {
         let session = URLSession.shared
+        let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions")!)
         // create new request hitting Google (for now), pass in a callback
-        let task = session.dataTask(with: URL(string: "https://www.google.com")!) {data, response, error in
+        let task = session.dataTask(with: request) {data, response, error in
 
             if let error = error {
                 print("ERROR: \(error)")
             }
+
+            let res = String(data: data!, encoding: .ascii)
+            print("RESPONSE ==>", res)
 
             let auctions = [Auction(identifier: 4, title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date())]
 
