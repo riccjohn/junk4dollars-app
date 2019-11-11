@@ -19,14 +19,19 @@ public struct Auction {
 
         // TODO: Probably shouldn't use ANY here and guard against its type
         print("incoming json", json)
+
+        // #### TODO: PICK UP HERE ####
 //        if let title = json[0]["title"] as? String {
 //            print(title)
 //        }
 
-
-        return Auction(identifier: 1, title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date())
-
 //        return Auction(identifier: json.id, title: json.title, description: json.description, startingPrice: json.starting_price, endsAt: json.ends_at)
+
+    return Auction(
+        identifier: 1,
+        title: "Throne of Eldraine Booster Box",
+        description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).",
+        startingPrice: 8500, endsAt: Date())
     }
 
 }
