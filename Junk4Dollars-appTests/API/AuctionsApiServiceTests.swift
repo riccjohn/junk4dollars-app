@@ -14,16 +14,18 @@ class AuctionsApiServiceTests: XCTestCase {
     func testApiReturnsAuctions() {
         let expectation = XCTestExpectation(description: "Waiting for API response")
         AuctionsApiService.getAllAuctionsFromAPI {data,_error in
-            let auctionsArray = [Auction(
-                                identifier: 1,
-                                 title: "Throne of Eldraine Booster Box",
-                                 description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).",
-                                 startingPrice: 8500,
-                                 endsAt: Date()
-                )]
+            let auction = Auction(
+                            identifier: 1,
+                             title: "Throne of Eldraine Booster Box",
+                             description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).",
+                             startingPrice: 8500,
+                             endsAt: Date()
+            )
+
+            let auctionsArray = [auction, auction]
             XCTAssertEqual( auctionsArray, data)
             expectation.fulfill()
         }
-        wait(for: [expectation], timeout: 10.0)
+        wait(for: [expectation], timeout: 2.0)
     }
 }

@@ -11,23 +11,37 @@ public class AuctionsApiService {
         return auctions
     }
 
-    public static func getAllAuctionsFromAPI(callback: @escaping ([Auction], Error?) -> Void) -> Void {
+    static func miniAdapter(json: [Any]) -> [Auction] {
+        // map over the json using the .from method we put on the Auction struct
+        json.map(Auction.from)
+    }
+
+    public static func getAllAuctionsFromAPI(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
         let session = URLSession.shared
         let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions")!)
-        // create new request hitting Google (for now), pass in a callback
+        // create new request hitting local rails server (for now), pass in a callback
         let task = session.dataTask(with: request) {data, response, error in
 
             if let error = error {
                 print("ERROR: \(error)")
             }
 
-            let res = String(data: data!, encoding: .ascii)
-            print("RESPONSE ==>", res)
+            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
 
-            let auctions = [Auction(identifier: 4, title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date())]
+            var adaptedAuctions: [Auction]
 
-            // call callback using the fake data instead of the data coming back from the URL
-            callback(auctions, nil)
+            if json is [Any] {
+                // TODO: for below line: y tho? Why do we have to coerce `as! [Any]` if preceeding line already assures that?
+                adaptedAuctions = miniAdapter(json: json as! [Any])
+                print("Auctions =>", adaptedAuctions)
+
+                // call callback using the fake data instead of the data coming back from the URL
+                callback(adaptedAuctions, error)
+            } else {
+                // TODO: figure out how to create an Error object properly
+                print("ERROR IN CALLBACK")
+                callback(nil, NSError(domain: "", code: -1, userInfo: nil))
+            }
         }
 
         task.resume()
