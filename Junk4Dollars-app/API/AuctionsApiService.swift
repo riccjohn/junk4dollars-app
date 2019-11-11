@@ -26,7 +26,9 @@ public class AuctionsApiService {
                 print("ERROR: \(error)")
             }
 
-            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+            guard let data = data else { return }
+
+            let json = try? JSONSerialization.jsonObject(with: data, options: [])
 
             var adaptedAuctions: [Auction]
 
