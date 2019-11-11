@@ -32,12 +32,8 @@ public class AuctionsApiService {
 
             do {
                 if let json = try JSONSerialization.jsonObject(with: data , options: []) as? Array<Dictionary<String, Any>> {
-//                    if let title = json[0]["title"] as? String {
-//                        print(title)
-//                    }
                     adaptedAuctions = miniAdapter(json: json)
                     callback(adaptedAuctions, error)
-
                 }
             } catch let err {
                 print(err.localizedDescription)

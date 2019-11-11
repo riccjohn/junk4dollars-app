@@ -17,7 +17,6 @@ public struct Auction {
 
     static func from(json: Dictionary<String, Any>) -> Auction {
         // #### TODO: PICK UP HERE ####
-
         if let identifier = json["id"] as? Int {
             print("ID =>", identifier)
         }
@@ -34,12 +33,21 @@ public struct Auction {
             print("Start price =>", startingPrice)
         }
 
-        // TODO: This  should be a Date!
+
+        // TODO: Parse this as a Date
         if let endsAt = json["ends_at"] as? String {
             print("Ends at =>", endsAt)
         }
 
-//        return Auction(identifier: json.id, title: json.title, description: json.description, startingPrice: json.starting_price, endsAt: json.ends_at)
+        /*
+        return Auction(
+            identifier: ,
+            title: ,
+            description: ,
+            startingPrice: ,
+            endsAt:
+        )
+         */
 
     return Auction(
         identifier: 1,
