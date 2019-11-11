@@ -28,22 +28,36 @@ public class AuctionsApiService {
 
             guard let data = data else { return }
 
-            let json = try? JSONSerialization.jsonObject(with: data, options: [])
-
             var adaptedAuctions: [Auction]
 
-            if json is [Any] {
-                // TODO: for below line: y tho? Why do we have to coerce `as! [Any]` if preceeding line already assures that?
-                adaptedAuctions = miniAdapter(json: json as! [Any])
-                print("Auctions =>", adaptedAuctions)
+            do {
+                if let json = try JSONSerialization.jsonObject(with: data , options: []) as? [[String: Any]] {
+                    if let title = json[0]["title"] as? String {
+                        print(title)
+                    }
+                    adaptedAuctions = miniAdapter(json: json)
+                    callback(adaptedAuctions, error)
 
-                // call callback using the fake data instead of the data coming back from the URL
-                callback(adaptedAuctions, error)
-            } else {
-                // TODO: figure out how to create an Error object properly
-                print("ERROR IN CALLBACK")
-                callback(nil, NSError(domain: "", code: -1, userInfo: nil))
+                }
+            } catch let err {
+                print(err.localizedDescription)
+                callback(nil, NSError(domain: "Could not decode API response", code: -1, userInfo: nil))
             }
+
+//            var adaptedAuctions: [Auction]
+//
+//            if json is [Any] {
+//                // TODO: for below line: y tho? Why do we have to coerce `as! [Any]` if preceeding line already assures that?
+//                adaptedAuctions = miniAdapter(json: json as! [Any])
+//                print("Auctions =>", adaptedAuctions)
+//
+//                // call callback using the fake data instead of the data coming back from the URL
+//                callback(adaptedAuctions, error)
+//            } else {
+//                // TODO: figure out how to create an Error object properly
+//                print("ERROR IN CALLBACK")
+//                callback(nil, NSError(domain: "", code: -1, userInfo: nil))
+//            }
         }
 
         task.resume()
