@@ -11,7 +11,7 @@ public class AuctionsApiService {
         return auctions
     }
 
-    static func miniAdapter(json: [Any]) -> [Auction] {
+    static func miniAdapter(json: Array<Dictionary<String, Any>>) -> [Auction] {
         // map over the json using the .from method we put on the Auction struct
         json.map(Auction.from)
     }
@@ -31,10 +31,10 @@ public class AuctionsApiService {
             var adaptedAuctions: [Auction]
 
             do {
-                if let json = try JSONSerialization.jsonObject(with: data , options: []) as? [[String: Any]] {
-                    if let title = json[0]["title"] as? String {
-                        print(title)
-                    }
+                if let json = try JSONSerialization.jsonObject(with: data , options: []) as? Array<Dictionary<String, Any>> {
+//                    if let title = json[0]["title"] as? String {
+//                        print(title)
+//                    }
                     adaptedAuctions = miniAdapter(json: json)
                     callback(adaptedAuctions, error)
 

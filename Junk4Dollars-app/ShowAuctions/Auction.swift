@@ -15,15 +15,29 @@ public struct Auction {
     public var startingPrice: Int
     public var endsAt: Date
 
-    static func from(json: Any) -> Auction {
-
-        // TODO: Probably shouldn't use ANY here and guard against its type
-        print("incoming json", json)
-
+    static func from(json: Dictionary<String, Any>) -> Auction {
         // #### TODO: PICK UP HERE ####
-//        if let title = json[0]["title"] as? String {
-//            print(title)
-//        }
+
+        if let identifier = json["id"] as? Int {
+            print("ID =>", identifier)
+        }
+
+        if let title = json["title"] as? String {
+            print("Title =>", title)
+        }
+
+        if let description = json["description"] as? String {
+            print("Desc =>", description)
+        }
+
+        if let startingPrice = json["starting_price"] as? Int {
+            print("Start price =>", startingPrice)
+        }
+
+        // TODO: This  should be a Date!
+        if let endsAt = json["ends_at"] as? String {
+            print("Ends at =>", endsAt)
+        }
 
 //        return Auction(identifier: json.id, title: json.title, description: json.description, startingPrice: json.starting_price, endsAt: json.ends_at)
 
