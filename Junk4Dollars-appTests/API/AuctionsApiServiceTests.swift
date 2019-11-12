@@ -12,16 +12,32 @@ class AuctionsApiServiceTests: XCTestCase {
     }
 
     func testApiReturnsAuctions() {
+
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
         let expectation = XCTestExpectation(description: "Waiting for API response")
         AuctionsApiService.getAllAuctionsFromAPI {data,_error in
-            let auction = Auction(
+            let auctionOne = Auction(
                 identifier: 1,
                 title: "Throne of Eldraine Booster Box",
                 description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).",
                 startingPrice: 8500,
-                endsAt: Date()
+//                endsAt: Date()
+                endsAt: dateFormatter.date(from: "2019-11-01T20:35:21.000Z" )!
             )
-            let auctionsArray = [auction, auction]
+
+            let auctionTwo = Auction(
+                identifier: 3,
+                title: "Oko, Theif of Crowns",
+                description: "Brand new. Single card",
+                startingPrice: 1000,
+    //                endsAt: Date()
+                endsAt: dateFormatter.date(from: "2019-11-01T20:35:21.000Z" )!
+            )
+
+
+            let auctionsArray = [auctionOne, auctionTwo]
 
             XCTAssertEqual( auctionsArray, data)
             expectation.fulfill()
