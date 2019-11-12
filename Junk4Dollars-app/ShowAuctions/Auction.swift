@@ -17,43 +17,25 @@ public struct Auction {
 
     static func from(json: Dictionary<String, Any>) -> Auction {
         // #### TODO: PICK UP HERE ####
-        if let identifier = json["id"] as? Int {
-            print("ID =>", identifier)
-        }
 
-        if let title = json["title"] as? String {
-            print("Title =>", title)
-        }
+        let identifier = json["id"] as! Int
+        let title = json["title"] as! String
+        let description = json["description"] as! String
+        let startingPrice = json["starting_price"] as! Int
+        let stringEndsAt = json["ends_at"] as! String
 
-        if let description = json["description"] as? String {
-            print("Desc =>", description)
-        }
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 
-        if let startingPrice = json["starting_price"] as? Int {
-            print("Start price =>", startingPrice)
-        }
+        let endsAt = dateFormatterGet.date(from: stringEndsAt)!
 
-
-        // TODO: Parse this as a Date
-        if let endsAt = json["ends_at"] as? String {
-            print("Ends at =>", endsAt)
-        }
-
-        /*
         return Auction(
-            identifier: ,
-            title: ,
-            description: ,
-            startingPrice: ,
-            endsAt:
+            identifier: identifier,
+            title: title,
+            description: description,
+            startingPrice: startingPrice,
+            endsAt: endsAt
         )
-         */
-
-    return Auction(
-        identifier: 1,
-        title: "Throne of Eldraine Booster Box",
-        description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).",
-        startingPrice: 8500, endsAt: Date())
     }
 
 }
