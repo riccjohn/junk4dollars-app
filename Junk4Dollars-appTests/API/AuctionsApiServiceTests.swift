@@ -12,7 +12,6 @@ class AuctionsApiServiceTests: XCTestCase {
     }
 
     func testApiReturnsAuctions() {
-
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
 
@@ -23,7 +22,6 @@ class AuctionsApiServiceTests: XCTestCase {
                 title: "Throne of Eldraine Booster Box",
                 description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).",
                 startingPrice: 8500,
-//                endsAt: Date()
                 endsAt: dateFormatter.date(from: "2019-11-01T20:35:21.000Z" )!
             )
 
@@ -32,10 +30,8 @@ class AuctionsApiServiceTests: XCTestCase {
                 title: "Oko, Theif of Crowns",
                 description: "Brand new. Single card",
                 startingPrice: 1000,
-    //                endsAt: Date()
                 endsAt: dateFormatter.date(from: "2019-11-01T20:35:21.000Z" )!
             )
-
 
             let auctionsArray = [auctionOne, auctionTwo]
 

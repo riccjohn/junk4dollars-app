@@ -15,19 +15,13 @@ public struct Auction {
     public var startingPrice: Int
     public var endsAt: Date
 
-    static func from(json: Dictionary<String, Any>) -> Auction {
-        // #### TODO: PICK UP HERE ####
-
+    public static func from(json: Dictionary<String, Any>) -> Auction {
         let identifier = json["id"] as! Int
         let title = json["title"] as! String
         let description = json["description"] as! String
         let startingPrice = json["starting_price"] as! Int
         let stringEndsAt = json["ends_at"] as! String
-
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-
-        let endsAt = dateFormatterGet.date(from: stringEndsAt)!
+        let endsAt = JSONParsing.createTimeObject(stringTime: stringEndsAt)
 
         return Auction(
             identifier: identifier,

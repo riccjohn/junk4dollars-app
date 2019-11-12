@@ -11,16 +11,13 @@ public class AuctionsApiService {
         return auctions
     }
 
-    static func miniAdapter(json: Array<Dictionary<String, Any>>) -> [Auction] {
-        // map over the json using the .from method we put on the Auction struct
+    static func multipleAuctionsAdapter(json: Array<Dictionary<String, Any>>) -> [Auction] {
         json.map(Auction.from)
     }
 
     public static func getAllAuctionsFromAPI(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
-        let session = URLSession.shared
         let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions")!)
-        // create new request hitting local rails server (for now), pass in a callback
-        let task = session.dataTask(with: request) {data, response, error in
+        let task = URLSession.shared.dataTask(with: request) {data, response, error in
 
             if let error = error {
                 print("ERROR: \(error)")
@@ -30,17 +27,10 @@ public class AuctionsApiService {
 
             var adaptedAuctions: [Auction]
 
-            // Look up info on do/try/catch blocks
-            // Look up as? / as / as!
-            do {
-                if let json = try JSONSerialization.jsonObject(with: data , options: []) as? Array<Dictionary<String, Any>> {
-                    adaptedAuctions = miniAdapter(json: json)
-                    callback(adaptedAuctions, error)
-                }
-            } catch let err {
-                print(err.localizedDescription)
-                callback(nil, NSError(domain: "Could not decode API response", code: -1, userInfo: nil))
-            }
+            let jsonData = JSONParsing.decodeAPIResponse(encodedJson: data) as! Array<Dictionary<String, Any>>
+            // Currently blowing up if Auction.from can't create an Auction from incoming parsed json
+            adaptedAuctions = multipleAuctionsAdapter(json: jsonData)
+            callback(adaptedAuctions, error)
         }
 
         task.resume()
