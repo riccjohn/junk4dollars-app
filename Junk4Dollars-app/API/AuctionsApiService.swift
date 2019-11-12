@@ -15,6 +15,31 @@ public class AuctionsApiService {
         json.map(Auction.from)
     }
 
+    static func singleAuctionAdapter(json: Dictionary<String, Any>) -> Auction {
+        Auction.from(json: json)
+    }
+
+    public static func getSingleAuctionFromAPI(id: Int, callback: @escaping (Auction?, Error?) -> Void) -> Void {
+        let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions/\(id)")!)
+        let task = URLSession.shared.dataTask(with: request) {data, response, error in
+
+            if let error = error {
+                print("ERROR: \(error)")
+            }
+
+            guard let data = data else { return }
+
+            var adaptedAuction: Auction
+
+            let jsonData = JSONParsing.decodeAPIResponse(encodedJson: data) as! Dictionary<String, Any>
+            adaptedAuction = singleAuctionAdapter(json: jsonData)
+            callback(adaptedAuction, error)
+        }
+
+        task.resume()
+
+    }
+
     public static func getAllAuctionsFromAPI(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
         let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions")!)
         let task = URLSession.shared.dataTask(with: request) {data, response, error in
