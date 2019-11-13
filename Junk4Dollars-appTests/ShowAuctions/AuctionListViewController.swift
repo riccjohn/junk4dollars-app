@@ -17,7 +17,7 @@ class AuctionListViewControllerTests: XCTestCase {
         XCTAssertNotNil(controller.auctionTableView.dataSource)
     }
 
-    func testDataSourceIs() {
+    func testDataSourceIsSetAsExpected() {
         let controller = buildController()
         controller.viewDidLoad()
         XCTAssert(controller.auctionsDataSource === controller.auctionTableView.dataSource)

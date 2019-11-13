@@ -27,6 +27,7 @@ class AuctionTests: XCTestCase {
             ] as [String : Any]
 
         let auction = Auction.from(json: testDictionary)
+        
         XCTAssertEqual(id, auction.identifier)
         XCTAssertEqual(title, auction.title)
         XCTAssertEqual(description, auction.description)

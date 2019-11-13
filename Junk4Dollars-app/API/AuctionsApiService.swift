@@ -1,6 +1,14 @@
 import Foundation
 
 public class AuctionsApiService {
+    static func multipleAuctionsAdapter(json: Array<Dictionary<String, Any>>) -> [Auction] {
+        json.map(Auction.from)
+    }
+
+    static func singleAuctionAdapter(json: Dictionary<String, Any>) -> Auction {
+        Auction.from(json: json)
+    }
+
     public static func getAllAuctions() -> [Auction] {
         let auctions: [Auction] = [
             Auction(identifier: 1, title: "Throne of Eldraine Booster Box", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date()),
@@ -10,55 +18,29 @@ public class AuctionsApiService {
 
         return auctions
     }
-
-    static func multipleAuctionsAdapter(json: Array<Dictionary<String, Any>>) -> [Auction] {
-        json.map(Auction.from)
-    }
-
-    static func singleAuctionAdapter(json: Dictionary<String, Any>) -> Auction {
-        Auction.from(json: json)
-    }
-
+    
     public static func getSingleAuctionFromAPI(id: Int, callback: @escaping (Auction?, Error?) -> Void) -> Void {
-        let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions/\(id)")!)
-        let task = URLSession.shared.dataTask(with: request) {data, response, error in
-
-            if let error = error {
-                print("ERROR: \(error)")
-            }
-
-            guard let data = data else { return }
-
-            var adaptedAuction: Auction
-
+        let endpoint = "http://localhost:3000/auctions/\(id)"
+        QueryAPI.makeApiCall(endpoint: endpoint) {data, response, error in
+            // relies on data
             let jsonData = JSONParsing.decodeAPIResponse(encodedJson: data) as! Dictionary<String, Any>
-            adaptedAuction = singleAuctionAdapter(json: jsonData)
+            let adaptedAuction = singleAuctionAdapter(json: jsonData)
+
+            // relies on callback, adaptedAuctions, error
             callback(adaptedAuction, error)
         }
-
-        task.resume()
 
     }
 
     public static func getAllAuctionsFromAPI(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
-        let request: URLRequest = URLRequest(url: URL(string: "http://localhost:3000/auctions")!)
-        let task = URLSession.shared.dataTask(with: request) {data, response, error in
-
-            if let error = error {
-                print("ERROR: \(error)")
-            }
-
-            guard let data = data else { return }
-
-            var adaptedAuctions: [Auction]
-
+        let endpoint = "http://localhost:3000/auctions"
+        QueryAPI.makeApiCall(endpoint: endpoint) {data, response, error in
+            // relies on data
             let jsonData = JSONParsing.decodeAPIResponse(encodedJson: data) as! Array<Dictionary<String, Any>>
-            // Currently blowing up if Auction.from can't create an Auction from incoming parsed json
-            adaptedAuctions = multipleAuctionsAdapter(json: jsonData)
+            let adaptedAuctions = multipleAuctionsAdapter(json: jsonData)
+
+            // relies on callback, adaptedAuctions, error
             callback(adaptedAuctions, error)
         }
-
-        task.resume()
-
     }
 }

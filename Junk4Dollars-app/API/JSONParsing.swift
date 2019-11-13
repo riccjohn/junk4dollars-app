@@ -9,9 +9,11 @@
 import Foundation
 
 public class JSONParsing {
+    public static let formatString = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+
     public static func createTimeObject(stringTime: String) -> Date {
         let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+        dateFormatterGet.dateFormat = formatString
         return dateFormatterGet.date(from: stringTime)!
     }
 
