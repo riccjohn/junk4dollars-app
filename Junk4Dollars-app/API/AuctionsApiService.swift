@@ -38,15 +38,16 @@ public class AuctionsApiService {
             // relies on data
             if let data = data {
                 if data.isEmpty {
-                    callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
+                    // TODO: Base decison on response code
+                    return callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
                 } else {
                     let jsonData = JSONParsing.decodeAPIResponse(encodedJson: data) as! Array<Dictionary<String, Any>>
 
                     let adaptedAuctions = AuctionsApiService.multipleAuctionsAdapter(json: jsonData)
-                    callback(adaptedAuctions, error)
+                    return callback(adaptedAuctions, error)
                 }
             }
-            callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
+            return callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
         }
     }
 }
