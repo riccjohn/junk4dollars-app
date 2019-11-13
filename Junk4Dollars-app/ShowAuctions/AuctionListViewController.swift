@@ -24,7 +24,9 @@ public class AuctionListViewController: UIViewController {
                 print(error.localizedDescription)
             }
 
-            self.auctionTableView.reloadData()
+            DispatchQueue.main.async {
+               self.auctionTableView.reloadData()
+            }
         }
     }
 }
