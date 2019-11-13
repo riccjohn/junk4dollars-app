@@ -9,7 +9,7 @@ public class AuctionsApiService {
         Auction.from(json: json)
     }
     
-    public static func getSingleAuctionFromAPI(id: Int, callback: @escaping (Auction?, Error?) -> Void) -> Void {
+    public static func getSingleAuction(id: Int, callback: @escaping (Auction?, Error?) -> Void) -> Void {
         let endpoint = "http://localhost:3000/auctions/\(id)"
         QueryAPI.makeApiCall(endpoint: endpoint) {data, response, error in
             // relies on data
@@ -22,7 +22,7 @@ public class AuctionsApiService {
 
     }
 
-    public static func getAllAuctionsFromAPI(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
+    public static func getAllAuctions(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
         let endpoint = "http://localhost:3000/auctions"
         QueryAPI.makeApiCall(endpoint: endpoint) {data, response, error in
             // relies on data

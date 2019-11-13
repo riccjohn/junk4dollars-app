@@ -15,7 +15,7 @@ public class AuctionListViewController: UIViewController {
     }
 
     func loadAuctions() -> Void {
-        AuctionsApiService.getAllAuctionsFromAPI { auctions, error in
+        AuctionsApiService.getAllAuctions { auctions, error in
             if let updatedAuctions = auctions {
                 self.auctionsDataSource.setAuctions(updatedAuctions)
             }
