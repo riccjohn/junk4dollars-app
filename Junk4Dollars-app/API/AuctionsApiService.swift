@@ -8,14 +8,6 @@ public class AuctionsApiService {
     static func singleAuctionAdapter(json: Dictionary<String, Any>) -> Auction {
         Auction.from(json: json)
     }
-
-    public static func getAllAuctions() -> [Auction] {
-        let auctions: [Auction] = [
-            Auction(identifier: 1, title: "BRO, IM FAKE", description: "New: A brand-new, unused, unopened, undamaged item (including handmade items).", startingPrice: 8500, endsAt: Date()),
-        ]
-
-        return auctions
-    }
     
     public static func getSingleAuctionFromAPI(id: Int, callback: @escaping (Auction?, Error?) -> Void) -> Void {
         let endpoint = "http://localhost:3000/auctions/\(id)"

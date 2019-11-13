@@ -22,4 +22,20 @@ class AuctionListViewControllerTests: XCTestCase {
         controller.viewDidLoad()
         XCTAssert(controller.auctionsDataSource === controller.auctionTableView.dataSource)
     }
+
+    func testTableInitiallyHasOneSection() {
+        let controller = buildController()
+        controller.viewDidLoad()
+        let sectionCount = controller.auctionTableView.numberOfSections
+        XCTAssertEqual(1, sectionCount)
+    }
+
+    func testTableInitiallyHasOneSectionWithZeroRows() {
+        let controller = buildController()
+        controller.viewDidLoad()
+        let sectionCount = controller.auctionTableView.numberOfSections
+        XCTAssertEqual(1, sectionCount)
+        let rowCount = controller.auctionTableView.numberOfRows(inSection: 0)
+        XCTAssertEqual(0, rowCount)
+    }
 }
