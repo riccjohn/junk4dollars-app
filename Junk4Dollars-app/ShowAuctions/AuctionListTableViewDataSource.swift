@@ -1,7 +1,11 @@
 import UIKit
 
 public class AuctionListTableViewDataSource: NSObject, UITableViewDataSource {
-    let auctions = AuctionsApiService.getAllAuctions()
+    var auctions: [Auction] = AuctionsApiService.getAllAuctions()
+
+    public func setAuctions(_ newAuctions: [Auction]) -> Void {
+        auctions = newAuctions
+    }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
