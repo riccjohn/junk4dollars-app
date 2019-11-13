@@ -18,6 +18,6 @@ public class JSONParsing {
     }
 
     public static func decodeAPIResponse(encodedJson: Data) -> Any {
-       return try! JSONSerialization.jsonObject(with: encodedJson)
+        return try! JSONSerialization.jsonObject(with: encodedJson)
     }
 }
