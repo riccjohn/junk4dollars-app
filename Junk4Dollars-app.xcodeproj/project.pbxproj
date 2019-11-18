@@ -16,7 +16,7 @@
 		E9AC7886237B434F00AFD98E /* JSONParsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC7885237B434F00AFD98E /* JSONParsing.swift */; };
 		E9AC7888237B4CF100AFD98E /* JSONParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC7887237B4CF100AFD98E /* JSONParsingTests.swift */; };
 		E9AC788A237B4DA100AFD98E /* AuctionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC7889237B4DA100AFD98E /* AuctionTests.swift */; };
-		E9AC788C237C510D00AFD98E /* QueryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC788B237C510D00AFD98E /* QueryAPI.swift */; };
+		E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC788B237C510D00AFD98E /* ApiClient.swift */; };
 		E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */; };
 		E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
@@ -56,7 +56,7 @@
 		E9AC7885237B434F00AFD98E /* JSONParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParsing.swift; sourceTree = "<group>"; };
 		E9AC7887237B4CF100AFD98E /* JSONParsingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParsingTests.swift; sourceTree = "<group>"; };
 		E9AC7889237B4DA100AFD98E /* AuctionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionTests.swift; sourceTree = "<group>"; };
-		E9AC788B237C510D00AFD98E /* QueryAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueryAPI.swift; sourceTree = "<group>"; };
+		E9AC788B237C510D00AFD98E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsApiService.swift; sourceTree = "<group>"; };
 		E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsApiServiceTests.swift; sourceTree = "<group>"; };
 		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +130,7 @@
 			children = (
 				E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */,
 				E9AC7885237B434F00AFD98E /* JSONParsing.swift */,
-				E9AC788B237C510D00AFD98E /* QueryAPI.swift */,
+				E9AC788B237C510D00AFD98E /* ApiClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 				E9AC7886237B434F00AFD98E /* JSONParsing.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
-				E9AC788C237C510D00AFD98E /* QueryAPI.swift in Sources */,
+				E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
 				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,

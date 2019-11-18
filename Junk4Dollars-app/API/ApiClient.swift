@@ -17,11 +17,11 @@ public struct ApiQueryError: Error {
     public let kind: ErrorKind
 }
 
-public protocol APICallable {
+public protocol ApiCallable {
     func makeApiCall(endpoint: String, whatToDoWithResponseData: @escaping (Data?, URLResponse?, Error?) -> Void) -> Void
 }
 
-public class QueryAPI: APICallable {
+public class ApiClient: ApiCallable {
     public func makeApiCall(endpoint: String, whatToDoWithResponseData: @escaping (Data?, URLResponse?, Error?) -> Void) -> Void {
         let url = URL(string: endpoint)!
         let request: URLRequest = URLRequest(url: url)
@@ -40,7 +40,7 @@ public class QueryAPI: APICallable {
     }
 }
 
-public class MockQueryAPI: APICallable {
+public class MockApiClient: ApiCallable {
     let data: Data
     let response: URLResponse?
     let error: Error?
