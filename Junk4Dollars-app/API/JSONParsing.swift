@@ -17,7 +17,7 @@ public class JSONParsing {
         return dateFormatterGet.date(from: stringTime)!
     }
 
-    public static func decodeAPIResponse(encodedJson: Data) -> Any {
+    public static func decodeApiResponse(encodedJson: Data) -> Any {
         return try! JSONSerialization.jsonObject(with: encodedJson)
     }
 }

@@ -11,7 +11,7 @@ import XCTest
 import Junk4Dollars_app
 
 class JSONParsingTests: XCTestCase {
-    func testDecodeAPIResponse() {
+    func testDecodeApiResponse() {
         let testDictionary: Dictionary<String, Any> = [
             "foo": "bar",
             "baz": 100
@@ -28,7 +28,7 @@ class JSONParsingTests: XCTestCase {
 
         let stringifiedJson: Data? = asString(jsonDictionary: testDictionary).data(using: .utf8)
 
-        let result = JSONParsing.decodeAPIResponse(encodedJson: stringifiedJson!) as! Dictionary<String, Any>
+        let result = JSONParsing.decodeApiResponse(encodedJson: stringifiedJson!) as! Dictionary<String, Any>
 
         let fooResponse = result["foo"] as! String
         let bazResponse = result["baz"] as! Int

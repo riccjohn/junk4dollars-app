@@ -25,7 +25,7 @@ public class AuctionsApiService {
                     // TODO: Base decison on response code
                     return callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
                 } else {
-                    let jsonData = JSONParsing.decodeAPIResponse(encodedJson: data) as! Array<Dictionary<String, Any>>
+                    let jsonData = JSONParsing.decodeApiResponse(encodedJson: data) as! Array<Dictionary<String, Any>>
 
                     let adaptedAuctions = AuctionsApiService.multipleAuctionsAdapter(json: jsonData)
                     return callback(adaptedAuctions, error)

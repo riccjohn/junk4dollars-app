@@ -4,7 +4,7 @@ import Junk4Dollars_app
 class AuctionsApiServiceTests: XCTestCase {
     func testCallbackDealsWithReceivingNoData() {
         let expectation = XCTestExpectation(description: "Waiting for API response")
-        let client = MockQueryAPI()
+        let client = MockApiClient()
         AuctionsApiService(client: client).getAllAuctions {_data, error in
             XCTAssertEqual(ApiQueryError.ErrorKind.noData,(error as! ApiQueryError).kind)
             expectation.fulfill()
@@ -14,7 +14,7 @@ class AuctionsApiServiceTests: XCTestCase {
 
     func testCallbackRuns() {
         let expectation = XCTestExpectation(description: "Waiting for API response")
-        let client = MockQueryAPI()
+        let client = MockApiClient()
         AuctionsApiService(client: client).getAllAuctions {_data,_error in
             expectation.fulfill()
         }

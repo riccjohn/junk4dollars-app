@@ -1,5 +1,5 @@
 //
-//  QueryAPI.swift
+//  ApiClient.swift
 //  Junk4Dollars-app
 //
 //  Created by John Riccardi on 11/13/19.
