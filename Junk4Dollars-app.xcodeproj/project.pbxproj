@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; };
-		E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
@@ -50,7 +49,6 @@
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
-		E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
 		E9AC7885237B434F00AFD98E /* JSONParsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParsing.swift; sourceTree = "<group>"; };
@@ -118,7 +116,6 @@
 		E9AA197D2373313E00136975 /* ShowAuctions */ = {
 			isa = PBXGroup;
 			children = (
-				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
 				E910118D2373541F00018D22 /* AuctionListViewController.swift */,
 				E9AC7889237B4DA100AFD98E /* AuctionTests.swift */,
 			);
@@ -346,7 +343,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */,
-				E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */,
 				E9AC7888237B4CF100AFD98E /* JSONParsingTests.swift in Sources */,
 				E9AC788A237B4DA100AFD98E /* AuctionTests.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,

@@ -19,7 +19,7 @@ public class AuctionsApiService {
     public func getAllAuctions(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
         let endpoint = "http://localhost:3000/auctions"
         client.makeApiCall(endpoint: endpoint) {data, response, error in
-            // relies on data
+
             if let data = data {
                 if data.isEmpty {
                     // TODO: Base decison on response code

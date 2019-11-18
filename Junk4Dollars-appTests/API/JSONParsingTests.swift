@@ -38,7 +38,7 @@ class JSONParsingTests: XCTestCase {
 
     }
 
-/* Need to make sure the createTimeObject gives us time back in UTC so we dont have to deal with this time zone issue */
+/* TODO: Need to make sure the createTimeObject gives us time back in UTC so we dont have to deal with this time zone issue */
 
 //    func testCreateTimeObjectCreatesExpectedDateObject() {
 //        let timeString = "2019-11-01T20:35:21.000Z"
