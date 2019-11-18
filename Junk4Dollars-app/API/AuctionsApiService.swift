@@ -17,7 +17,7 @@ public class AuctionsApiService {
     }
     
     public func getAllAuctions(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
-        let endpoint = "http://localhost:3000/auctions"
+        let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/auctions"
         client.makeApiCall(endpoint: endpoint) {data, response, error in
 
             if let data = data {
