@@ -1,37 +1,36 @@
 import Foundation
 
+public enum ApiCallResult<T> {
+    case success(data: T)
+    case error(message: String)
+}
+
 public class AuctionsApiService {
-    let client: ApiCallable
+    let client: ApiClient
 
     public convenience init() {
-        let client = ApiClient()
+        let client = AsyncApiClient()
         self.init(client: client)
     }
 
-    public init(client: ApiCallable) {
+    public init(client: ApiClient) {
         self.client = client
     }
 
-    static func multipleAuctionsAdapter(json: Array<Dictionary<String, Any>>) -> [Auction] {
-        json.map(Auction.from)
-    }
-    
-    public func getAllAuctions(callback: @escaping ([Auction]?, Error?) -> Void) -> Void {
+    public func getAllAuctions(callback: @escaping ((ApiCallResult<[Auction]>) -> Void)) {
         let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/auctions"
-        client.makeApiCall(endpoint: endpoint) {data, response, error in
-
+        client.makeApiCall(endpoint: endpoint) {data, _, _ in
             if let data = data {
-                if data.isEmpty {
-                    // TODO: Base decison on response code
-                    return callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
-                } else {
-                    let jsonData = JSONParsing.decodeApiResponse(encodedJson: data) as! Array<Dictionary<String, Any>>
-
-                    let adaptedAuctions = AuctionsApiService.multipleAuctionsAdapter(json: jsonData)
-                    return callback(adaptedAuctions, error)
+                do {
+                    let auctions = try JSONDecoder().decode([Auction].self, from: data)
+                    callback(.success(data: auctions))
+                } catch {
+                    callback(.error(message: "Invalid JSON"))
                 }
+            } else {
+                callback(.error(message: "No data returned"))
             }
-            return callback(Optional<[Auction]>(nilLiteral: ()), ApiQueryError(kind: .noData))
         }
     }
+
 }

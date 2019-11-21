@@ -1,11 +1,3 @@
-//
-//  SceneDelegate.swift
-//  Junk4Dollars-app
-//
-//  Created by John Riccardi on 10/23/19.
-//  Copyright © 2019 John Riccardi. All rights reserved.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

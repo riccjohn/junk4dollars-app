@@ -15,17 +15,15 @@ public class AuctionListViewController: UIViewController {
     }
 
     func loadAuctions() -> Void {
-        AuctionsApiService().getAllAuctions { auctions, error in
-            if let updatedAuctions = auctions {
-                self.auctionsDataSource.setAuctions(updatedAuctions)
-            }
-
-            if let error = error {
-                print(error.localizedDescription)
-            }
-
-            DispatchQueue.main.async {
-               self.auctionTableView.reloadData()
+        AuctionsApiService().getAllAuctions { result in
+            switch result {
+                case .success(let auctions):
+                    self.auctionsDataSource.setAuctions(auctions)
+                    DispatchQueue.main.async {
+                       self.auctionTableView.reloadData()
+                    }
+                case .error(let message):
+                    print("An error occurred: \(message)")
             }
         }
     }
