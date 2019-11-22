@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; };
-		E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */; };
+		E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */; };
+		E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncApiClient.swift */; };
+		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
+		E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC788B237C510D00AFD98E /* ApiClient.swift */; };
+		E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */; };
+		E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
 		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
 		E9BA21032360D9D000127076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21012360D9D000127076 /* Main.storyboard */; };
 		E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */; };
 		E9BA21082360D9D100127076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21072360D9D100127076 /* Assets.xcassets */; };
 		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
+		E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,13 +46,18 @@
 
 /* Begin PBXFileReference section */
 		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
+		E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiClient.swift; sourceTree = "<group>"; };
+		E9196C6F238723C800FCC973 /* AsyncApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncApiClient.swift; sourceTree = "<group>"; };
+		E9196C71238732D800FCC973 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
-		E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
+		E9AC788B237C510D00AFD98E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsApiService.swift; sourceTree = "<group>"; };
+		E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionsApiServiceTests.swift; sourceTree = "<group>"; };
 		E9BA20F82360D9D000127076 /* Junk4Dollars-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Junk4Dollars-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA20FB2360D9D000127076 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9BA20FD2360D9D000127076 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +68,7 @@
 		E9BA210C2360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA21172360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +118,29 @@
 		E9AA197D2373313E00136975 /* ShowAuctions */ = {
 			isa = PBXGroup;
 			children = (
-				E9AA197623732D0100136975 /* AuctionListTableViewDataSourceTests.swift */,
+				E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */,
 				E910118D2373541F00018D22 /* AuctionListViewController.swift */,
 			);
 			path = ShowAuctions;
+			sourceTree = "<group>";
+		};
+		E9B8E56F2374BBD6001B9179 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */,
+				E9AC788B237C510D00AFD98E /* ApiClient.swift */,
+				E9196C6F238723C800FCC973 /* AsyncApiClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		E9B8E5722374BFFA001B9179 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */,
+				E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		E9BA20EF2360D9D000127076 = {
@@ -135,6 +166,7 @@
 		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXGroup;
 			children = (
+				E9B8E56F2374BBD6001B9179 /* API */,
 				E9AA197C2373310A00136975 /* ShowAuctions */,
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
@@ -150,8 +182,10 @@
 		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				E9B8E5722374BFFA001B9179 /* API */,
 				E9AA197D2373313E00136975 /* ShowAuctions */,
 				E9BA21172360D9D100127076 /* Info.plist */,
+				E9196C71238732D800FCC973 /* JsonHelper.swift */,
 			);
 			path = "Junk4Dollars-appTests";
 			sourceTree = "<group>";
@@ -296,10 +330,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
+				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
+				E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
 				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
+				E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,8 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E93215D123733AB80073D3BD /* AuctionListTableViewDataSourceTests.swift in Sources */,
+				E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */,
+				E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */,
+				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,
+				E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,8 +458,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = GL56NVSP8T;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -478,8 +520,10 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = GL56NVSP8T;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;

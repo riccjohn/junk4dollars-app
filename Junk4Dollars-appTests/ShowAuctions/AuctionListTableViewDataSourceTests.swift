@@ -3,21 +3,40 @@ import UIKit
 import Junk4Dollars_app
 
 class AuctionListTableViewDataSourceTests: XCTestCase {
-    var dataSource: UITableViewDataSource!
+    func testDataSource_SetsCorrectNumberOfCells() {
+        let dataSource = AuctionListTableViewDataSource()
 
-    func setupDataSource() {
-        dataSource = AuctionListTableViewDataSource()
+        let auctions = [
+            Auction(identifier: 1, title: "Title One"),
+            Auction(identifier: 2, title: "Title Two")
+        ]
+
+        let tableView = UITableView()
+
+        var numberOfRowsInSectionZero = dataSource.tableView(tableView, numberOfRowsInSection: 0)
+
+
+        XCTAssertEqual(0, numberOfRowsInSectionZero)
+
+        dataSource.setAuctions(auctions)
+        numberOfRowsInSectionZero = dataSource.tableView(tableView, numberOfRowsInSection: 0)
+
+        XCTAssertEqual(auctions.count, numberOfRowsInSectionZero)
     }
 
-    func testNumberOfRowsHardcodedToThree() {
-        setupDataSource()
-        XCTAssertEqual(3, dataSource.tableView(UITableView(), numberOfRowsInSection: 0))
-    }
+    func testDataSource_SetsTitleOfCellCorrectly() {
+        let dataSource = AuctionListTableViewDataSource()
 
-    func testHardcodedFirstCellTitle() {
-        setupDataSource()
-        let indexPath = IndexPath(row: 0, section: 0)
-        let cell = dataSource.tableView(UITableView(), cellForRowAt: indexPath)
-        XCTAssertEqual("Throne of Eldraine Booster Box", cell.textLabel?.text)
+        let auctions = [
+            Auction(identifier: 1, title: "Title One"),
+            Auction(identifier: 2, title: "Title Two")
+        ]
+
+        dataSource.setAuctions(auctions)
+        let tableView = UITableView()
+        let indexPathZero = IndexPath(indexes: [0, 0])
+        let titleOfFirstCell = dataSource.tableView(tableView, cellForRowAt: indexPathZero)
+
+        XCTAssertEqual(auctions[0].title, titleOfFirstCell.textLabel?.text)
     }
 }

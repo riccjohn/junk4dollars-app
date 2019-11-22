@@ -1,8 +1,23 @@
-import Foundation
+public struct Auction: Codable {
 
-struct Auction {
-    var title: String
-    var description: String
-    var startingPrice: Int
-    var endsAt: Date
+    public let identifier: Int
+    public let title: String
+
+    public init(identifier: Int, title: String) {
+        self.identifier = identifier
+        self.title = title
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case title
+        case identifier = "id"
+    }
+
+}
+
+extension Auction: Equatable {
+    public static func == (lhs: Auction, rhs: Auction) -> Bool {
+        return
+            lhs.identifier == rhs.identifier
+    }
 }

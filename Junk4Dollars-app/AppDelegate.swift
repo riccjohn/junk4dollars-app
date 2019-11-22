@@ -1,18 +1,8 @@
-//
-//  AppDelegate.swift
-//  Junk4Dollars-app
-//
-//  Created by John Riccardi on 10/23/19.
-//  Copyright © 2019 John Riccardi. All rights reserved.
-//
-
 import UIKit
 import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

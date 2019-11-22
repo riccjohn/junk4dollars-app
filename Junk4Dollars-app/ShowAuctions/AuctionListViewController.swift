@@ -9,4 +9,22 @@ public class AuctionListViewController: UIViewController {
         super.viewDidLoad()
         auctionTableView.dataSource = auctionsDataSource
     }
+
+    public override func viewWillAppear(_ animated: Bool) {
+        loadAuctions()
+    }
+
+    func loadAuctions() -> Void {
+        AuctionsApiService().getAllAuctions { result in
+            switch result {
+                case .success(let auctions):
+                    self.auctionsDataSource.setAuctions(auctions)
+                    DispatchQueue.main.async {
+                       self.auctionTableView.reloadData()
+                    }
+                case .error(let message):
+                    print("An error occurred: \(message)")
+            }
+        }
+    }
 }
