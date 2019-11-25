@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; };
 		E96C9825238C6E35007BF8E8 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = E96C9824238C6E35007BF8E8 /* Auth0.plist */; };
+		E96C9828238C727A007BF8E8 /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96C9827238C727A007BF8E8 /* Auth0.framework */; };
+		E96C9829238C727A007BF8E8 /* Auth0.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96C9827238C727A007BF8E8 /* Auth0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
@@ -25,6 +27,8 @@
 		E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */; };
 		E9BA21082360D9D100127076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21072360D9D100127076 /* Assets.xcassets */; };
 		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
+		E9C2DE0B238C81DD00A28895 /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C2DE04238C800E00A28895 /* SimpleKeychain.framework */; };
+		E9C2DE0C238C81DD00A28895 /* SimpleKeychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9C2DE04238C800E00A28895 /* SimpleKeychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +49,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E96C982A238C727A007BF8E8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E9C2DE0C238C81DD00A28895 /* SimpleKeychain.framework in Embed Frameworks */,
+				E96C9829238C727A007BF8E8 /* Auth0.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiClient.swift; sourceTree = "<group>"; };
@@ -54,6 +73,7 @@
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E96C9824238C6E35007BF8E8 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		E96C9827238C727A007BF8E8 /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/iOS/Auth0.framework; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -70,6 +90,9 @@
 		E9BA210C2360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9BA21112360D9D100127076 /* Junk4Dollars-appTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9BA21172360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E9C2DE04238C800E00A28895 /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = Carthage/Build/iOS/SimpleKeychain.framework; sourceTree = "<group>"; };
+		E9C2DE07238C816E00A28895 /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/iOS/Auth0.framework; sourceTree = "<group>"; };
+		E9C2DE09238C817400A28895 /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = Carthage/Build/iOS/SimpleKeychain.framework; sourceTree = "<group>"; };
 		E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9C2DE0B238C81DD00A28895 /* SimpleKeychain.framework in Frameworks */,
+				E96C9828238C727A007BF8E8 /* Auth0.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +130,15 @@
 				E93215DA23734E900073D3BD /* Info.plist */,
 			);
 			path = "Junk4Dollars-appUITests";
+			sourceTree = "<group>";
+		};
+		E96C9826238C727A007BF8E8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9C2DE04238C800E00A28895 /* SimpleKeychain.framework */,
+				E96C9827238C727A007BF8E8 /* Auth0.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E9AA197C2373310A00136975 /* ShowAuctions */ = {
@@ -148,10 +182,13 @@
 		E9BA20EF2360D9D000127076 = {
 			isa = PBXGroup;
 			children = (
+				E9C2DE09238C817400A28895 /* SimpleKeychain.framework */,
+				E9C2DE07238C816E00A28895 /* Auth0.framework */,
 				E9BA20FA2360D9D000127076 /* Junk4Dollars-app */,
 				E9BA21142360D9D100127076 /* Junk4Dollars-appTests */,
 				E93215D723734E900073D3BD /* Junk4Dollars-appUITests */,
 				E9BA20F92360D9D000127076 /* Products */,
+				E96C9826238C727A007BF8E8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,6 +258,8 @@
 				E9BA20F42360D9D000127076 /* Sources */,
 				E9BA20F52360D9D000127076 /* Frameworks */,
 				E9BA20F62360D9D000127076 /* Resources */,
+				E96C982A238C727A007BF8E8 /* Embed Frameworks */,
+				E96C9834238C7794007BF8E8 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -319,6 +358,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E96C9834238C7794007BF8E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+				"$(SRCROOT)/input.xcfilelist",
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+				"$(SRCROOT)/output.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E93215D223734E900073D3BD /* Sources */ = {
@@ -553,6 +614,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Junk4Dollars-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -570,6 +635,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "Junk4Dollars-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
