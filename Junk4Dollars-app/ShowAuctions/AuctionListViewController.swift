@@ -15,40 +15,49 @@ public class AuctionListViewController: UIViewController {
         auctionTableView.dataSource = auctionsDataSource
     }
 
+    func auth0LogOut() {
+        print("Logging out ...")
+        Auth0
+        .webAuth()
+        .clearSession(federated:false) {
+            switch $0 {
+                case true:
+                    print("Logged out")
+                    self.loggedIn = false
+                    self.logInOutButton.title = "Log In"
+                case false:
+                   print("Error logging out")
+            }
+        }
+    }
+
+    func auth0LogIn() {
+        Auth0
+            .webAuth()
+            .scope("openid profile")
+            .audience("https://dev-whnyp6fr.auth0.com/userinfo")
+            .start {
+                switch $0 {
+                case .failure(let error):
+                    // Handle the error
+                    print("Error: \(error)")
+                case .success(let credentials):
+                    // Do something with credentials e.g.: save them.
+                    // Auth0 will automatically dismiss the login page
+                    self.credentialsManager.store(credentials: credentials)
+                    self.loggedIn = true
+                    self.logInOutButton.title = "Log Out"
+                    print("Credentials: \(credentials)")
+                }
+        }
+    }
+
     @IBAction func logInOut(_ sender: UIBarButtonItem) {
         if (self.loggedIn) {
-            print("Logging out ...")
-            Auth0
-            .webAuth()
-            .clearSession(federated:false) {
-                switch $0 {
-                    case true:
-                        print("Logged out")
-                        self.loggedIn = false
-                        self.logInOutButton.title = "Log In"
-                    case false:
-                       print("Error logging out")
-                }
-            }
+            self.auth0LogOut()
+
         } else {
-            Auth0
-                .webAuth()
-                .scope("openid profile")
-                .audience("https://dev-whnyp6fr.auth0.com/userinfo")
-                .start {
-                    switch $0 {
-                    case .failure(let error):
-                        // Handle the error
-                        print("Error: \(error)")
-                    case .success(let credentials):
-                        // Do something with credentials e.g.: save them.
-                        // Auth0 will automatically dismiss the login page
-                        self.credentialsManager.store(credentials: credentials)
-                        self.loggedIn = true
-                        self.logInOutButton.title = "Log Out"
-                        print("Credentials: \(credentials)")
-                    }
-            }
+            self.auth0LogIn()
         }
     }
 
