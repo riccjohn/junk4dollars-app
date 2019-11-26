@@ -3,8 +3,18 @@ import Auth0
 
 public class AuctionListViewController: UIViewController {
     @IBOutlet public var auctionTableView: UITableView!
-    
-    @IBAction func showLoginController(_ sender: UIButton) {
+    @IBOutlet var logInOutButton: UIBarButtonItem!
+
+    public let auctionsDataSource = AuctionListTableViewDataSource()
+    let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+
+    override public func viewDidLoad() {
+        super.viewDidLoad()
+        auctionTableView.dataSource = auctionsDataSource
+    }
+
+
+    @IBAction func displayLogIn(_ sender: UIBarButtonItem) {
         Auth0
             .webAuth()
             .scope("openid profile")
@@ -17,10 +27,10 @@ public class AuctionListViewController: UIViewController {
                 case .success(let credentials):
                     // Do something with credentials e.g.: save them.
                     // Auth0 will automatically dismiss the login page
+                    self.credentialsManager.store(credentials: credentials)
                     print("Credentials: \(credentials)")
                 }
         }
-
     }
 
     @IBAction func showLogoutController(_ sender: UIButton) {
@@ -34,13 +44,6 @@ public class AuctionListViewController: UIViewController {
                    print("Error logging out")
             }
         }
-    }
-
-    public let auctionsDataSource = AuctionListTableViewDataSource()
-    
-    override public func viewDidLoad() {
-        super.viewDidLoad()
-        auctionTableView.dataSource = auctionsDataSource
     }
 
     public override func viewWillAppear(_ animated: Bool) {
