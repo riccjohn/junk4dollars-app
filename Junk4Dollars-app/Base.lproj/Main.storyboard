@@ -32,7 +32,7 @@
                     <navigationItem key="navigationItem" title="Auctions" id="ktM-19-Hor">
                         <barButtonItem key="rightBarButtonItem" title="Log In" id="UUw-fC-t1a">
                             <connections>
-                                <action selector="logInOut:" destination="05P-fW-icy" id="8wu-Lh-rdI"/>
+                                <action selector="logInOut:" destination="05P-fW-icy" id="0QM-Ij-XZv"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

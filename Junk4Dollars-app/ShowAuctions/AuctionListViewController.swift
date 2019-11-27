@@ -2,7 +2,7 @@ import UIKit
 
 public class AuctionListViewController: UIViewController {
     @IBOutlet public var auctionTableView: UITableView!
-    @IBOutlet var logInOutButton: UIBarButtonItem!
+    @IBOutlet public var logInOutButton: UIBarButtonItem!
 
     public let auctionsDataSource = AuctionListTableViewDataSource()
 
@@ -21,8 +21,8 @@ public class AuctionListViewController: UIViewController {
         super.viewDidLoad()
         auctionTableView.dataSource = auctionsDataSource
     }
-
-    @IBAction func logInOut(_ sender: UIBarButtonItem) {
+    
+    @IBAction public func logInOut(_ sender: UIBarButtonItem) {
         if (authentication.loggedIn) {
             authentication.logOut() {
                 self.logInOutButton.title = "Log In"
@@ -31,6 +31,8 @@ public class AuctionListViewController: UIViewController {
         } else {
             authentication.logIn() {
                 self.logInOutButton.title = "Log Out"
+//                self.logInOutButton.title = "Hi, \(username)"
+                // return user name / id from Rails private route
             }
         }
 

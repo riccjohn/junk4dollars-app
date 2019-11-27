@@ -15,4 +15,3 @@ public class AsyncApiClient: ApiClient {
         task.resume()
     }
 }
-
