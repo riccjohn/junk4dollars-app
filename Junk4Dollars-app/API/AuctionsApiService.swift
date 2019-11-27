@@ -1,10 +1,5 @@
 import Foundation
 
-public enum ApiCallResult<T> {
-    case success(data: T)
-    case error(message: String)
-}
-
 public class AuctionsApiService {
     let client: ApiClient
 
