@@ -18,6 +18,10 @@
 		E99A920C238EEF7D00E4E778 /* Auth0Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */; };
 		E99A920E238EF58300E4E778 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920D238EF58300E4E778 /* Authentication.swift */; };
 		E99A9211238EF6CF00E4E778 /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */; };
+		E99A9213238F124C00E4E778 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9212238F124C00E4E778 /* SessionManager.swift */; };
+		E99A9215238F152D00E4E778 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9214238F152D00E4E778 /* UserApiService.swift */; };
+		E99A9217238F15B200E4E778 /* ApiCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9216238F15B200E4E778 /* ApiCallResult.swift */; };
+		E99A9219238F15DD00E4E778 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9218238F15DD00E4E778 /* User.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
@@ -80,6 +84,10 @@
 		E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth0Authentication.swift; sourceTree = "<group>"; };
 		E99A920D238EF58300E4E778 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthentication.swift; sourceTree = "<group>"; };
+		E99A9212238F124C00E4E778 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		E99A9214238F152D00E4E778 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
+		E99A9216238F15B200E4E778 /* ApiCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallResult.swift; sourceTree = "<group>"; };
+		E99A9218238F15DD00E4E778 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -152,6 +160,7 @@
 			children = (
 				E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */,
 				E99A920D238EF58300E4E778 /* Authentication.swift */,
+				E99A9212238F124C00E4E778 /* SessionManager.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -162,6 +171,14 @@
 				E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E99A921A238F15EF00E4E778 /* ShowUser */ = {
+			isa = PBXGroup;
+			children = (
+				E99A9218238F15DD00E4E778 /* User.swift */,
+			);
+			path = ShowUser;
 			sourceTree = "<group>";
 		};
 		E9AA197C2373310A00136975 /* ShowAuctions */ = {
@@ -189,6 +206,8 @@
 				E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */,
 				E9AC788B237C510D00AFD98E /* ApiClient.swift */,
 				E9196C6F238723C800FCC973 /* AsyncApiClient.swift */,
+				E99A9214238F152D00E4E778 /* UserApiService.swift */,
+				E99A9216238F15B200E4E778 /* ApiCallResult.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -230,6 +249,7 @@
 			children = (
 				E99A9204238D96B100E4E778 /* Authentication */,
 				E9B8E56F2374BBD6001B9179 /* API */,
+				E99A921A238F15EF00E4E778 /* ShowUser */,
 				E9AA197C2373310A00136975 /* ShowAuctions */,
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
@@ -420,10 +440,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
+				E99A9217238F15B200E4E778 /* ApiCallResult.swift in Sources */,
+				E99A9215238F152D00E4E778 /* UserApiService.swift in Sources */,
 				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
+				E99A9213238F124C00E4E778 /* SessionManager.swift in Sources */,
 				E99A920E238EF58300E4E778 /* Authentication.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E99A920C238EEF7D00E4E778 /* Auth0Authentication.swift in Sources */,
+				E99A9219238F15DD00E4E778 /* User.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
 				E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
