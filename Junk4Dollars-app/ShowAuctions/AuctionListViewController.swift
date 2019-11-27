@@ -1,5 +1,4 @@
 import UIKit
-import Auth0
 
 public class AuctionListViewController: UIViewController {
     @IBOutlet public var auctionTableView: UITableView!
@@ -7,14 +6,21 @@ public class AuctionListViewController: UIViewController {
 
     public let auctionsDataSource = AuctionListTableViewDataSource()
 
-    let authentication = Authentication()
+    var authentication: Authentication = Auth0Authentication()
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
+    public init(authentication: Authentication) {
+        super.init(nibName: nil, bundle: nil)
+        self.authentication = authentication
+    }
 
     override public func viewDidLoad() {
         super.viewDidLoad()
         auctionTableView.dataSource = auctionsDataSource
     }
-
-
 
     @IBAction func logInOut(_ sender: UIBarButtonItem) {
         if (authentication.loggedIn) {

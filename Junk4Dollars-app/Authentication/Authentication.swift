@@ -1,40 +1,5 @@
-import Auth0
-
-class Authentication {
-    public var loggedIn = false
-    let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
-    let APIIdentifier = "junk4dollars"
-
-    public func logOut(_ callback: @escaping () -> Void) {
-        Auth0
-        .webAuth()
-        .clearSession(federated:false) {
-            switch $0 {
-                case true:
-                    self.loggedIn = false
-                    callback()
-                case false:
-                   print("Error logging out")
-            }
-        }
-    }
-
-    public func logIn( _ callback: @escaping () -> Void) {
-        Auth0
-            .webAuth()
-            .scope("openid profile")
-            .audience(APIIdentifier)
-            .start {
-                switch $0 {
-                case .failure(let error):
-                    print("Error: \(error)")
-                case .success(let credentials):
-                    self.credentialsManager.store(credentials: credentials)
-                    self.loggedIn = true
-                    callback()
-                    print("Credentials: \(credentials)")
-                }
-        }
-    }
-
+public protocol Authentication {
+    var loggedIn: Bool { get }
+    func logOut(_ callback: @escaping() -> Void)
+    func logIn(_ callback: @escaping() -> Void)
 }

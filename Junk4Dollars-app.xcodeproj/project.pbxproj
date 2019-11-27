@@ -15,7 +15,9 @@
 		E96C9825238C6E35007BF8E8 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = E96C9824238C6E35007BF8E8 /* Auth0.plist */; };
 		E96C9828238C727A007BF8E8 /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96C9827238C727A007BF8E8 /* Auth0.framework */; };
 		E96C9829238C727A007BF8E8 /* Auth0.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96C9827238C727A007BF8E8 /* Auth0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E99A920C238EEF7D00E4E778 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920B238EEF7D00E4E778 /* Authentication.swift */; };
+		E99A920C238EEF7D00E4E778 /* Auth0Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */; };
+		E99A920E238EF58300E4E778 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920D238EF58300E4E778 /* Authentication.swift */; };
+		E99A9211238EF6CF00E4E778 /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
@@ -75,7 +77,9 @@
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E96C9824238C6E35007BF8E8 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		E96C9827238C727A007BF8E8 /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/iOS/Auth0.framework; sourceTree = "<group>"; };
-		E99A920B238EEF7D00E4E778 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth0Authentication.swift; sourceTree = "<group>"; };
+		E99A920D238EF58300E4E778 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthentication.swift; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -146,7 +150,16 @@
 		E99A9204238D96B100E4E778 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				E99A920B238EEF7D00E4E778 /* Authentication.swift */,
+				E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */,
+				E99A920D238EF58300E4E778 /* Authentication.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		E99A920F238EF6C300E4E778 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -233,6 +246,7 @@
 		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				E99A920F238EF6C300E4E778 /* Authentication */,
 				E9B8E5722374BFFA001B9179 /* API */,
 				E9AA197D2373313E00136975 /* ShowAuctions */,
 				E9BA21172360D9D100127076 /* Info.plist */,
@@ -407,8 +421,9 @@
 			files = (
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
+				E99A920E238EF58300E4E778 /* Authentication.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
-				E99A920C238EEF7D00E4E778 /* Authentication.swift in Sources */,
+				E99A920C238EEF7D00E4E778 /* Auth0Authentication.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
 				E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
@@ -422,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E99A9211238EF6CF00E4E778 /* FakeAuthentication.swift in Sources */,
 				E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */,
 				E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */,
 				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
