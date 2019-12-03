@@ -29,22 +29,22 @@ public class AuctionListViewController: UIViewController {
             }
 
         } else {
-            authentication.logIn() {
+            authentication.logIn() { (token) in
                 self.logInOutButton.title = "Log Out"
-                UserApiService().getSingleUser(userId: 1) { result in
-                    switch result {
-                        case .success(let user):
-                            print("USER DATA =>", user)
-                        case .error(let message):
-                            print("An error occurred: \(message)")
-                    }
-                }
+                print("TOKEN (inside auction ctrl) ==>", token)
+                self.authentication.getUserInfo(token)
+//                UserApiService().getSingleUser(userId: 1) { result in
+//                    switch result {
+//                        case .success(let user):
+//                            print("USER DATA =>", user)
+//                        case .error(let message):
+//                            print("An error occurred: \(message)")
+//                    }
+//                }
 //                self.logInOutButton.title = "Hi, \(username)"
                 // return user name / id from Rails private route
             }
         }
-
-
     }
 
     public override func viewWillAppear(_ animated: Bool) {

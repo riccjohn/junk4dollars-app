@@ -3,21 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; };
-		E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */; };
+		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; platformFilter = ios; };
+		E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */; platformFilter = ios; };
 		E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncApiClient.swift */; };
-		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; };
-		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; };
+		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; platformFilter = ios; };
+		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; platformFilter = ios; };
 		E96C9825238C6E35007BF8E8 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = E96C9824238C6E35007BF8E8 /* Auth0.plist */; };
 		E96C9828238C727A007BF8E8 /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E96C9827238C727A007BF8E8 /* Auth0.framework */; };
 		E96C9829238C727A007BF8E8 /* Auth0.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E96C9827238C727A007BF8E8 /* Auth0.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E99A920C238EEF7D00E4E778 /* Auth0Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920B238EEF7D00E4E778 /* Auth0Authentication.swift */; };
 		E99A920E238EF58300E4E778 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A920D238EF58300E4E778 /* Authentication.swift */; };
-		E99A9211238EF6CF00E4E778 /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */; };
+		E99A9211238EF6CF00E4E778 /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9210238EF6CF00E4E778 /* FakeAuthentication.swift */; platformFilter = ios; };
 		E99A9213238F124C00E4E778 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9212238F124C00E4E778 /* SessionManager.swift */; };
 		E99A9215238F152D00E4E778 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9214238F152D00E4E778 /* UserApiService.swift */; };
 		E99A9217238F15B200E4E778 /* ApiCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99A9216238F15B200E4E778 /* ApiCallResult.swift */; };
@@ -27,7 +27,7 @@
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
 		E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC788B237C510D00AFD98E /* ApiClient.swift */; };
 		E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */; };
-		E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */; };
+		E9B8E5742374C011001B9179 /* AuctionsApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */; platformFilter = ios; };
 		E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FB2360D9D000127076 /* AppDelegate.swift */; };
 		E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BA20FD2360D9D000127076 /* SceneDelegate.swift */; };
 		E9BA21032360D9D000127076 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21012360D9D000127076 /* Main.storyboard */; };
@@ -36,7 +36,7 @@
 		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
 		E9C2DE0B238C81DD00A28895 /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C2DE04238C800E00A28895 /* SimpleKeychain.framework */; };
 		E9C2DE0C238C81DD00A28895 /* SimpleKeychain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E9C2DE04238C800E00A28895 /* SimpleKeychain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */; };
+		E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */; platformFilter = ios; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */

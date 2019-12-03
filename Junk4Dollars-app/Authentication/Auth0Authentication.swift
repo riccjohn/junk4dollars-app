@@ -2,7 +2,7 @@ import Auth0
 
 class Auth0Authentication: Authentication {
     public var loggedIn = false
-    let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
+    public let credentialsManager = CredentialsManager(authentication: Auth0.authentication())
     let APIIdentifier = "junk4dollars"
 
     public func logOut(_ callback: @escaping () -> Void) {
@@ -19,7 +19,7 @@ class Auth0Authentication: Authentication {
         }
     }
 
-    public func logIn( _ callback: @escaping () -> Void) {
+    public func logIn( _ callback: @escaping (_ token: String) -> Void) {
         Auth0
             .webAuth()
             .scope("openid profile")
@@ -31,9 +31,22 @@ class Auth0Authentication: Authentication {
                 case .success(let credentials):
                     self.credentialsManager.store(credentials: credentials)
                     self.loggedIn = true
-                    callback()
-                    print("Credentials: \(credentials)")
+                    callback(credentials.accessToken!)
                 }
+        }
+    }
+
+    public func getUserInfo(_ accessToken: String) -> Void {
+        Auth0
+        .authentication()
+        .userInfo(withAccessToken: accessToken)
+        .start { result in
+            switch(result) {
+            case .success(let profile):
+                print("PROFILE ID ==>", profile.sub)
+            case .failure(let error):
+                print("Error: \(error)")
+            }
         }
     }
 
