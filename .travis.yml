@@ -5,4 +5,4 @@ osx_image: xcode11.1
 xcode_destination: platform=iOS Simulator,OS=13.1,name=iPhone 11 Pro Max
 
 script:
-  - carthage bootstrap
+  - carthage bootstrap --platform ios --no-use-binaries --cache-builds
