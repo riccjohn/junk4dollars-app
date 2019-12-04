@@ -2,9 +2,21 @@ import UIKit
 
 public class AuctionListViewController: UIViewController {
     @IBOutlet public var auctionTableView: UITableView!
-    
+    @IBOutlet public var logInOutButton: UIBarButtonItem!
+
     public let auctionsDataSource = AuctionListTableViewDataSource()
-    
+
+    var authentication: Authentication = Auth0Authentication()
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+
+    public init(authentication: Authentication) {
+        super.init(nibName: nil, bundle: nil)
+        self.authentication = authentication
+    }
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         auctionTableView.dataSource = auctionsDataSource
@@ -12,6 +24,10 @@ public class AuctionListViewController: UIViewController {
 
     public override func viewWillAppear(_ animated: Bool) {
         loadAuctions()
+    }
+
+    @IBAction public func logInOut(_ sender: UIBarButtonItem) {
+        print("Clicked!")
     }
 
     func loadAuctions() -> Void {
