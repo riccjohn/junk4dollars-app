@@ -12,6 +12,10 @@
 		E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncApiClient.swift */; };
 		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; platformFilter = ios; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; platformFilter = ios; };
+		E96DC7462398486E00D60E49 /* UsersApiServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC7452398486E00D60E49 /* UsersApiServiceTests.swift */; };
+		E96DC748239848CD00D60E49 /* ApiCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC747239848CD00D60E49 /* ApiCallResult.swift */; };
+		E96DC74B2398597500D60E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74A2398597500D60E49 /* User.swift */; };
+		E96DC74D23985A1100D60E49 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74C23985A1100D60E49 /* UserApiService.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
@@ -58,6 +62,10 @@
 		E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E96DC7452398486E00D60E49 /* UsersApiServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersApiServiceTests.swift; sourceTree = "<group>"; };
+		E96DC747239848CD00D60E49 /* ApiCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallResult.swift; sourceTree = "<group>"; };
+		E96DC74A2398597500D60E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E96DC74C23985A1100D60E49 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -119,6 +127,14 @@
 			path = "Junk4Dollars-appUITests";
 			sourceTree = "<group>";
 		};
+		E96DC7492398595A00D60E49 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				E96DC74A2398597500D60E49 /* User.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		E9AA197C2373310A00136975 /* ShowAuctions */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +160,8 @@
 				E9B8E5702374BBF2001B9179 /* AuctionsApiService.swift */,
 				E9AC788B237C510D00AFD98E /* ApiClient.swift */,
 				E9196C6F238723C800FCC973 /* AsyncApiClient.swift */,
+				E96DC747239848CD00D60E49 /* ApiCallResult.swift */,
+				E96DC74C23985A1100D60E49 /* UserApiService.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -153,6 +171,7 @@
 			children = (
 				E9B8E5732374C011001B9179 /* AuctionsApiServiceTests.swift */,
 				E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */,
+				E96DC7452398486E00D60E49 /* UsersApiServiceTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -182,6 +201,7 @@
 		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXGroup;
 			children = (
+				E96DC7492398595A00D60E49 /* Users */,
 				E9EC1184239829DC000A8C8B /* Authentication */,
 				E9B8E56F2374BBD6001B9179 /* API */,
 				E9AA197C2373310A00136975 /* ShowAuctions */,
@@ -389,9 +409,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E96DC74B2398597500D60E49 /* User.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
+				E96DC748239848CD00D60E49 /* ApiCallResult.swift in Sources */,
 				E9EC118623982A0C000A8C8B /* Authentication.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
 				E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */,
@@ -400,6 +422,7 @@
 				E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 				E9EC118B23982ABF000A8C8B /* Auth0Authentication.swift in Sources */,
+				E96DC74D23985A1100D60E49 /* UserApiService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +436,7 @@
 				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,
 				E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */,
+				E96DC7462398486E00D60E49 /* UsersApiServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

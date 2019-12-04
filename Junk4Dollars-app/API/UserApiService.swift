@@ -1,6 +1,6 @@
 import Foundation
 
-public class AuctionsApiService {
+public class UserApiService {
     let client: ApiClient
 
     public convenience init() {
@@ -12,13 +12,13 @@ public class AuctionsApiService {
         self.client = client
     }
 
-    public func getAllAuctions(callback: @escaping ((ApiCallResult<[Auction]>) -> Void)) {
-        let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/auctions"
+    public func getUserByToken(token: String, callback: @escaping((ApiCallResult<User>) -> Void)) {
+        let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/users/\(token)"
         client.makeApiCall(endpoint: endpoint) {data, _, _ in
             if let data = data {
                 do {
-                    let auctions = try JSONDecoder().decode([Auction].self, from: data)
-                    callback(.success(data: auctions))
+                    let user = try JSONDecoder().decode(User.self, from: data)
+                    callback(.success(data: user))
                 } catch {
                     callback(.error(message: "Invalid JSON"))
                 }
@@ -27,5 +27,4 @@ public class AuctionsApiService {
             }
         }
     }
-
 }
