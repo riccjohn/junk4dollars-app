@@ -27,7 +27,16 @@ public class AuctionListViewController: UIViewController {
     }
 
     @IBAction public func logInOut(_ sender: UIBarButtonItem) {
-        print("Clicked!")
+        if(!authentication.loggedIn) {
+            authentication.logIn() { (token) in
+                self.logInOutButton.title = "Log Out"
+                print("TOKEN =>", token)
+            }
+        } else {
+            authentication.logOut() {
+                self.logInOutButton.title = "Log In"
+            }
+        }
     }
 
     func loadAuctions() -> Void {
