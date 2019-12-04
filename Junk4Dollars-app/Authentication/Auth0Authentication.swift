@@ -43,11 +43,10 @@ class Auth0Authentication: Authentication {
         .start { result in
             switch(result) {
             case .success(let profile):
-                print("PROFILE ID ==>", profile.sub)
+                print("PROFILE =>", profile)
             case .failure(let error):
                 print("Error: \(error)")
             }
         }
     }
-
 }

@@ -55,7 +55,9 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testLogInOut_whenLoggedIn_changesTitleTo_LogIn_and_logsUserOut() {
         let controller = buildController()
-        authentication.logIn() {}
+        authentication.logIn() {token in
+            print(token)
+        }
 
         controller.logInOut(controller.logInOutButton)
 

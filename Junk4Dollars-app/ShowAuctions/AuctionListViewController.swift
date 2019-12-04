@@ -31,8 +31,10 @@ public class AuctionListViewController: UIViewController {
         } else {
             authentication.logIn() { (token) in
                 self.logInOutButton.title = "Log Out"
-                print("TOKEN (inside auction ctrl) ==>", token)
                 self.authentication.getUserInfo(token)
+                print("TOKEN =>", token)
+//                print("USER ?", self.authentication.currentUserProfile?.sub)
+
 //                UserApiService().getSingleUser(userId: 1) { result in
 //                    switch result {
 //                        case .success(let user):
@@ -41,8 +43,9 @@ public class AuctionListViewController: UIViewController {
 //                            print("An error occurred: \(message)")
 //                    }
 //                }
+                
 //                self.logInOutButton.title = "Hi, \(username)"
-                // return user name / id from Rails private route
+//                return user name / id from Rails private route
             }
         }
     }

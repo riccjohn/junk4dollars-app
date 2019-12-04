@@ -1,3 +1,5 @@
+import Auth0
+
 public protocol Authentication {
     var loggedIn: Bool { get }
     func logOut(_ callback: @escaping() -> Void)
