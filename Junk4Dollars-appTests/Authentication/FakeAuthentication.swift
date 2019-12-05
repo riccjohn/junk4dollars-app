@@ -8,8 +8,8 @@ class FakeAuthentication: Authentication {
         callback()
     }
 
-    func logIn(_ callback: @escaping (_ token: String) -> Void) {
+    func logIn(_ callback: @escaping () -> Void) {
         loggedIn = true
-        callback("foo")
+        callback()
     }
 }

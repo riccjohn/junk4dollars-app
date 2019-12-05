@@ -19,7 +19,7 @@ class Auth0Authentication: Authentication    {
         }
     }
 
-    public func logIn(_ callback: @escaping (_ token: String) -> Void) {
+    public func logIn(_ callback: @escaping () -> Void) {
         Auth0
             .webAuth()
             .scope("openid profile")
@@ -31,8 +31,21 @@ class Auth0Authentication: Authentication    {
                 case .success(let credentials):
                     self.credentialsManager.store(credentials: credentials)
                     self.loggedIn = true
-                    callback(credentials.accessToken!)
+                    callback()
                 }
         }
     }
+
+//    public func getAccessToken(_ callback: (_ token: String) -> Void) {
+//        credentialsManager.credentials { error, credentials in
+//            guard error == nil, let credentials = credentials else {
+//                print("ERROR!", error)
+//                return
+//            }
+//
+//            if let accessToken = credentials.accessToken {
+//                callback(accessToken)
+//            }
+//        }
+//    }
 }

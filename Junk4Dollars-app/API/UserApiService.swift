@@ -12,8 +12,8 @@ public class UserApiService {
         self.client = client
     }
 
-    public func getUserByToken(token: String, callback: @escaping((ApiCallResult<User>) -> Void)) {
-        let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/users/\(token)"
+    public func getMyUser(callback: @escaping((ApiCallResult<User>) -> Void)) {
+        let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/users/me"
         client.makeApiCall(endpoint: endpoint) {data, _, _ in
             if let data = data {
                 do {

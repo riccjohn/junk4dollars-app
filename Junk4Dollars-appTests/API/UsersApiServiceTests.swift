@@ -2,7 +2,7 @@ import XCTest
 import Junk4Dollars_app
 
 class UsersApiServiceTests: XCTestCase {
-    func testGetUserByToken_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
+    func testgetMyUser_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
         let client = FakeApiClient()
 
         let user: [String:Any] = [
@@ -15,7 +15,7 @@ class UsersApiServiceTests: XCTestCase {
         var isSuccess = false
         var actualUser: User?
 
-        UserApiService(client: client).getUserByToken(token: "foo") { apiCallResult in
+        UserApiService(client: client).getMyUser() { apiCallResult in
             switch apiCallResult {
                 case .success(let data):
                     isSuccess = true
@@ -30,14 +30,14 @@ class UsersApiServiceTests: XCTestCase {
         XCTAssertEqual("John", actualUser?.name)
     }
 
-    func testGetUserByToken_WhenApiClientReturns400WithNoData_TriggersCallbackWithErroro() {
+    func testgetMyUser_WhenApiClientReturns400WithNoData_TriggersCallbackWithErroro() {
         let client = FakeApiClient()
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 400, httpVersion: nil, headerFields: [:])
         let error: Error? = nil
         client.stub(data: nil, response: response, error: error)
         var isError = false
 
-        UserApiService(client: client).getUserByToken(token: "foo") { apiCallResult in
+        UserApiService(client: client).getMyUser() { apiCallResult in
             switch apiCallResult {
                 case .error:
                     isError = true
@@ -49,7 +49,7 @@ class UsersApiServiceTests: XCTestCase {
         XCTAssertTrue(isError)
     }
 
-    func testGetUserByToken_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
+    func testgetMyUser_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
         let client = FakeApiClient()
         let data = "Not found".data(using: .utf8)
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 404, httpVersion: nil, headerFields: [:])
@@ -57,7 +57,7 @@ class UsersApiServiceTests: XCTestCase {
         client.stub(data: data, response: response, error: error)
         var isError = false
 
-        UserApiService(client: client).getUserByToken(token: "foo") { apiCallResult in
+        UserApiService(client: client).getMyUser() { apiCallResult in
             switch apiCallResult {
                 case .error:
                     isError = true
@@ -69,14 +69,14 @@ class UsersApiServiceTests: XCTestCase {
         XCTAssertTrue(isError)
     }
 
-    func testGetUserByToken_WhenApiClientReturnsValidJsonMissingField_TriggersCallbackWithError() {
+    func testgetMyUser_WhenApiClientReturnsValidJsonMissingField_TriggersCallbackWithError() {
         let client = FakeApiClient()
         client.stub(responseAsJson: [[
             "id": 555
         ]])
         var isError = false
 
-        UserApiService(client: client).getUserByToken(token: "foo") { apiCallResult in
+        UserApiService(client: client).getMyUser() { apiCallResult in
             switch apiCallResult {
                 case .error:
                     isError = true
