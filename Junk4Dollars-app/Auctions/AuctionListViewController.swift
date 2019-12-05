@@ -3,6 +3,7 @@ import UIKit
 public class AuctionListViewController: UIViewController {
     @IBOutlet public var auctionTableView: UITableView!
     @IBOutlet public var logInOutButton: UIBarButtonItem!
+    @IBOutlet public var welcomeLabel: UILabel!
 
     public let auctionsDataSource = AuctionListTableViewDataSource()
 
@@ -10,6 +11,7 @@ public class AuctionListViewController: UIViewController {
 
     override public func viewDidLoad() {
         super.viewDidLoad()
+        self.welcomeLabel.text = ""
         auctionTableView.dataSource = auctionsDataSource
     }
 
@@ -21,10 +23,21 @@ public class AuctionListViewController: UIViewController {
         if(!authentication.loggedIn) {
             authentication.logIn() {
                 self.logInOutButton.title = "Log Out"
+                UserApiService().getMyUser() { response in
+                    switch response {
+                        case .success(let data):
+                            DispatchQueue.main.async {
+                                self.welcomeLabel.text = "Welcome, \(data.name)!"
+                            }
+                        default:
+                            print("uh oh")
+                    }
+                }
             }
         } else {
             authentication.logOut() {
                 self.logInOutButton.title = "Log In"
+                self.welcomeLabel.text = ""
             }
         }
     }

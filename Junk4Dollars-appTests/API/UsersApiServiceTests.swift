@@ -2,7 +2,7 @@ import XCTest
 import Junk4Dollars_app
 
 class UsersApiServiceTests: XCTestCase {
-    func testgetMyUser_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
+    func testGetMyUser_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
         let client = FakeApiClient()
 
         let user: [String:Any] = [
@@ -30,7 +30,7 @@ class UsersApiServiceTests: XCTestCase {
         XCTAssertEqual("John", actualUser?.name)
     }
 
-    func testgetMyUser_WhenApiClientReturns400WithNoData_TriggersCallbackWithErroro() {
+    func testGetMyUser_WhenApiClientReturns400WithNoData_TriggersCallbackWithErroro() {
         let client = FakeApiClient()
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 400, httpVersion: nil, headerFields: [:])
         let error: Error? = nil
@@ -49,7 +49,7 @@ class UsersApiServiceTests: XCTestCase {
         XCTAssertTrue(isError)
     }
 
-    func testgetMyUser_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
+    func testGetMyUser_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
         let client = FakeApiClient()
         let data = "Not found".data(using: .utf8)
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 404, httpVersion: nil, headerFields: [:])
@@ -69,7 +69,7 @@ class UsersApiServiceTests: XCTestCase {
         XCTAssertTrue(isError)
     }
 
-    func testgetMyUser_WhenApiClientReturnsValidJsonMissingField_TriggersCallbackWithError() {
+    func testGetMyUser_WhenApiClientReturnsValidJsonMissingField_TriggersCallbackWithError() {
         let client = FakeApiClient()
         client.stub(responseAsJson: [[
             "id": 555

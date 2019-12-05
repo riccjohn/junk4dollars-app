@@ -36,16 +36,16 @@ class Auth0Authentication: Authentication    {
         }
     }
 
-//    public func getAccessToken(_ callback: (_ token: String) -> Void) {
-//        credentialsManager.credentials { error, credentials in
-//            guard error == nil, let credentials = credentials else {
-//                print("ERROR!", error)
-//                return
-//            }
-//
-//            if let accessToken = credentials.accessToken {
-//                callback(accessToken)
-//            }
-//        }
-//    }
+    public func getAccessToken(_ callback: @escaping(_ accessToken: String) -> Void) {
+        credentialsManager.credentials { error, credentials in
+            guard error == nil else {
+                print(error)
+                return
+            }
+
+            if let accessToken = credentials?.accessToken {
+                callback(accessToken)
+            }
+        }
+    }
 }
