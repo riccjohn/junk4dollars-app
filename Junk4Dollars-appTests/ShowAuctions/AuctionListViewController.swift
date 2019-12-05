@@ -6,9 +6,8 @@ class AuctionListViewControllerTests: XCTestCase {
     var authentication = FakeAuthentication()
 
     func buildController() -> AuctionListViewController {
-        authentication = FakeAuthentication()
-        var controller: AuctionListViewController!
-        controller = AuctionListViewController(authentication: authentication)
+        AuthenticationDependencies.authentication = authentication
+        let controller: AuctionListViewController! = AuctionListViewController()
         controller.logInOutButton = UIBarButtonItem()
         let tableView = UITableView()
         controller.auctionTableView = tableView

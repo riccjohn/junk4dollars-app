@@ -6,16 +6,7 @@ public class AuctionListViewController: UIViewController {
 
     public let auctionsDataSource = AuctionListTableViewDataSource()
 
-    var authentication: Authentication = Auth0Authentication()
-
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-
-    public init(authentication: Authentication) {
-        super.init(nibName: nil, bundle: nil)
-        self.authentication = authentication
-    }
+    var authentication: Authentication = AuthenticationDependencies.authentication
 
     override public func viewDidLoad() {
         super.viewDidLoad()

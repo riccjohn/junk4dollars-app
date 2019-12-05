@@ -16,6 +16,7 @@
 		E96DC748239848CD00D60E49 /* ApiCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC747239848CD00D60E49 /* ApiCallResult.swift */; };
 		E96DC74B2398597500D60E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74A2398597500D60E49 /* User.swift */; };
 		E96DC74D23985A1100D60E49 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74C23985A1100D60E49 /* UserApiService.swift */; };
+		E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
@@ -66,6 +67,7 @@
 		E96DC747239848CD00D60E49 /* ApiCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallResult.swift; sourceTree = "<group>"; };
 		E96DC74A2398597500D60E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E96DC74C23985A1100D60E49 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
+		E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDependencies.swift; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -201,10 +203,10 @@
 		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXGroup;
 			children = (
-				E96DC7492398595A00D60E49 /* Users */,
-				E9EC1184239829DC000A8C8B /* Authentication */,
-				E9B8E56F2374BBD6001B9179 /* API */,
 				E9AA197C2373310A00136975 /* Auctions */,
+				E9B8E56F2374BBD6001B9179 /* API */,
+				E9EC1184239829DC000A8C8B /* Authentication */,
+				E96DC7492398595A00D60E49 /* Users */,
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
 				E9BA21012360D9D000127076 /* Main.storyboard */,
@@ -220,8 +222,8 @@
 		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
 			isa = PBXGroup;
 			children = (
-				E9EC118723982A6C000A8C8B /* Authentication */,
 				E9B8E5722374BFFA001B9179 /* API */,
+				E9EC118723982A6C000A8C8B /* Authentication */,
 				E9AA197D2373313E00136975 /* ShowAuctions */,
 				E9BA21172360D9D100127076 /* Info.plist */,
 				E9196C71238732D800FCC973 /* JsonHelper.swift */,
@@ -234,6 +236,7 @@
 			children = (
 				E9EC118523982A0C000A8C8B /* Authentication.swift */,
 				E9EC118A23982ABF000A8C8B /* Auth0Authentication.swift */,
+				E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
+				E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */,
 				E96DC748239848CD00D60E49 /* ApiCallResult.swift in Sources */,
 				E9EC118623982A0C000A8C8B /* Authentication.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
