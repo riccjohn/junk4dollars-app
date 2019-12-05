@@ -135,14 +135,14 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
-		E9AA197C2373310A00136975 /* ShowAuctions */ = {
+		E9AA197C2373310A00136975 /* Auctions */ = {
 			isa = PBXGroup;
 			children = (
 				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
 				E9AA197823732FA300136975 /* Auction.swift */,
 				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
 			);
-			path = ShowAuctions;
+			path = Auctions;
 			sourceTree = "<group>";
 		};
 		E9AA197D2373313E00136975 /* ShowAuctions */ = {
@@ -204,7 +204,7 @@
 				E96DC7492398595A00D60E49 /* Users */,
 				E9EC1184239829DC000A8C8B /* Authentication */,
 				E9B8E56F2374BBD6001B9179 /* API */,
-				E9AA197C2373310A00136975 /* ShowAuctions */,
+				E9AA197C2373310A00136975 /* Auctions */,
 				E9BA20FB2360D9D000127076 /* AppDelegate.swift */,
 				E9BA20FD2360D9D000127076 /* SceneDelegate.swift */,
 				E9BA21012360D9D000127076 /* Main.storyboard */,
