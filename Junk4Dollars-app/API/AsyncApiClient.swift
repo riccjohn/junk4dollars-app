@@ -6,6 +6,7 @@ public class AsyncApiClient: ApiClient {
             let url = URL(string: endpoint)!
             var request: URLRequest = URLRequest(url: url)
             request.addValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+            // inject URLSession.shared for testing
             let task = URLSession.shared.dataTask(with: request) {data, response, error in
                 if let error = error {
                     print("ERROR: \(error)")
