@@ -8,10 +8,11 @@ public class AuctionListViewController: UIViewController {
     public let auctionsDataSource = AuctionListTableViewDataSource()
 
     var authentication: Authentication = AuthenticationDependencies.authentication
+    var userApiService = ApiDependencies.userService
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-        self.welcomeLabel.text = ""
+        self.welcomeLabel?.text = ""
         auctionTableView.dataSource = auctionsDataSource
     }
 
@@ -22,22 +23,22 @@ public class AuctionListViewController: UIViewController {
     @IBAction public func logInOut(_ sender: UIBarButtonItem) {
         if(!authentication.loggedIn) {
             authentication.logIn() {
-                self.logInOutButton.title = "Log Out"
-                UserApiService().getMyUser() { response in
+                self.userApiService.getMyUser() { response in
                     switch response {
                         case .success(let data):
                             DispatchQueue.main.async {
+                                self.logInOutButton.title = "Log Out"
                                 self.welcomeLabel.text = "Welcome, \(data.name)!"
                             }
-                        default:
-                            print("uh oh")
+                        case .error(let message):
+                            print("ERROR: \(message)")
                     }
                 }
             }
         } else {
             authentication.logOut() {
                 self.logInOutButton.title = "Log In"
-                self.welcomeLabel.text = ""
+                self.welcomeLabel?.text = ""
             }
         }
     }

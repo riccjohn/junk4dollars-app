@@ -17,6 +17,7 @@
 		E96DC74B2398597500D60E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74A2398597500D60E49 /* User.swift */; };
 		E96DC74D23985A1100D60E49 /* UserApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74C23985A1100D60E49 /* UserApiService.swift */; };
 		E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */; };
+		E96DC755239AB74E00D60E49 /* ApiDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC754239AB74E00D60E49 /* ApiDependencies.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
@@ -68,6 +69,7 @@
 		E96DC74A2398597500D60E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E96DC74C23985A1100D60E49 /* UserApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApiService.swift; sourceTree = "<group>"; };
 		E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDependencies.swift; sourceTree = "<group>"; };
+		E96DC754239AB74E00D60E49 /* ApiDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDependencies.swift; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				E9196C6F238723C800FCC973 /* AsyncApiClient.swift */,
 				E96DC747239848CD00D60E49 /* ApiCallResult.swift */,
 				E96DC74C23985A1100D60E49 /* UserApiService.swift */,
+				E96DC754239AB74E00D60E49 /* ApiDependencies.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96DC74B2398597500D60E49 /* User.swift in Sources */,
+				E96DC755239AB74E00D60E49 /* ApiDependencies.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,

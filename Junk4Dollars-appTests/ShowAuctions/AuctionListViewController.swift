@@ -3,14 +3,19 @@ import UIKit
 import Junk4Dollars_app
 
 class AuctionListViewControllerTests: XCTestCase {
-    var authentication = FakeAuthentication()
+    var authentication: FakeAuthentication = FakeAuthentication()
+    var apiClient: FakeApiClient = FakeApiClient()
 
     func buildController() -> AuctionListViewController {
+        authentication = FakeAuthentication()
+        apiClient = FakeApiClient()
         AuthenticationDependencies.authentication = authentication
+        ApiDependencies.userService = UserApiService(client: apiClient)
         let controller: AuctionListViewController! = AuctionListViewController()
         controller.logInOutButton = UIBarButtonItem()
         let tableView = UITableView()
         controller.auctionTableView = tableView
+        controller.welcomeLabel = UILabel()
         return controller
     }
 
@@ -44,12 +49,34 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testLogInOut_whenLoggedOut_changesTitleTo_LogOut_and_logsUserIn() {
         let controller = buildController()
-        authentication.logOut() {}
+        apiClient.stub(responseAsJson: ["id": 1, "name": "John"])
 
+        authentication.logOut() {}
         controller.logInOut(controller.logInOutButton)
 
+        let expectation = XCTestExpectation()
+        DispatchQueue.main.async {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2.0)
         XCTAssertEqual(true, authentication.loggedIn)
         XCTAssertEqual("Log Out", controller.logInOutButton.title)
+    }
+
+    func testLogInOut_whenLoggedOut_LogsUserIn_andDisplaysWelcomeMessage() {
+        let controller = buildController()
+        apiClient.stub(responseAsJson: ["id": 1, "name": "John"])
+
+        authentication.logOut() {}
+        controller.logInOut(controller.logInOutButton)
+
+        let expectation = XCTestExpectation()
+        DispatchQueue.main.async {
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 2.0)
+        XCTAssertEqual(true, authentication.loggedIn)
+        XCTAssertEqual("Welcome, John!", controller.welcomeLabel?.text)
     }
 
     func testLogInOut_whenLoggedIn_changesTitleTo_LogIn_and_logsUserOut() {

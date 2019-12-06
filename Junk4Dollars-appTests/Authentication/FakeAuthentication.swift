@@ -12,4 +12,10 @@ class FakeAuthentication: Authentication {
         loggedIn = true
         callback()
     }
+
+    // TODO: Figure out what this functionality should be
+    func getAccessToken(_ callback: @escaping (String) -> Void) {
+        let accessToken = "ABC"
+        callback(accessToken)
+    }
 }

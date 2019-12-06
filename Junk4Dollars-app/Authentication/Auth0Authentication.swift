@@ -39,7 +39,7 @@ class Auth0Authentication: Authentication    {
     public func getAccessToken(_ callback: @escaping(_ accessToken: String) -> Void) {
         credentialsManager.credentials { error, credentials in
             guard error == nil else {
-                print(error)
+                print(error as Any)
                 return
             }
 
