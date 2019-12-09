@@ -8,7 +8,7 @@ public class AuctionListViewController: UIViewController {
     public let auctionsDataSource = AuctionListTableViewDataSource()
 
     var authentication: Authentication = AuthenticationDependencies.authentication
-    var userApiService = ApiDependencies.userService
+    var apiServices = ApiDependencies.apiServices
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,7 @@ public class AuctionListViewController: UIViewController {
     @IBAction public func logInOut(_ sender: UIBarButtonItem) {
         if(!authentication.loggedIn) {
             authentication.logIn() {
-                self.userApiService.getMyUser() { response in
+                self.apiServices.getMyUser() { response in
                     self.updateUiForLogIn(response: response)
                 }
             }
@@ -35,7 +35,7 @@ public class AuctionListViewController: UIViewController {
     }
 
     func loadAuctions() -> Void {
-        AuctionsApiService().getAllAuctions { result in
+        self.apiServices.getAllAuctions { result in
             switch result {
                 case .success(let auctions):
                     self.auctionsDataSource.setAuctions(auctions)

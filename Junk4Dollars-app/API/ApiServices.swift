@@ -1,6 +1,6 @@
 import Foundation
 
-public class AuctionsApiService {
+public class ApiServices {
     let client: ApiClient
 
     public convenience init() {
@@ -28,4 +28,19 @@ public class AuctionsApiService {
         }
     }
 
+    public func getMyUser(callback: @escaping((ApiCallResult<User>) -> Void)) {
+        let endpoint = "\(ApiEndpoints.apiEndpoint)/user/me"
+        client.makeAuthorizedApiCall(endpoint: endpoint) {data, _, _ in
+            if let data = data {
+                do {
+                    let user = try JSONDecoder().decode(User.self, from: data)
+                    callback(.success(data: user))
+                } catch {
+                    callback(.error(message: "Invalid JSON"))
+                }
+            } else {
+                callback(.error(message: "No data returned"))
+            }
+        }
+    }
 }

@@ -10,7 +10,7 @@ class AuctionListViewControllerTests: XCTestCase {
         authentication = FakeAuthentication()
         apiClient = FakeApiClient()
         AuthenticationDependencies.authentication = authentication
-        ApiDependencies.userService = UserApiService(client: apiClient)
+        ApiDependencies.apiServices = ApiServices(client: apiClient)
         let controller: AuctionListViewController! = AuctionListViewController()
         controller.logInOutButton = UIBarButtonItem()
         let tableView = UITableView()

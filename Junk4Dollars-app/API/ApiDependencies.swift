@@ -1,3 +1,3 @@
 public class ApiDependencies {
-    public static var userService = UserApiService()
+    public static var apiServices = ApiServices()
 }
