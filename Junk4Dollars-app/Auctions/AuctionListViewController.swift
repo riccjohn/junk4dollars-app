@@ -24,21 +24,12 @@ public class AuctionListViewController: UIViewController {
         if(!authentication.loggedIn) {
             authentication.logIn() {
                 self.userApiService.getMyUser() { response in
-                    switch response {
-                        case .success(let data):
-                            DispatchQueue.main.async {
-                                self.logInOutButton.title = "Log Out"
-                                self.welcomeLabel.text = "Welcome, \(data.name)!"
-                            }
-                        case .error(let message):
-                            print("ERROR: \(message)")
-                    }
+                    self.updateUiForLogIn(response: response)
                 }
             }
         } else {
             authentication.logOut() {
-                self.logInOutButton.title = "Log In"
-                self.welcomeLabel?.text = ""
+                self.updateUiForLogOut()
             }
         }
     }
@@ -56,4 +47,25 @@ public class AuctionListViewController: UIViewController {
             }
         }
     }
+
+    private
+
+    func updateUiForLogIn(response: ApiCallResult<User> ) -> Void {
+        switch response {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.logInOutButton.title = "Log Out"
+                    self.welcomeLabel.text = "Welcome, \(data.name)!"
+                }
+            case .error(let message):
+                print("An error occurred: \(message)")
+        }
+    }
+
+    func updateUiForLogOut() -> Void {
+        self.logInOutButton.title = "Log In"
+        self.welcomeLabel?.text = ""
+    }
+
+
 }

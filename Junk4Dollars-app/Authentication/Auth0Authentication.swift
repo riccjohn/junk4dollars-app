@@ -12,6 +12,7 @@ class Auth0Authentication: Authentication    {
             switch $0 {
                 case true:
                     self.loggedIn = false
+                    // self.credentialsManger.remove?
                     callback()
                 case false:
                    print("Error logging out")

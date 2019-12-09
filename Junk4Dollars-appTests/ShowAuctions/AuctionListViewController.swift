@@ -89,4 +89,8 @@ class AuctionListViewControllerTests: XCTestCase {
         XCTAssertEqual(false, authentication.loggedIn)
         XCTAssertEqual("Log In", controller.logInOutButton.title)
     }
+
+    // add assertion that logging out changes title
+
+    // add assertion that logging in with auth0 but getting a 401 from Rails does not log you in / does not change "logInOut" title
 }

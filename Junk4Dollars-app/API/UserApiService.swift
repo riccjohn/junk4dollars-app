@@ -20,7 +20,6 @@ public class UserApiService {
                     let user = try JSONDecoder().decode(User.self, from: data)
                     callback(.success(data: user))
                 } catch {
-                    print(data)
                     callback(.error(message: "Invalid JSON"))
                 }
             } else {
