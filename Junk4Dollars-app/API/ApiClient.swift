@@ -1,5 +1,6 @@
 import Foundation
 
 public protocol ApiClient {
-    func makeApiCall(endpoint: String, authorized: Bool, whatToDoWithResponseData: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func makePublicApiCall(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void)
+    func makeAuthorizedApiCall(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void)
 }

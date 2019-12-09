@@ -1,15 +1,14 @@
 import Foundation
 
 public class AsyncApiClient: ApiClient {
-    public func makeApiCall(endpoint: String, authorized: Bool = false, whatToDoWithResponseData: @escaping (Data?, URLResponse?, Error?) -> Void) {
-        if(authorized) {
-            AuthenticationDependencies.authentication.getAccessToken() { accessToken in
-                let task = self.createURLSessionDataTask(endpoint: endpoint, accessToken: accessToken, callback: whatToDoWithResponseData)
+    public func makePublicApiCall(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        let task = self.createURLSessionDataTask(endpoint: endpoint, accessToken: nil, callback: callback)
+        task.resume()
+    }
 
-                task.resume()
-            }
-        } else {
-            let task = createURLSessionDataTask(endpoint: endpoint, accessToken: nil, callback: whatToDoWithResponseData)
+    public func makeAuthorizedApiCall(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
+        AuthenticationDependencies.authentication.getAccessToken() { accessToken in
+            let task = self.createURLSessionDataTask(endpoint: endpoint, accessToken: accessToken, callback: callback)
             task.resume()
         }
     }

@@ -14,7 +14,7 @@ public class AuctionsApiService {
 
     public func getAllAuctions(callback: @escaping ((ApiCallResult<[Auction]>) -> Void)) {
         let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions"
-        client.makeApiCall(endpoint: endpoint, authorized: false) {data, _, _ in
+        client.makePublicApiCall(endpoint: endpoint) {data, _, _ in
             if let data = data {
                 do {
                     let auctions = try JSONDecoder().decode([Auction].self, from: data)

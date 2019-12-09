@@ -14,7 +14,7 @@ public class UserApiService {
 
     public func getMyUser(callback: @escaping((ApiCallResult<User>) -> Void)) {
         let endpoint = "\(ApiEndpoints.apiEndpoint)/user/me"
-        client.makeApiCall(endpoint: endpoint, authorized: true) {data, _, _ in
+        client.makeAuthorizedApiCall(endpoint: endpoint) {data, _, _ in
             if let data = data {
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
