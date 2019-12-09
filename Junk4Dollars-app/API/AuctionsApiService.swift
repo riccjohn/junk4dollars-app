@@ -13,7 +13,7 @@ public class AuctionsApiService {
     }
 
     public func getAllAuctions(callback: @escaping ((ApiCallResult<[Auction]>) -> Void)) {
-        let endpoint = "http://ec2-52-24-38-188.us-west-2.compute.amazonaws.com:3000/auctions"
+        let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions"
         client.makeApiCall(endpoint: endpoint, authorized: false) {data, _, _ in
             if let data = data {
                 do {

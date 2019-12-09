@@ -13,7 +13,7 @@ public class UserApiService {
     }
 
     public func getMyUser(callback: @escaping((ApiCallResult<User>) -> Void)) {
-        let endpoint = "http://localhost:3000/user/me"
+        let endpoint = "\(ApiEndpoints.apiEndpoint)/user/me"
         client.makeApiCall(endpoint: endpoint, authorized: true) {data, _, _ in
             if let data = data {
                 do {

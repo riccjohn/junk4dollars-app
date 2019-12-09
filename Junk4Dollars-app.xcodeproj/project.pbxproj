@@ -37,6 +37,7 @@
 		E9EC118623982A0C000A8C8B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118523982A0C000A8C8B /* Authentication.swift */; };
 		E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118823982A7C000A8C8B /* FakeAuthentication.swift */; };
 		E9EC118B23982ABF000A8C8B /* Auth0Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118A23982ABF000A8C8B /* Auth0Authentication.swift */; };
+		E9FEC19E239EDF1D00A26881 /* Endpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FEC19D239EDF1D00A26881 /* Endpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		E9EC118523982A0C000A8C8B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E9EC118823982A7C000A8C8B /* FakeAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthentication.swift; sourceTree = "<group>"; };
 		E9EC118A23982ABF000A8C8B /* Auth0Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth0Authentication.swift; sourceTree = "<group>"; };
+		E9FEC19D239EDF1D00A26881 /* Endpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 				E9BA210C2360D9D100127076 /* Info.plist */,
 				E9BA21042360D9D000127076 /* Junk4Dollars_app.xcdatamodeld */,
 				E9B6459D2398219200558BE6 /* Auth0.plist */,
+				E9FEC19D239EDF1D00A26881 /* Endpoints.swift */,
 			);
 			path = "Junk4Dollars-app";
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 			files = (
 				E96DC74B2398597500D60E49 /* User.swift in Sources */,
 				E96DC755239AB74E00D60E49 /* ApiDependencies.swift in Sources */,
+				E9FEC19E239EDF1D00A26881 /* Endpoints.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9B8E5712374BBF2001B9179 /* AuctionsApiService.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
