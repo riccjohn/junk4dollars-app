@@ -14,7 +14,7 @@ public class ApiServices {
 
     public func getAllAuctions(callback: @escaping ((ApiCallResult<[Auction]>) -> Void)) {
         let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions"
-        client.getPublicDataFromApi(endpoint: endpoint) {data, _, _ in
+        client.makeApiCall(endpoint: endpoint, authenticated: false, data: nil) {data, _, _ in
             if let data = data {
                 do {
                     let auctions = try JSONDecoder().decode([Auction].self, from: data)
@@ -30,7 +30,7 @@ public class ApiServices {
 
     public func getMyUser(callback: @escaping((ApiCallResult<User>) -> Void)) {
         let endpoint = "\(ApiEndpoints.apiEndpoint)/user/me"
-        client.getSecureDataFromApi(endpoint: endpoint) {data, _, _ in
+        client.makeApiCall(endpoint: endpoint, authenticated: true, data: nil) {data, _, _ in
             if let data = data {
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
