@@ -32,11 +32,11 @@ public class FakeApiClient: ApiClient {
         self.error = error
     }
 
-    public func makeAuthorizedApiCall(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    public func getPublicDataFromApi(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
         callback(self.data, self.response, self.error)
     }
 
-    public func makePublicApiCall(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
+    public func getSecureDataFromApi(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
         callback(self.data, self.response, self.error)
     }
 }
