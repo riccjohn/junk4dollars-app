@@ -90,7 +90,22 @@ class AuctionListViewControllerTests: XCTestCase {
         XCTAssertEqual("Log In", controller.logInOutButton.title)
     }
 
-    // add assertion that logging out changes title
+    func testLogInOut_whenLoggedIn_resetsWelcomeMessage() {
+        let controller = buildController()
+        apiClient.stub(responseAsJson: ["id": 1, "name": "John"])
+        authentication.logIn() {
 
-    // add assertion that logging in with auth0 but getting a 401 from Rails does not log you in / does not change "logInOut" title
+        }
+        controller.logInOut(controller.logInOutButton)
+
+        let expectation = XCTestExpectation()
+        DispatchQueue.main.async {
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 2.0)
+
+        XCTAssertEqual(false, authentication.loggedIn)
+        XCTAssertEqual("", controller.welcomeLabel?.text)
+    }
 }
