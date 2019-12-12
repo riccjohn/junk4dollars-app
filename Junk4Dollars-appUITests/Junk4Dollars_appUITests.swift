@@ -14,7 +14,7 @@ class Junk4Dollars_appUITests: XCTestCase {
         super.tearDown()
     }
 
-// Can't test this until I can control what the mock api data is 
+// TODO: Figure out how to stub data in FakeApiClient before the UI tests run
 
 //    func testTableCellsExist() {
 //        let tablesQuery = XCUIApplication().tables
