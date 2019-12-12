@@ -5,7 +5,6 @@ public class AsyncHttpClient: HttpClient {
 
     public func makeHttpCall(httpRequest: HttpRequest, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
         let method = httpRequest.httpMethod
-        let data = httpRequest.data
         let endpoint = httpRequest.endpoint
         let authenticated = httpRequest.authenticated
 
