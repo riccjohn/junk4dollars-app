@@ -1,20 +1,23 @@
 import Foundation
 
 public class ApiServices {
-    let client: ApiClient
+    let client: HttpClient
 
     public convenience init() {
-        let client = AsyncApiClient()
+        let client = AsyncHttpClient()
         self.init(client: client)
     }
 
-    public init(client: ApiClient) {
+    public init(client: HttpClient) {
         self.client = client
     }
 
-    public func getAllAuctions(callback: @escaping ((ApiCallResult<[Auction]>) -> Void)) {
+    public func getAllAuctions(callback: @escaping ((HttpCallResult<[Auction]>) -> Void)) {
         let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions"
-        client.makeApiCall(endpoint: endpoint, authenticated: false, data: nil) {data, _, _ in
+
+        let request = HttpRequest(httpMethod: .get, endpoint: endpoint, authenticated: false, data: nil)
+
+        client.makeHttpCall(httpRequest: request) {data, _, _ in
             if let data = data {
                 do {
                     let auctions = try JSONDecoder().decode([Auction].self, from: data)
@@ -28,9 +31,11 @@ public class ApiServices {
         }
     }
 
-    public func getMyUser(callback: @escaping((ApiCallResult<User>) -> Void)) {
+    public func getMyUser(callback: @escaping((HttpCallResult<User>) -> Void)) {
         let endpoint = "\(ApiEndpoints.apiEndpoint)/user/me"
-        client.makeApiCall(endpoint: endpoint, authenticated: true, data: nil) {data, _, _ in
+        let request = HttpRequest(httpMethod: .get, endpoint: endpoint, authenticated: true, data: nil)
+
+        client.makeHttpCall(httpRequest: request) {data, _, _ in
             if let data = data {
                 do {
                     let user = try JSONDecoder().decode(User.self, from: data)
@@ -42,5 +47,6 @@ public class ApiServices {
                 callback(.error(message: "No data returned"))
             }
         }
+
     }
 }

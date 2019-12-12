@@ -4,11 +4,11 @@ import Junk4Dollars_app
 
 class AuctionListViewControllerTests: XCTestCase {
     var authentication: FakeAuthentication = FakeAuthentication()
-    var apiClient: FakeApiClient = FakeApiClient()
+    var apiClient: FakeHttpClient = FakeHttpClient()
 
     func buildController() -> AuctionListViewController {
         authentication = FakeAuthentication()
-        apiClient = FakeApiClient()
+        apiClient = FakeHttpClient()
         AuthenticationDependencies.authentication = authentication
         ApiDependencies.apiServices = ApiServices(client: apiClient)
         let controller: AuctionListViewController! = AuctionListViewController()

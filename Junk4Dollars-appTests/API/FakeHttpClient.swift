@@ -1,7 +1,7 @@
 import Foundation
 import Junk4Dollars_app
 
-public class FakeApiClient: ApiClient {
+public class FakeHttpClient: HttpClient {
     var data: Data?
     var response: URLResponse?
     var error: Error?
@@ -32,15 +32,7 @@ public class FakeApiClient: ApiClient {
         self.error = error
     }
 
-//    public func getPublicDataFromApi(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
-//        callback(self.data, self.response, self.error)
-//    }
-//
-//    public func getSecureDataFromApi(endpoint: String, callback: @escaping (Data?, URLResponse?, Error?) -> Void) {
-//        callback(self.data, self.response, self.error)
-//    }
-
-    public func makeApiCall(endpoint: String, authenticated: Bool, data: Data?, callback: @escaping(Data?, URLResponse?, Error?) -> Void) {
+    public func makeHttpCall(httpRequest: HttpRequest, callback: @escaping(Data?, URLResponse?, Error?) -> Void) {
         callback(self.data, self.response, self.error)
     }
 }

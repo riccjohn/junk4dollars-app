@@ -3,7 +3,7 @@ import Junk4Dollars_app
 
 class ApiServicesTests: XCTestCase {
     func testGetAllAuctions_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
-           let client = FakeApiClient()
+           let client = FakeHttpClient()
            client.stub(responseAsJson: [[
                "id": 555,
                "title": "Throne of Eldraine Booster Box",
@@ -33,7 +33,7 @@ class ApiServicesTests: XCTestCase {
        }
 
        func testGetAllAuctions_WhenApiClientReturns400WithNoData_TriggersCallbackWithError() {
-           let client = FakeApiClient()
+           let client = FakeHttpClient()
            let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 400, httpVersion: nil, headerFields: [:])
            let error: Error? = nil
            client.stub(data: nil, response: response, error: error)
@@ -52,7 +52,7 @@ class ApiServicesTests: XCTestCase {
        }
 
        func testGetAuctions_WhenApiClientReturns404WithInvalidJson_TriggersCallbackWithError() {
-           let client = FakeApiClient()
+           let client = FakeHttpClient()
            let data = "Not found".data(using: .utf8)
            let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 404, httpVersion: nil, headerFields: [:])
            let error: Error? = nil
@@ -72,7 +72,7 @@ class ApiServicesTests: XCTestCase {
        }
 
        func testGetAllAuctions_WhenApiClientReturnsValidJsonMissingField_TriggersCallbackWithError() {
-           let client = FakeApiClient()
+           let client = FakeHttpClient()
            client.stub(responseAsJson: [[
                "id": 555
            ]])
@@ -91,7 +91,7 @@ class ApiServicesTests: XCTestCase {
        }
 
     func testGetMyUser_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
-        let client = FakeApiClient()
+        let client = FakeHttpClient()
 
         let user: [String:Any] = [
             "id": 1,
@@ -119,7 +119,7 @@ class ApiServicesTests: XCTestCase {
     }
 
     func testGetMyUser_WhenApiClientReturns400WithNoData_TriggersCallbackWithErroro() {
-        let client = FakeApiClient()
+        let client = FakeHttpClient()
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 400, httpVersion: nil, headerFields: [:])
         let error: Error? = nil
         client.stub(data: nil, response: response, error: error)
@@ -138,7 +138,7 @@ class ApiServicesTests: XCTestCase {
     }
 
     func testGetMyUser_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
-        let client = FakeApiClient()
+        let client = FakeHttpClient()
         let data = "Not found".data(using: .utf8)
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 404, httpVersion: nil, headerFields: [:])
         let error: Error? = nil
@@ -158,7 +158,7 @@ class ApiServicesTests: XCTestCase {
     }
 
     func testGetMyUser_WhenApiClientReturnsValidJsonMissingField_TriggersCallbackWithError() {
-        let client = FakeApiClient()
+        let client = FakeHttpClient()
         client.stub(responseAsJson: [[
             "id": 555
         ]])

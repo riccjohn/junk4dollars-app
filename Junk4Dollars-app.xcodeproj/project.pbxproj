@@ -8,18 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; platformFilter = ios; };
-		E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */; platformFilter = ios; };
-		E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncApiClient.swift */; };
+		E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */; platformFilter = ios; };
+		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
 		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; platformFilter = ios; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; platformFilter = ios; };
-		E96DC748239848CD00D60E49 /* ApiCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC747239848CD00D60E49 /* ApiCallResult.swift */; };
+		E96DC748239848CD00D60E49 /* HttpCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC747239848CD00D60E49 /* HttpCallResult.swift */; };
 		E96DC74B2398597500D60E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74A2398597500D60E49 /* User.swift */; };
 		E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */; };
 		E96DC755239AB74E00D60E49 /* ApiDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC754239AB74E00D60E49 /* ApiDependencies.swift */; };
 		E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA1974237329D600136975 /* AuctionListViewController.swift */; };
 		E9AA197923732FA300136975 /* Auction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197823732FA300136975 /* Auction.swift */; };
 		E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */; };
-		E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC788B237C510D00AFD98E /* ApiClient.swift */; };
+		E9AC788C237C510D00AFD98E /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AC788B237C510D00AFD98E /* HttpClient.swift */; };
 		E9B6459A23980A4A00558BE6 /* Auth0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B6459823980A4A00558BE6 /* Auth0.framework */; };
 		E9B6459B23980A4A00558BE6 /* SimpleKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9B6459923980A4A00558BE6 /* SimpleKeychain.framework */; };
 		E9B6459E2398219200558BE6 /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9B6459D2398219200558BE6 /* Auth0.plist */; };
@@ -31,6 +31,9 @@
 		E9BA210B2360D9D100127076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9BA21092360D9D100127076 /* LaunchScreen.storyboard */; };
 		E9C62326239EF61B0036304C /* ApiServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C62325239EF61B0036304C /* ApiServices.swift */; };
 		E9C62328239EF6450036304C /* ApiServicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C62327239EF6450036304C /* ApiServicesTests.swift */; };
+		E9E4FAC323A2920F00B58015 /* HttpRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAC223A2920F00B58015 /* HttpRequestTests.swift */; };
+		E9E4FAC523A294E200B58015 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAC423A294E200B58015 /* HttpRequest.swift */; };
+		E9E4FAC723A2A12000B58015 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAC623A2A12000B58015 /* HttpMethod.swift */; };
 		E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */; platformFilter = ios; };
 		E9EC118623982A0C000A8C8B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118523982A0C000A8C8B /* Authentication.swift */; };
 		E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118823982A7C000A8C8B /* FakeAuthentication.swift */; };
@@ -57,20 +60,20 @@
 
 /* Begin PBXFileReference section */
 		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
-		E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeApiClient.swift; sourceTree = "<group>"; };
-		E9196C6F238723C800FCC973 /* AsyncApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncApiClient.swift; sourceTree = "<group>"; };
+		E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
+		E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
 		E9196C71238732D800FCC973 /* JsonHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonHelper.swift; sourceTree = "<group>"; };
 		E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E96DC747239848CD00D60E49 /* ApiCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCallResult.swift; sourceTree = "<group>"; };
+		E96DC747239848CD00D60E49 /* HttpCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpCallResult.swift; sourceTree = "<group>"; };
 		E96DC74A2398597500D60E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDependencies.swift; sourceTree = "<group>"; };
 		E96DC754239AB74E00D60E49 /* ApiDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDependencies.swift; sourceTree = "<group>"; };
 		E9AA1974237329D600136975 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9AA197823732FA300136975 /* Auction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auction.swift; sourceTree = "<group>"; };
 		E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSource.swift; sourceTree = "<group>"; };
-		E9AC788B237C510D00AFD98E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		E9AC788B237C510D00AFD98E /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		E9B6459823980A4A00558BE6 /* Auth0.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Auth0.framework; path = Carthage/Build/iOS/Auth0.framework; sourceTree = "<group>"; };
 		E9B6459923980A4A00558BE6 /* SimpleKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SimpleKeychain.framework; path = Carthage/Build/iOS/SimpleKeychain.framework; sourceTree = "<group>"; };
 		E9B6459D2398219200558BE6 /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
@@ -86,6 +89,9 @@
 		E9BA21172360D9D100127076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9C62325239EF61B0036304C /* ApiServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServices.swift; sourceTree = "<group>"; };
 		E9C62327239EF6450036304C /* ApiServicesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiServicesTests.swift; sourceTree = "<group>"; };
+		E9E4FAC223A2920F00B58015 /* HttpRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestTests.swift; sourceTree = "<group>"; };
+		E9E4FAC423A294E200B58015 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		E9E4FAC623A2A12000B58015 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		E9EC118523982A0C000A8C8B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E9EC118823982A7C000A8C8B /* FakeAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthentication.swift; sourceTree = "<group>"; };
@@ -159,11 +165,13 @@
 		E9B8E56F2374BBD6001B9179 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E9AC788B237C510D00AFD98E /* ApiClient.swift */,
-				E9196C6F238723C800FCC973 /* AsyncApiClient.swift */,
-				E96DC747239848CD00D60E49 /* ApiCallResult.swift */,
+				E9AC788B237C510D00AFD98E /* HttpClient.swift */,
+				E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */,
+				E96DC747239848CD00D60E49 /* HttpCallResult.swift */,
 				E96DC754239AB74E00D60E49 /* ApiDependencies.swift */,
 				E9C62325239EF61B0036304C /* ApiServices.swift */,
+				E9E4FAC423A294E200B58015 /* HttpRequest.swift */,
+				E9E4FAC623A2A12000B58015 /* HttpMethod.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -171,8 +179,9 @@
 		E9B8E5722374BFFA001B9179 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				E9196C6B23871E4B00FCC973 /* FakeApiClient.swift */,
+				E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */,
 				E9C62327239EF6450036304C /* ApiServicesTests.swift */,
+				E9E4FAC223A2920F00B58015 /* HttpRequestTests.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -416,17 +425,19 @@
 				E96DC755239AB74E00D60E49 /* ApiDependencies.swift in Sources */,
 				E9FEC19E239EDF1D00A26881 /* Endpoints.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
+				E9E4FAC723A2A12000B58015 /* HttpMethod.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
 				E9C62326239EF61B0036304C /* ApiServices.swift in Sources */,
 				E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */,
-				E96DC748239848CD00D60E49 /* ApiCallResult.swift in Sources */,
+				E96DC748239848CD00D60E49 /* HttpCallResult.swift in Sources */,
 				E9EC118623982A0C000A8C8B /* Authentication.swift in Sources */,
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
-				E9AC788C237C510D00AFD98E /* ApiClient.swift in Sources */,
+				E9AC788C237C510D00AFD98E /* HttpClient.swift in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
 				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
-				E9196C70238723C800FCC973 /* AsyncApiClient.swift in Sources */,
+				E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
+				E9E4FAC523A294E200B58015 /* HttpRequest.swift in Sources */,
 				E9EC118B23982ABF000A8C8B /* Auth0Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,10 +447,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */,
-				E9196C6C23871E4B00FCC973 /* FakeApiClient.swift in Sources */,
+				E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */,
 				E9C62328239EF6450036304C /* ApiServicesTests.swift in Sources */,
 				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,
+				E9E4FAC323A2920F00B58015 /* HttpRequestTests.swift in Sources */,
 				E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

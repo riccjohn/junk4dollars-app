@@ -50,7 +50,7 @@ public class AuctionListViewController: UIViewController {
 
     private
 
-    func updateUiForLogIn(response: ApiCallResult<User> ) -> Void {
+    func updateUiForLogIn(response: HttpCallResult<User> ) -> Void {
         switch response {
             case .success(let data):
                 DispatchQueue.main.async {
