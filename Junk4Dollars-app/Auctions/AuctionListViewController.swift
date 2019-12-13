@@ -19,7 +19,7 @@ public class AuctionListViewController: UIViewController, AuctionListView {
     }
 
     public override func viewWillAppear(_ animated: Bool) {
-        loadAuctions()
+        self.presenter?.loadAuctions()
     }
 
     @IBAction public func logInOut(_ sender: UIBarButtonItem) {
@@ -36,15 +36,11 @@ public class AuctionListViewController: UIViewController, AuctionListView {
         }
     }
 
-    public func refreshAuctions(_ auctions: [Auction]) -> Void {
+    public func refresh(auctions: [Auction]) -> Void {
         self.auctionsDataSource.setAuctions(auctions)
         DispatchQueue.main.async {
             self.auctionTableView.reloadData()
         }
-    }
-
-    func loadAuctions() -> Void {
-        self.presenter?.loadAuctions()
     }
 
     private

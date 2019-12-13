@@ -35,11 +35,10 @@ class AuctionListPresenterTests: XCTestCase {
         AuthenticationDependencies.authentication = FakeAuthentication()
         let fakeClient = createClientWithAuctions()
         ApiDependencies.apiServices = ApiServices(client: fakeClient)
-        let viewController = AuctionListViewController()
-        viewController.auctionTableView = UITableView()
+        let viewController = FakeAuctionListViewController()
         let presenter = AuctionListPresenter(view: viewController)
 
         presenter.loadAuctions()
-        XCTAssertEqual(self.fakeAuctions.count, viewController.auctionsDataSource.auctions.count)
+        XCTAssertEqual(self.fakeAuctions.count, viewController.auctions.count)
     }
 }

@@ -1,4 +1,4 @@
 import UIKit
-public protocol AuctionListView: UIViewController {
-    func refreshAuctions(_ auctions: [Auction]) -> Void
+public protocol AuctionListView {
+    func refresh(auctions: [Auction]) -> Void
 }

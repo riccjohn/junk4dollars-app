@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */; };
 		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; platformFilter = ios; };
 		E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */; platformFilter = ios; };
 		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuctionListViewController.swift; sourceTree = "<group>"; };
 		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
 		E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 				E9E4FAD423A2F37B00B58015 /* AuctionListPresenterTests.swift */,
 				E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */,
 				E910118D2373541F00018D22 /* AuctionListViewController.swift */,
+				E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */,
 			);
 			path = Auctions;
 			sourceTree = "<group>";
@@ -458,6 +461,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */,
+				E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */,
 				E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */,
 				E9C62328239EF6450036304C /* ApiServicesTests.swift in Sources */,
 				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,

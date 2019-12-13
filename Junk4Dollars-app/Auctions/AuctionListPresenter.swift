@@ -10,7 +10,7 @@ public class AuctionListPresenter {
         self.apiServices.getAllAuctions { result in
             switch result {
                 case .success(let auctions):
-                    self.view.refreshAuctions(auctions)
+                    self.view.refresh(auctions: auctions)
                 case .error(let message):
                     print("An error  occurred: \(message)")
             }
