@@ -39,4 +39,20 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
 
         XCTAssertEqual(auctions[0].title, titleOfFirstCell.textLabel?.text)
     }
+
+    func testAuctionFor_returnsAuctionId_givenAnIndexPath() {
+        let auctions = [
+            Auction(identifier: 111, title: "Throne of Eldraine Booster Box"),
+            Auction(identifier: 222, title: "M20 Booster Box")
+        ]
+        
+        let dataSource = AuctionListTableViewDataSource()
+        dataSource.auctions = auctions
+
+        let auctionOne = dataSource.auctionFor(indexPath: [0, 0])
+        let auctionTwo = dataSource.auctionFor(indexPath: [0, 1])
+
+        XCTAssertEqual(auctions[0].identifier, auctionOne.identifier)
+        XCTAssertEqual(auctions[1].identifier, auctionTwo.identifier)
+    }
 }

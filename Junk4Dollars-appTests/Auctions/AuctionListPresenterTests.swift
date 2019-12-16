@@ -20,8 +20,7 @@ class AuctionListPresenterTests: XCTestCase {
             "ends_at": "2019-11-01T20:35:21.000Z",
             "created_at": "2019-11-18T20:25:58.247Z",
             "updated_at": "2019-11-18T20:25:58.247Z"
-        ],
-
+        ]
     ]
 
     func createClientWithAuctions() -> HttpClient {
