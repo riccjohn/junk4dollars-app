@@ -45,7 +45,7 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
     }
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void {
-        let auction = self.auctionsDataSource.auctionFor(indexPath: indexPath) { id in
+        self.auctionsDataSource.auctionFor(indexPath: indexPath) { id in
             print("ROW => \(indexPath.row) ID =>", id)
         }
     }
