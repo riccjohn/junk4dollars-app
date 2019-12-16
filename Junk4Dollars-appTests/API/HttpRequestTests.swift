@@ -16,15 +16,4 @@ class HttpRequestTests: XCTestCase {
         let request = HttpRequest(httpMethod: .get, endpoint: "foo", authenticated: false)
         XCTAssertEqual(false, request.authenticated)
     }
-
-//    func test_ifGivenData_whenHttpRequestCreated_returnsData() {
-//        let uploadData = Data()
-//        let request = HttpRequest(httpMethod: .get, endpoint: "foo", authenticated: false, data: uploadData)
-//        XCTAssertEqual(uploadData, request.data)
-//    }
-
-//    func test_ifNotGivenData_whenHttpRequestCreated_returnsNil() {
-//        let request = HttpRequest(httpMethod: .get, endpoint: "foo", authenticated: false)
-//        XCTAssertEqual(nil, request.data)
-//    }
 }

@@ -1,11 +1,12 @@
 import UIKit
 
-public class AuctionListViewController: UIViewController {
+public class AuctionListViewController: UIViewController, AuctionListView {
     @IBOutlet public var auctionTableView: UITableView!
     @IBOutlet public var logInOutButton: UIBarButtonItem!
     @IBOutlet public var welcomeLabel: UILabel!
 
     public let auctionsDataSource = AuctionListTableViewDataSource()
+    var presenter: AuctionListPresenter?
 
     var authentication: Authentication = AuthenticationDependencies.authentication
     var apiServices = ApiDependencies.apiServices
@@ -14,10 +15,11 @@ public class AuctionListViewController: UIViewController {
         super.viewDidLoad()
         self.welcomeLabel?.text = ""
         auctionTableView.dataSource = auctionsDataSource
+        self.presenter = AuctionListPresenter(view: self)
     }
 
     public override func viewWillAppear(_ animated: Bool) {
-        loadAuctions()
+        self.presenter?.loadAuctions()
     }
 
     @IBAction public func logInOut(_ sender: UIBarButtonItem) {
@@ -34,17 +36,10 @@ public class AuctionListViewController: UIViewController {
         }
     }
 
-    func loadAuctions() -> Void {
-        self.apiServices.getAllAuctions { result in
-            switch result {
-                case .success(let auctions):
-                    self.auctionsDataSource.setAuctions(auctions)
-                    DispatchQueue.main.async {
-                       self.auctionTableView.reloadData()
-                    }
-                case .error(let message):
-                    print("An error occurred: \(message)")
-            }
+    public func refresh(auctions: [Auction]) -> Void {
+        self.auctionsDataSource.setAuctions(auctions)
+        DispatchQueue.main.async {
+            self.auctionTableView.reloadData()
         }
     }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */; };
 		E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewController.swift */; platformFilter = ios; };
 		E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */; platformFilter = ios; };
 		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
@@ -34,6 +35,9 @@
 		E9E4FAC323A2920F00B58015 /* HttpRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAC223A2920F00B58015 /* HttpRequestTests.swift */; };
 		E9E4FAC523A294E200B58015 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAC423A294E200B58015 /* HttpRequest.swift */; };
 		E9E4FAC723A2A12000B58015 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAC623A2A12000B58015 /* HttpMethod.swift */; };
+		E9E4FAD323A2F36600B58015 /* AuctionListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAD223A2F36600B58015 /* AuctionListPresenter.swift */; };
+		E9E4FAD623A2F3CF00B58015 /* AuctionListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAD423A2F37B00B58015 /* AuctionListPresenterTests.swift */; };
+		E9E4FAD823A3E79D00B58015 /* AuctionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E4FAD723A3E79D00B58015 /* AuctionListView.swift */; };
 		E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */; platformFilter = ios; };
 		E9EC118623982A0C000A8C8B /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118523982A0C000A8C8B /* Authentication.swift */; };
 		E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EC118823982A7C000A8C8B /* FakeAuthentication.swift */; };
@@ -59,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuctionListViewController.swift; sourceTree = "<group>"; };
 		E910118D2373541F00018D22 /* AuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewController.swift; sourceTree = "<group>"; };
 		E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
 		E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
@@ -92,6 +97,9 @@
 		E9E4FAC223A2920F00B58015 /* HttpRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequestTests.swift; sourceTree = "<group>"; };
 		E9E4FAC423A294E200B58015 /* HttpRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		E9E4FAC623A2A12000B58015 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		E9E4FAD223A2F36600B58015 /* AuctionListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListPresenter.swift; sourceTree = "<group>"; };
+		E9E4FAD423A2F37B00B58015 /* AuctionListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListPresenterTests.swift; sourceTree = "<group>"; };
+		E9E4FAD723A3E79D00B58015 /* AuctionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListView.swift; sourceTree = "<group>"; };
 		E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuctionListTableViewDataSourceTests.swift; sourceTree = "<group>"; };
 		E9EC118523982A0C000A8C8B /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		E9EC118823982A7C000A8C8B /* FakeAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuthentication.swift; sourceTree = "<group>"; };
@@ -149,17 +157,21 @@
 				E9AA1974237329D600136975 /* AuctionListViewController.swift */,
 				E9AA197823732FA300136975 /* Auction.swift */,
 				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
+				E9E4FAD223A2F36600B58015 /* AuctionListPresenter.swift */,
+				E9E4FAD723A3E79D00B58015 /* AuctionListView.swift */,
 			);
 			path = Auctions;
 			sourceTree = "<group>";
 		};
-		E9AA197D2373313E00136975 /* ShowAuctions */ = {
+		E9AA197D2373313E00136975 /* Auctions */ = {
 			isa = PBXGroup;
 			children = (
+				E9E4FAD423A2F37B00B58015 /* AuctionListPresenterTests.swift */,
 				E9E9A84B23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift */,
 				E910118D2373541F00018D22 /* AuctionListViewController.swift */,
+				E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */,
 			);
-			path = ShowAuctions;
+			path = Auctions;
 			sourceTree = "<group>";
 		};
 		E9B8E56F2374BBD6001B9179 /* API */ = {
@@ -233,7 +245,7 @@
 			children = (
 				E9B8E5722374BFFA001B9179 /* API */,
 				E9EC118723982A6C000A8C8B /* Authentication */,
-				E9AA197D2373313E00136975 /* ShowAuctions */,
+				E9AA197D2373313E00136975 /* Auctions */,
 				E9BA21172360D9D100127076 /* Info.plist */,
 				E9196C71238732D800FCC973 /* JsonHelper.swift */,
 			);
@@ -434,10 +446,12 @@
 				E9BA21062360D9D000127076 /* Junk4Dollars_app.xcdatamodeld in Sources */,
 				E9AC788C237C510D00AFD98E /* HttpClient.swift in Sources */,
 				E9AA197923732FA300136975 /* Auction.swift in Sources */,
+				E9E4FAD323A2F36600B58015 /* AuctionListPresenter.swift in Sources */,
 				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
 				E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 				E9E4FAC523A294E200B58015 /* HttpRequest.swift in Sources */,
+				E9E4FAD823A3E79D00B58015 /* AuctionListView.swift in Sources */,
 				E9EC118B23982ABF000A8C8B /* Auth0Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,9 +461,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */,
+				E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */,
 				E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */,
 				E9C62328239EF6450036304C /* ApiServicesTests.swift in Sources */,
 				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
+				E9E4FAD623A2F3CF00B58015 /* AuctionListPresenterTests.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewController.swift in Sources */,
 				E9E4FAC323A2920F00B58015 /* HttpRequestTests.swift in Sources */,
 				E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */,
