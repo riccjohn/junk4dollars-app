@@ -20,6 +20,7 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
     }
 
     public override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         self.presenter?.loadAuctions()
     }
 
