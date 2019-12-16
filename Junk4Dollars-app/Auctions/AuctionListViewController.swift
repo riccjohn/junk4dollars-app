@@ -1,6 +1,6 @@
 import UIKit
 
-public class AuctionListViewController: UIViewController, AuctionListView {
+public class AuctionListViewController: UIViewController, AuctionListView, UITableViewDelegate {
     @IBOutlet public var auctionTableView: UITableView!
     @IBOutlet public var logInOutButton: UIBarButtonItem!
     @IBOutlet public var welcomeLabel: UILabel!
@@ -15,6 +15,7 @@ public class AuctionListViewController: UIViewController, AuctionListView {
         super.viewDidLoad()
         self.welcomeLabel?.text = ""
         auctionTableView.dataSource = auctionsDataSource
+        auctionTableView.delegate = self
         self.presenter = AuctionListPresenter(view: self)
     }
 

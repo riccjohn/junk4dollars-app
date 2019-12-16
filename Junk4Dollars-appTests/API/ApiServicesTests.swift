@@ -176,5 +176,34 @@ class ApiServicesTests: XCTestCase {
         XCTAssertTrue(isError)
     }
 
+    func testGetAuctionDetailsById_TriggersCallbackWithSuccess() {
+        let client = FakeHttpClient()
+        let fakeAuction: [String : Any] = [
+            "id": 123,
+            "title": "Throne of Eldraine Booster Box",
+            "description": "New",
+            "starting_price": 8500,
+            "ends_at": "2019-11-01T20:35:21.000Z",
+            "created_at": "2019-11-18T20:25:58.247Z",
+            "updated_at": "2019-11-18T20:25:58.247Z"
+        ]
+        client.stub(responseAsJson: fakeAuction)
+        var isSuccess = false
+        var actualAuction: Auction?
+
+        ApiServices(client: client).getAuctionDetailsBy(id: 123) { apiCallResult in
+            switch apiCallResult {
+                case .success(let data):
+                    isSuccess = true
+                    actualAuction = data
+                default:
+                    break
+            }
+        }
+
+        XCTAssertTrue(isSuccess)
+        XCTAssertNotNil(actualAuction)
+        XCTAssertEqual(123, actualAuction?.identifier)
+    }
     
 }
