@@ -44,6 +44,10 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
         }
     }
 
+//    public func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+//        print("SELECTED SECTION \(indexPath[0]), ROW \(indexPath[1])")
+//    }
+
     private
 
     func updateUiForLogIn(response: HttpCallResult<User> ) -> Void {

@@ -17,4 +17,8 @@ public class AuctionListTableViewDataSource: NSObject, UITableViewDataSource {
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return auctions.count
     }
+
+//    public func auctionFor(indexPath: IndexPath) -> Auction {
+//
+//    }
 }
