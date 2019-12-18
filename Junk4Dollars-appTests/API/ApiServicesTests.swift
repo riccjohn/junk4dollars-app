@@ -118,7 +118,7 @@ class ApiServicesTests: XCTestCase {
         XCTAssertEqual("John", actualUser?.name)
     }
 
-    func testGetMyUser_WhenApiClientReturns400WithNoData_TriggersCallbackWithErroro() {
+    func testGetMyUser_WhenApiClientReturns400WithNoData_TriggersCallbackWithError() {
         let client = FakeHttpClient()
         let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 400, httpVersion: nil, headerFields: [:])
         let error: Error? = nil
@@ -174,5 +174,38 @@ class ApiServicesTests: XCTestCase {
         }
 
         XCTAssertTrue(isError)
+    }
+
+    func testGetAuction_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
+        let client = FakeHttpClient()
+        let fakeAuction: Dictionary<String, Any> = [
+            "id": 001,
+            "title": "Throne of Eldraine Booster Box",
+            "description": "New",
+            "starting_price": 8500,
+            "ends_at": "2019-11-01T20:35:21.000Z",
+            "created_at": "2019-11-18T20:25:58.247Z",
+            "updated_at": "2019-11-18T20:25:58.247Z"
+        ]
+
+        client.stub(responseAsJson: fakeAuction)
+
+        var isSuccess = false
+        var auction: Auction?
+
+        ApiServices(client: client).getAuction(id: 001) { apiCallResult in
+            switch apiCallResult {
+                case .success(let data):
+                    isSuccess = true
+                    auction = data
+                default:
+                    break
+            }
+        }
+
+        XCTAssertTrue(isSuccess)
+        XCTAssertNotNil(auction)
+        XCTAssertEqual(fakeAuction["id"] as? Int, auction?.identifier)
+        XCTAssertEqual(fakeAuction["title"] as? String, auction?.title)
     }
 }
