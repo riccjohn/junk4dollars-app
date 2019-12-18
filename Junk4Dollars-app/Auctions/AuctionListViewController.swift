@@ -11,7 +11,7 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
     var authentication: Authentication = AuthenticationDependencies.authentication
     var apiServices = ApiDependencies.apiServices
 
-    var selectedAuction: Int? = nil
+    public var selectedAuction: Int? = nil
 
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -55,12 +55,12 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void {
         let auction = self.auctionsDataSource.auctionFor(indexPath: indexPath)
         self.selectedAuction = auction.identifier
-        self .performSegue(withIdentifier: "showAuctionDetailsSegue", sender: self)
+        self.performSegue(withIdentifier: "showAuctionDetailsSegue", sender: self)
     }
 
     private
 
-    func updateUiForLogIn(response: HttpCallResult<User> ) -> Void {
+    func updateUiForLogIn(response: HttpCallResult<User>) -> Void {
         switch response {
             case .success(let data):
                 DispatchQueue.main.async {

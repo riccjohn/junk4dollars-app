@@ -137,4 +137,49 @@ class AuctionListViewControllerTests: XCTestCase {
         XCTAssertEqual(false, authentication.loggedIn)
         XCTAssertEqual("", controller.welcomeLabel?.text)
     }
+
+    func testSelectingARow_setsInstanceVariableToAuctionId() {
+        let fakeAuctions: [Dictionary<String, Any>] = [
+            [
+                "id": 001,
+                "title": "Throne of Eldraine Booster Box",
+                "description": "New",
+                "starting_price": 8500,
+                "ends_at": "2019-11-01T20:35:21.000Z",
+                "created_at": "2019-11-18T20:25:58.247Z",
+                "updated_at": "2019-11-18T20:25:58.247Z"
+            ],
+            [
+                "id": 002,
+                "title": "M20 Booster Box",
+                "description": "New",
+                "starting_price": 8200,
+                "ends_at": "2019-11-01T20:35:21.000Z",
+                "created_at": "2019-11-18T20:25:58.247Z",
+                "updated_at": "2019-11-18T20:25:58.247Z"
+            ]
+        ]
+
+        authentication = FakeAuthentication()
+        apiClient = FakeHttpClient()
+        apiClient.stub(responseAsJson: fakeAuctions)
+        AuthenticationDependencies.authentication = authentication
+        ApiDependencies.apiServices = ApiServices(client: apiClient)
+
+
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuctionListViewController") as! AuctionListViewController
+
+        // get controller to load it's hierarchy, including outlets
+        let _ = controller.view
+
+        controller.viewDidLoad()
+        controller.viewWillAppear(true)
+
+        XCTAssertEqual(nil, controller.selectedAuction)
+
+        let selectedAuctionId = 1
+        controller.tableView(UITableView(), didSelectRowAt: [0, selectedAuctionId])
+
+        XCTAssertEqual(fakeAuctions[selectedAuctionId]["id"] as? Int, controller.selectedAuction)
+    }
 }
