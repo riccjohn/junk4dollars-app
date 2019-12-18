@@ -18,9 +18,8 @@ public class AuctionListTableViewDataSource: NSObject, UITableViewDataSource {
         return auctions.count
     }
 
-    public func auctionFor(indexPath: IndexPath, callback:( (_ id: Int) -> Void)? = nil) -> Auction {
+    public func auctionFor(indexPath: IndexPath) -> Auction {
         let auction = auctions[indexPath.row]
-        callback?(auction.identifier)
         return auction
     }
 }
