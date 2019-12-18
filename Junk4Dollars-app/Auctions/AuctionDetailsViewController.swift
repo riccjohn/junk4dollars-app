@@ -10,5 +10,4 @@ public class AuctionDetailsViewController: UIViewController {
             AuctionIdLabel.text = "Auction \(auctionId)"
         }
     }
-    
 }

@@ -10,7 +10,7 @@
         <!--Auctions-->
         <scene sceneID="eM5-6E-PRy">
             <objects>
-                <viewController id="05P-fW-icy" customClass="AuctionListViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuctionListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="05P-fW-icy" customClass="AuctionListViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p3l-0W-0pk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
