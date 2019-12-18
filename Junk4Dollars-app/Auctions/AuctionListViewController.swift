@@ -11,6 +11,8 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
     var authentication: Authentication = AuthenticationDependencies.authentication
     var apiServices = ApiDependencies.apiServices
 
+    var selectedAuction: Int? = nil
+
     override public func viewDidLoad() {
         super.viewDidLoad()
         self.welcomeLabel?.text = ""
@@ -45,9 +47,15 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
         }
     }
 
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let secondViewController = segue.destination as! AuctionDetailsViewController
+        secondViewController.auctionId = self.selectedAuction
+    }
+
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void {
         let auction = self.auctionsDataSource.auctionFor(indexPath: indexPath)
-        print("ROW => \(indexPath.row) ID =>", auction.identifier)
+        self.selectedAuction = auction.identifier
+        self .performSegue(withIdentifier: "showAuctionDetailsSegue", sender: self)
     }
 
     private
@@ -68,6 +76,4 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
         self.logInOutButton.title = "Log In"
         self.welcomeLabel?.text = ""
     }
-
-
 }

@@ -13,6 +13,7 @@
 		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
 		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; platformFilter = ios; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; platformFilter = ios; };
+		E95A56A623AA9ED00020D8D5 /* AuctionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56A523AA9ED00020D8D5 /* AuctionDetailsViewController.swift */; };
 		E96DC748239848CD00D60E49 /* HttpCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC747239848CD00D60E49 /* HttpCallResult.swift */; };
 		E96DC74B2398597500D60E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74A2398597500D60E49 /* User.swift */; };
 		E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */; };
@@ -71,6 +72,7 @@
 		E93215D623734E900073D3BD /* Junk4Dollars-appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Junk4Dollars-appUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Junk4Dollars_appUITests.swift; sourceTree = "<group>"; };
 		E93215DA23734E900073D3BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E95A56A523AA9ED00020D8D5 /* AuctionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsViewController.swift; sourceTree = "<group>"; };
 		E96DC747239848CD00D60E49 /* HttpCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpCallResult.swift; sourceTree = "<group>"; };
 		E96DC74A2398597500D60E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDependencies.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				E9AA197A2373305E00136975 /* AuctionListTableViewDataSource.swift */,
 				E9E4FAD223A2F36600B58015 /* AuctionListPresenter.swift */,
 				E9E4FAD723A3E79D00B58015 /* AuctionListView.swift */,
+				E95A56A523AA9ED00020D8D5 /* AuctionDetailsViewController.swift */,
 			);
 			path = Auctions;
 			sourceTree = "<group>";
@@ -449,6 +452,7 @@
 				E9E4FAD323A2F36600B58015 /* AuctionListPresenter.swift in Sources */,
 				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
 				E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */,
+				E95A56A623AA9ED00020D8D5 /* AuctionDetailsViewController.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 				E9E4FAC523A294E200B58015 /* HttpRequest.swift in Sources */,
 				E9E4FAD823A3E79D00B58015 /* AuctionListView.swift in Sources */,
