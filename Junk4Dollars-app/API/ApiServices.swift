@@ -32,7 +32,7 @@ public class ApiServices {
     }
 
     public func getAuction(id: Int, callback: @escaping ((HttpCallResult<Auction>) -> Void)) {
-        let endpoint = "\(ApiEndpoints.apiEndpoint)/auction/\(id)"
+        let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions/\(id)"
         let request = HttpRequest(httpMethod: .get, endpoint: endpoint, authenticated: false)
 
         client.makeHttpCall(httpRequest: request) { data, _, _ in

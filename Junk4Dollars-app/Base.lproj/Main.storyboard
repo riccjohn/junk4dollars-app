@@ -77,13 +77,13 @@
         <!--Auction Details-->
         <scene sceneID="ijc-A5-uu1">
             <objects>
-                <viewController id="77W-PN-hPt" userLabel="Auction Details" customClass="AuctionDetailsViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuctionDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="77W-PN-hPt" userLabel="Auction Details" customClass="AuctionDetailsViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bk4-ag-JmX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Auction Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-7K-JsD">
-                                <rect key="frame" x="150" y="117" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Auction Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-7K-JsD">
+                                <rect key="frame" x="160" y="117" width="96" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Pi4-FS-s2d"/>
                     <connections>
-                        <outlet property="AuctionIdLabel" destination="erY-7K-JsD" id="F8A-nH-LtI"/>
+                        <outlet property="auctionTitleLabel" destination="erY-7K-JsD" id="LTC-xk-uLc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUl-q6-R3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

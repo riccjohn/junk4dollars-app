@@ -18,6 +18,7 @@
 		E95A56B023AADB790020D8D5 /* FakeAuctionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56AF23AADB790020D8D5 /* FakeAuctionDetailsViewController.swift */; };
 		E95A56B223AADBF50020D8D5 /* AuctionDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56B123AADBF50020D8D5 /* AuctionDetailsView.swift */; };
 		E95A56B423AADC660020D8D5 /* AuctionDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56B323AADC660020D8D5 /* AuctionDetailsPresenter.swift */; };
+		E95A56B623AAE0130020D8D5 /* AuctionDetailsViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56B523AAE0130020D8D5 /* AuctionDetailsViewControllerTests.swift */; };
 		E96DC748239848CD00D60E49 /* HttpCallResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC747239848CD00D60E49 /* HttpCallResult.swift */; };
 		E96DC74B2398597500D60E49 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74A2398597500D60E49 /* User.swift */; };
 		E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */; };
@@ -81,6 +82,7 @@
 		E95A56AF23AADB790020D8D5 /* FakeAuctionDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuctionDetailsViewController.swift; sourceTree = "<group>"; };
 		E95A56B123AADBF50020D8D5 /* AuctionDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsView.swift; sourceTree = "<group>"; };
 		E95A56B323AADC660020D8D5 /* AuctionDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsPresenter.swift; sourceTree = "<group>"; };
+		E95A56B523AAE0130020D8D5 /* AuctionDetailsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionDetailsViewControllerTests.swift; sourceTree = "<group>"; };
 		E96DC747239848CD00D60E49 /* HttpCallResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpCallResult.swift; sourceTree = "<group>"; };
 		E96DC74A2398597500D60E49 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E96DC74E2399593700D60E49 /* AuthenticationDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationDependencies.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */,
 				E95A56AD23AADA3F0020D8D5 /* AuctionDetailsPresenterTests.swift */,
 				E95A56AF23AADB790020D8D5 /* FakeAuctionDetailsViewController.swift */,
+				E95A56B523AAE0130020D8D5 /* AuctionDetailsViewControllerTests.swift */,
 			);
 			path = Auctions;
 			sourceTree = "<group>";
@@ -483,6 +486,7 @@
 				E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */,
 				E9C62328239EF6450036304C /* ApiServicesTests.swift in Sources */,
 				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
+				E95A56B623AAE0130020D8D5 /* AuctionDetailsViewControllerTests.swift in Sources */,
 				E9E4FAD623A2F3CF00B58015 /* AuctionListPresenterTests.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewControllerTests.swift in Sources */,
 				E95A56AE23AADA3F0020D8D5 /* AuctionDetailsPresenterTests.swift in Sources */,
