@@ -9,7 +9,7 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
 
     override public func viewDidLoad() {
         super.viewDidLoad()
-
+        self.auctionTitleLabel?.text = ""
         self.presenter = AuctionDetailsPresenter(view: self)
     }
 

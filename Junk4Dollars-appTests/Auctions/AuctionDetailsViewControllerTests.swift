@@ -5,7 +5,19 @@ class AuctionDetailsViewControllerTests: XCTestCase {
     var authentication: FakeAuthentication = FakeAuthentication()
     var apiClient: FakeHttpClient = FakeHttpClient()
 
-    func testController_SetsLabelToAuctionTitle() {
+    func testController_labelsAreInitiallyBlank() {
+        AuthenticationDependencies.authentication = authentication
+        ApiDependencies.apiServices = ApiServices(client: apiClient)
+
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuctionDetailsViewController") as! AuctionDetailsViewController
+
+        let _ = controller.view
+
+        controller.viewDidLoad()
+        XCTAssertEqual("", controller.auctionTitleLabel.text)
+    }
+
+    func testController_SetsLabelsWithAuctionData() {
 
         let fakeAuction: Dictionary<String, Any> = [
             "id": 001,

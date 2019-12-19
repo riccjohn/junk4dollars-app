@@ -82,8 +82,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Auction Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-7K-JsD">
-                                <rect key="frame" x="160" y="117" width="96" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-7K-JsD">
+                                <rect key="frame" x="36" y="134" width="342" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -91,9 +91,9 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="erY-7K-JsD" firstAttribute="leading" secondItem="DgG-SE-Q2e" secondAttribute="leading" constant="150" id="1nD-ah-oH7"/>
-                            <constraint firstItem="erY-7K-JsD" firstAttribute="top" secondItem="DgG-SE-Q2e" secondAttribute="top" constant="29" id="DMf-1B-qME"/>
-                            <constraint firstItem="erY-7K-JsD" firstAttribute="centerX" secondItem="Bk4-ag-JmX" secondAttribute="centerX" id="wy9-Gr-dgH"/>
+                            <constraint firstItem="erY-7K-JsD" firstAttribute="leading" secondItem="DgG-SE-Q2e" secondAttribute="leading" constant="36" id="81h-aS-rT4"/>
+                            <constraint firstItem="erY-7K-JsD" firstAttribute="top" secondItem="DgG-SE-Q2e" secondAttribute="top" constant="46" id="kDF-Ng-EkP"/>
+                            <constraint firstItem="erY-7K-JsD" firstAttribute="centerX" secondItem="Bk4-ag-JmX" secondAttribute="centerX" id="wph-BA-on4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DgG-SE-Q2e"/>
                     </view>
@@ -104,7 +104,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nUl-q6-R3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3504" y="116"/>
+            <point key="canvasLocation" x="3502.898550724638" y="115.84821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Vu-Ta-H1Z">
