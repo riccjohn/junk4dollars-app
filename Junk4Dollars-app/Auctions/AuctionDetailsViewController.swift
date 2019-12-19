@@ -3,6 +3,9 @@ import UIKit
 public class AuctionDetailsViewController: UIViewController, AuctionDetailsView {
 
     @IBOutlet public var auctionTitleLabel: UILabel!
+    @IBOutlet var auctionDescriptionLabel: UILabel!
+    @IBOutlet var auctionPriceLabel: UILabel!
+    @IBOutlet var auctionTimeRemainingLabel: UILabel!
 
     public var auctionId: Int? = nil
     var presenter: AuctionDetailsPresenter?
@@ -24,6 +27,9 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
     public func auctionLoaded(auction: Auction) -> Void {
         DispatchQueue.main.async {
             self.auctionTitleLabel?.text = auction.title
+            self.auctionDescriptionLabel?.text = auction.description
+            self.auctionPriceLabel?.text = String(auction.starting_price)
+            self.auctionTimeRemainingLabel?.text = auction.ends_at
         }
     }
 }
