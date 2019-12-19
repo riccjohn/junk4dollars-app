@@ -15,6 +15,9 @@ class AuctionDetailsViewControllerTests: XCTestCase {
 
         controller.viewDidLoad()
         XCTAssertEqual("", controller.auctionTitleLabel.text)
+        XCTAssertEqual("", controller.auctionDescriptionLabel.text)
+        XCTAssertEqual("", controller.auctionPriceLabel.text)
+        XCTAssertEqual("", controller.auctionTimeRemainingLabel.text)
     }
 
     func testController_SetsLabelsWithAuctionData() {
@@ -49,5 +52,8 @@ class AuctionDetailsViewControllerTests: XCTestCase {
         wait(for: [expectation], timeout: 2.0)
 
         XCTAssertEqual(fakeAuction["title"] as? String, controller.auctionTitleLabel.text)
+        XCTAssertEqual(fakeAuction["description"] as? String, controller.auctionDescriptionLabel.text)
+        XCTAssertEqual("$85.00", controller.auctionPriceLabel.text)
+        XCTAssertEqual(fakeAuction["ends_at"] as? String, controller.auctionTimeRemainingLabel.text)
     }
 }

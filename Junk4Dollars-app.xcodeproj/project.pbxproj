@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */; };
+		E90DD8A823ABEAB90041C059 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8A723ABEAB90041C059 /* Price.swift */; };
+		E90DD8AB23ABEAEE0041C059 /* PriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */; };
 		E910118E2373541F00018D22 /* AuctionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewControllerTests.swift */; platformFilter = ios; };
 		E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */; platformFilter = ios; };
 		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
@@ -70,6 +72,8 @@
 
 /* Begin PBXFileReference section */
 		E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuctionListViewController.swift; sourceTree = "<group>"; };
+		E90DD8A723ABEAB90041C059 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTests.swift; sourceTree = "<group>"; };
 		E910118D2373541F00018D22 /* AuctionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewControllerTests.swift; sourceTree = "<group>"; };
 		E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
 		E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
@@ -146,6 +150,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E90DD8A623ABEA3E0041C059 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E90DD8A723ABEAB90041C059 /* Price.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E90DD8A923ABEAE30041C059 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		E93215D723734E900073D3BD /* Junk4Dollars-appUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -241,6 +261,7 @@
 		E9BA20FA2360D9D000127076 /* Junk4Dollars-app */ = {
 			isa = PBXGroup;
 			children = (
+				E90DD8A623ABEA3E0041C059 /* Utils */,
 				E9AA197C2373310A00136975 /* Auctions */,
 				E9B8E56F2374BBD6001B9179 /* API */,
 				E9EC1184239829DC000A8C8B /* Authentication */,
@@ -261,6 +282,7 @@
 		E9BA21142360D9D100127076 /* Junk4Dollars-appTests */ = {
 			isa = PBXGroup;
 			children = (
+				E90DD8A923ABEAE30041C059 /* Utils */,
 				E9B8E5722374BFFA001B9179 /* API */,
 				E9EC118723982A6C000A8C8B /* Authentication */,
 				E9AA197D2373313E00136975 /* Auctions */,
@@ -468,6 +490,7 @@
 				E9E4FAD323A2F36600B58015 /* AuctionListPresenter.swift in Sources */,
 				E9AA197B2373305E00136975 /* AuctionListTableViewDataSource.swift in Sources */,
 				E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */,
+				E90DD8A823ABEAB90041C059 /* Price.swift in Sources */,
 				E95A56A623AA9ED00020D8D5 /* AuctionDetailsViewController.swift in Sources */,
 				E9BA20FE2360D9D000127076 /* SceneDelegate.swift in Sources */,
 				E9E4FAC523A294E200B58015 /* HttpRequest.swift in Sources */,
@@ -481,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E90DD8AB23ABEAEE0041C059 /* PriceTests.swift in Sources */,
 				E9EC118923982A7C000A8C8B /* FakeAuthentication.swift in Sources */,
 				E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */,
 				E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */,
