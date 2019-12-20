@@ -54,6 +54,7 @@ class AuctionDetailsViewControllerTests: XCTestCase {
         XCTAssertEqual(fakeAuction["title"] as? String, controller.auctionTitleLabel.text)
         XCTAssertEqual(fakeAuction["description"] as? String, controller.auctionDescriptionLabel.text)
         XCTAssertEqual("$85.00", controller.auctionPriceLabel.text)
-        XCTAssertEqual(fakeAuction["ends_at"] as? String, controller.auctionTimeRemainingLabel.text)
+
+        XCTAssertEqual("11-01-2019 3:35 PM", controller.auctionTimeRemainingLabel.text)
     }
 }

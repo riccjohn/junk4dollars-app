@@ -10,6 +10,8 @@
 		E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */; };
 		E90DD8A823ABEAB90041C059 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8A723ABEAB90041C059 /* Price.swift */; };
 		E90DD8AB23ABEAEE0041C059 /* PriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */; };
+		E90DD8AE23AD25260041C059 /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8AD23AD25260041C059 /* TimeTests.swift */; };
+		E90DD8B023AD27520041C059 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8AF23AD27520041C059 /* Time.swift */; };
 		E910118E2373541F00018D22 /* AuctionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewControllerTests.swift */; platformFilter = ios; };
 		E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */; platformFilter = ios; };
 		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
@@ -74,6 +76,8 @@
 		E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeAuctionListViewController.swift; sourceTree = "<group>"; };
 		E90DD8A723ABEAB90041C059 /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceTests.swift; sourceTree = "<group>"; };
+		E90DD8AD23AD25260041C059 /* TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
+		E90DD8AF23AD27520041C059 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		E910118D2373541F00018D22 /* AuctionListViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuctionListViewControllerTests.swift; sourceTree = "<group>"; };
 		E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeHttpClient.swift; sourceTree = "<group>"; };
 		E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncHttpClient.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				E90DD8A723ABEAB90041C059 /* Price.swift */,
+				E90DD8AF23AD27520041C059 /* Time.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -162,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */,
+				E90DD8AD23AD25260041C059 /* TimeTests.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9E4FAC723A2A12000B58015 /* HttpMethod.swift in Sources */,
 				E9AA1975237329D600136975 /* AuctionListViewController.swift in Sources */,
+				E90DD8B023AD27520041C059 /* Time.swift in Sources */,
 				E9C62326239EF61B0036304C /* ApiServices.swift in Sources */,
 				E96DC74F2399593700D60E49 /* AuthenticationDependencies.swift in Sources */,
 				E96DC748239848CD00D60E49 /* HttpCallResult.swift in Sources */,
@@ -516,6 +523,7 @@
 				E95A56AE23AADA3F0020D8D5 /* AuctionDetailsPresenterTests.swift in Sources */,
 				E95A56B023AADB790020D8D5 /* FakeAuctionDetailsViewController.swift in Sources */,
 				E9E4FAC323A2920F00B58015 /* HttpRequestTests.swift in Sources */,
+				E90DD8AE23AD25260041C059 /* TimeTests.swift in Sources */,
 				E9E9A84C23883C9B00808DCB /* AuctionListTableViewDataSourceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

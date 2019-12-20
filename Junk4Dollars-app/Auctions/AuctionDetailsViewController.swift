@@ -34,7 +34,9 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
 
             let price = Price(inCents: auction.starting_price).inDollars()
             self.auctionPriceLabel?.text = price
-            self.auctionTimeRemainingLabel?.text = auction.ends_at
+
+            let endTime = Time(utc: auction.ends_at).local()
+            self.auctionTimeRemainingLabel?.text = endTime
         }
     }
 }
