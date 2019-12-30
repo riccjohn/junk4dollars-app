@@ -11,28 +11,29 @@ class AuctionListViewControllerTests: XCTestCase {
         apiClient = FakeHttpClient()
         AuthenticationDependencies.authentication = authentication
         ApiDependencies.apiServices = ApiServices(client: apiClient)
-        let controller: AuctionListViewController! = AuctionListViewController()
-        controller.logInOutButton = UIBarButtonItem()
-        let tableView = UITableView()
-        controller.auctionTableView = tableView
-        controller.welcomeLabel = UILabel()
+
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuctionListViewController") as! AuctionListViewController
+        let _ = controller.view
         return controller
     }
 
     func testControllerSetsTableViewDataSource() {
         let controller = buildController()
+
         controller.viewDidLoad()
         XCTAssertNotNil(controller.auctionTableView.dataSource)
     }
 
     func testDataSourceIsSetAsExpected() {
         let controller = buildController()
+
         controller.viewDidLoad()
         XCTAssert(controller.auctionsDataSource === controller.auctionTableView.dataSource)
     }
 
     func testTableInitiallyHasOneSection() {
         let controller = buildController()
+
         controller.viewDidLoad()
         let sectionCount = controller.auctionTableView.numberOfSections
         XCTAssertEqual(1, sectionCount)
@@ -40,6 +41,8 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testTableInitiallyHasOneSectionWithZeroRows() {
         let controller = buildController()
+
+
         controller.viewDidLoad()
         let sectionCount = controller.auctionTableView.numberOfSections
         XCTAssertEqual(1, sectionCount)
@@ -49,6 +52,7 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testTableHasNumOfRows_equalToNumAuctions() {
         let controller = buildController()
+
         let fakeAuctions: [Dictionary<String, Any>] = [
             [
                 "id": 001,
@@ -78,6 +82,7 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testLogInOut_whenLoggedOut_changesTitleTo_LogOut_and_logsUserIn() {
         let controller = buildController()
+
         apiClient.stub(responseAsJson: ["id": 1, "name": "John"])
 
         authentication.logOut() {}
@@ -110,6 +115,7 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testLogInOut_whenLoggedIn_changesTitleTo_LogIn_and_logsUserOut() {
         let controller = buildController()
+
         authentication.logIn() {
         }
 
@@ -121,10 +127,12 @@ class AuctionListViewControllerTests: XCTestCase {
 
     func testLogInOut_whenLoggedIn_resetsWelcomeMessage() {
         let controller = buildController()
+
         apiClient.stub(responseAsJson: ["id": 1, "name": "John"])
         authentication.logIn() {
 
         }
+        
         controller.logInOut(controller.logInOutButton)
 
         let expectation = XCTestExpectation()
@@ -159,18 +167,11 @@ class AuctionListViewControllerTests: XCTestCase {
                 "updated_at": "2019-11-18T20:25:58.247Z"
             ]
         ]
+        let controller = buildController()
 
-        authentication = FakeAuthentication()
         apiClient = FakeHttpClient()
         apiClient.stub(responseAsJson: fakeAuctions)
-        AuthenticationDependencies.authentication = authentication
         ApiDependencies.apiServices = ApiServices(client: apiClient)
-
-
-        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuctionListViewController") as! AuctionListViewController
-
-        // get controller to load it's hierarchy, including outlets
-        let _ = controller.view
 
         controller.viewDidLoad()
         controller.viewWillAppear(true)
