@@ -183,4 +183,65 @@ class AuctionListViewControllerTests: XCTestCase {
 
         XCTAssertEqual(fakeAuctions[selectedAuctionId]["id"] as? Int, controller.selectedAuction)
     }
+
+    func testSelectingARow_displaysCorrectController() {
+        let fakeAuctions: [Dictionary<String, Any>] = [
+            [
+                "id": 001,
+                "title": "Throne of Eldraine Booster Box",
+                "description": "New",
+                "starting_price": 8500,
+                "ends_at": "2019-11-01T20:35:21.000Z",
+                "created_at": "2019-11-18T20:25:58.247Z",
+                "updated_at": "2019-11-18T20:25:58.247Z"
+            ]
+        ]
+
+        let controller = buildController()
+        apiClient = FakeHttpClient()
+        apiClient.stub(responseAsJson: fakeAuctions)
+        ApiDependencies.apiServices = ApiServices(client: apiClient)
+
+        controller.viewDidLoad()
+        controller.viewWillAppear(true)
+
+        UIApplication.shared.windows.first?.rootViewController = controller
+
+        controller.tableView(UITableView(), didSelectRowAt: [0, 0])
+        apiClient.stub(responseAsJson: fakeAuctions[0])
+
+        let presentedController = controller.presentedViewController
+        XCTAssertTrue(presentedController?.isKind(of: AuctionDetailsViewController.self) ?? false)
+    }
+
+    func testSelectingARow_sendsCorrectDataToDetailsController() {
+        let fakeAuctions: [Dictionary<String, Any>] = [
+            [
+                "id": 001,
+                "title": "Throne of Eldraine Booster Box",
+                "description": "New",
+                "starting_price": 8500,
+                "ends_at": "2019-11-01T20:35:21.000Z",
+                "created_at": "2019-11-18T20:25:58.247Z",
+                "updated_at": "2019-11-18T20:25:58.247Z"
+            ]
+        ]
+
+        let controller = buildController()
+        apiClient = FakeHttpClient()
+        apiClient.stub(responseAsJson: fakeAuctions)
+        ApiDependencies.apiServices = ApiServices(client: apiClient)
+
+        controller.viewDidLoad()
+        controller.viewWillAppear(true)
+
+        UIApplication.shared.windows.first?.rootViewController = controller
+
+        controller.tableView(UITableView(), didSelectRowAt: [0, 0])
+        apiClient.stub(responseAsJson: fakeAuctions[0])
+
+        let presentedController = controller.presentedViewController as? AuctionDetailsViewController
+
+        XCTAssertEqual(001, presentedController?.auctionId)
+    }
 }
