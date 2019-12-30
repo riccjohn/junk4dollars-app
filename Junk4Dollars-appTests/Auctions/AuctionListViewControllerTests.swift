@@ -237,11 +237,12 @@ class AuctionListViewControllerTests: XCTestCase {
 
         UIApplication.shared.windows.first?.rootViewController = controller
 
-        controller.tableView(UITableView(), didSelectRowAt: [0, 0])
-        apiClient.stub(responseAsJson: fakeAuctions[0])
+        let selectedAuction = 0
+        controller.tableView(UITableView(), didSelectRowAt: [0, selectedAuction])
+        apiClient.stub(responseAsJson: fakeAuctions[selectedAuction])
 
         let presentedController = controller.presentedViewController as? AuctionDetailsViewController
 
-        XCTAssertEqual(001, presentedController?.auctionId)
+        XCTAssertEqual(fakeAuctions[selectedAuction]["id"] as? Int, presentedController?.auctionId)
     }
 }
