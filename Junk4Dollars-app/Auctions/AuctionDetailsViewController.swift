@@ -32,7 +32,14 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
             self.auctionTitleLabel?.text = auction.title
             self.auctionDescriptionLabel?.text = auction.description
 
-            let price = Price(inCents: auction.starting_price).inDollars()
+            var price: String
+
+            if let bid = auction.bid {
+                price = Price(inCents: bid.price).inDollars()
+            } else {
+                price = Price(inCents: auction.starting_price).inDollars()
+            }
+
             self.auctionPriceLabel?.text = price
 
             let endTime = Time(utc: auction.ends_at).local()
