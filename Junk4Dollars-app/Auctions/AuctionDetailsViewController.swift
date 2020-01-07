@@ -50,6 +50,7 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
             }
 
             self.presenter?.submitBid(auctionId: self.auctionId!, price: inputNumber!)
+            self.clearInput()
         }
     }
 
@@ -70,6 +71,12 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
 
             let endTime = Time(utc: auction.ends_at).local()
             self.auctionTimeRemainingLabel?.text = endTime
+        }
+    }
+
+    private func clearInput() -> Void {
+        DispatchQueue.main.async {
+            self.bidPriceInput.text = ""
         }
     }
 }

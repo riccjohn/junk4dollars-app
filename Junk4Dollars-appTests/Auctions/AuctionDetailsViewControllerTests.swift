@@ -124,4 +124,42 @@ class AuctionDetailsViewControllerTests: XCTestCase {
         createDummyExpectation()
         XCTAssertEqual("$86.99", controller.auctionPriceLabel?.text)
     }
+
+    func testSubmitBid_whenSuccessful_clearsInput() {
+        stubWithFreshAuction()
+
+        let controller = createController()
+        controller.auctionId = 1
+
+        controller.viewDidLoad()
+        controller.viewWillAppear(true)
+
+        stubWithAuctionWithBid()
+
+        controller.bidPriceInput?.text = "90.99"
+        controller.auctionId = 123
+        controller.submitBid(UIButton())
+
+        createDummyExpectation()
+        XCTAssertEqual("", controller.bidPriceInput?.text)
+    }
+
+    func testSubmitBid_whenUnsuccessful_clearsInput() {
+        stubWithFreshAuction()
+
+        let controller = createController()
+        controller.auctionId = 1
+
+        controller.viewDidLoad()
+        controller.viewWillAppear(true)
+
+        stubWithAuctionWithBid()
+
+        controller.bidPriceInput?.text = "9099"
+        controller.auctionId = 123
+        controller.submitBid(UIButton())
+
+        createDummyExpectation()
+        XCTAssertEqual("9099", controller.bidPriceInput?.text)
+    }
 }
