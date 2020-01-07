@@ -12,7 +12,7 @@ class Auth0Authentication: Authentication    {
             switch $0 {
                 case true:
                     self.loggedIn = false
-                    // self.credentialsManger.remove?
+                    self.credentialsManager.clear()
                     callback()
                 case false:
                    print("Error logging out")
@@ -48,5 +48,9 @@ class Auth0Authentication: Authentication    {
                 callback(accessToken)
             }
         }
+    }
+
+    public func checkValidToken() -> Bool {
+        return self.credentialsManager.hasValid()
     }
 }

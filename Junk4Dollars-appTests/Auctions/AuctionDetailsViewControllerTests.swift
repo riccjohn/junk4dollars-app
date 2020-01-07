@@ -185,4 +185,35 @@ class AuctionDetailsViewControllerTests: XCTestCase {
         XCTAssertTrue(controller.presentedViewController is UIAlertController)
         XCTAssertEqual("Missing decimal", controller.presentedViewController?.title)
     }
+
+    func testController_doesNotDisplayBidInputs_whenNotLoggedIn() {
+        let controller = createController()
+
+        AuthenticationDependencies.authentication = FakeAuthentication()
+        AuthenticationDependencies.authentication.logIn {
+        }
+        AuthenticationDependencies.authentication.logOut {
+        }
+
+        controller.auctionId = 1
+        controller.viewWillAppear(true)
+
+        XCTAssertTrue(controller.bidButton.isHidden)
+        XCTAssertTrue(controller.bidPriceInput.isHidden)
+    }
+
+    func testController_displaysBidInputs_whenLoggedIn() {
+        let controller = createController()
+
+        AuthenticationDependencies.authentication = FakeAuthentication()
+
+        AuthenticationDependencies.authentication.logIn {
+        }
+
+        controller.auctionId = 1
+        controller.viewWillAppear(true)
+
+        XCTAssertFalse(controller.bidButton.isHidden)
+        XCTAssertFalse(controller.bidPriceInput.isHidden)
+    }
 }

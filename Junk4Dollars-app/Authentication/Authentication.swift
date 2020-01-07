@@ -3,4 +3,5 @@ public protocol Authentication {
     func logOut(_ callback: @escaping() -> Void)
     func logIn(_ callback: @escaping() -> Void)
     func getAccessToken(_ callback: @escaping(_ accessToken: String) -> Void)
+    func checkValidToken() -> Bool
 }

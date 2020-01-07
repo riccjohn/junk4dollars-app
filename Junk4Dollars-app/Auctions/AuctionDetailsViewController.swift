@@ -23,6 +23,7 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
 
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.updateUIForLogInState()
 
         if let id = self.auctionId {
             self.presenter?.loadAuction(id: id)
@@ -80,11 +81,27 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
         }
     }
 
-    private func displaySimpleAlert(title: String, message: String) -> Void {
+    private
+
+    func displaySimpleAlert(title: String, message: String) -> Void {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
         NSLog("The \"MISSING\" \"DECIMAL\" alert occured.")
         }))
         self.present(alert, animated: true, completion: nil)
+    }
+
+    func updateUIForLogInState() {
+        if(self.checkLoggedIn()) {
+            self.bidButton.isHidden = false
+            self.bidPriceInput.isHidden = false
+        } else {
+            self.bidButton.isHidden = true
+            self.bidPriceInput.isHidden = true
+        }
+    }
+
+    func checkLoggedIn() -> Bool {
+        return AuthenticationDependencies.authentication.checkValidToken()
     }
 }
