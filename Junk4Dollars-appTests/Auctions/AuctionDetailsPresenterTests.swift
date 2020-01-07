@@ -10,7 +10,11 @@ class AuctionDetailsPresenterTests: XCTestCase {
         "starting_price": 8500,
         "ends_at": "2019-11-01T20:35:21.000Z",
         "created_at": "2019-11-18T20:25:58.247Z",
-        "updated_at": "2019-11-18T20:25:58.247Z"
+        "updated_at": "2019-11-18T20:25:58.247Z",
+        "bid": [
+            "price": 9000,
+            "created_at": "2019-11-18T20:25:58.247Z"
+        ]
     ]
 
     func createClientWithAuction() -> HttpClient {
@@ -32,4 +36,15 @@ class AuctionDetailsPresenterTests: XCTestCase {
         XCTAssertEqual(fakeAuction["id"] as? Int, viewController.auction?.identifier)
     }
 
+    func testSubmitBid_callsAuctionLoaded() {
+        AuthenticationDependencies.authentication = FakeAuthentication()
+        let fakeClient = createClientWithAuction()
+        ApiDependencies.apiServices = ApiServices(client: fakeClient)
+
+        let viewController = FakeAuctionDetailsViewController()
+        let presenter = AuctionDetailsPresenter(view: viewController)
+
+        presenter.submitBid(auctionId: 123, price: 9000)
+        XCTAssertEqual(9000, viewController.auction?.bid?.price)
+    }
 }
