@@ -67,8 +67,8 @@ public class ApiServices {
         }
     }
 
-    public func submitBid(auction_id: Int, price: Int, callback: @escaping ((HttpCallResult<Auction>) -> Void)) -> Void {
-        let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions/\(auction_id)/bid"
+    public func submitBid(auctionId: Int, price: Int, callback: @escaping ((HttpCallResult<Auction>) -> Void)) -> Void {
+        let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions/\(auctionId)/bid"
 
         let bidData: Data? = JsonHelper.asJson(dictionary: ["price": price]).data(using: .utf8)
 

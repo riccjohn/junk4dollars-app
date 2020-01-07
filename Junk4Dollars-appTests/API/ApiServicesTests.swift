@@ -230,7 +230,7 @@ class ApiServicesTests: XCTestCase {
             var isSuccess = false
             var updatedAuction: Auction?
 
-            ApiServices(client: client).submitBid(auction_id: 555, price: 9099) { apiCallResult in
+            ApiServices(client: client).submitBid(auctionId: 555, price: 9099) { apiCallResult in
                 switch apiCallResult {
                     case .success(let data):
                         isSuccess = true
@@ -245,4 +245,24 @@ class ApiServicesTests: XCTestCase {
             XCTAssertEqual(555, updatedAuction?.identifier)
             XCTAssertEqual(9099, updatedAuction?.bid?.price)
        }
+
+    func testSubmitBid_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
+        let client = FakeHttpClient()
+        let data = "Not found".data(using: .utf8)
+        let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 404, httpVersion: nil, headerFields: [:])
+        let error: Error? = nil
+        client.stub(data: data, response: response, error: error)
+        var isError = false
+
+        ApiServices(client: client).submitBid(auctionId: 555, price: 9100) { apiCallResult in
+            switch apiCallResult {
+                case .error:
+                    isError = true
+                default:
+                    break;
+            }
+        }
+
+        XCTAssertTrue(isError)
+    }
 }
