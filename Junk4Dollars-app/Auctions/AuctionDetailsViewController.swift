@@ -6,6 +6,8 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
     @IBOutlet public var auctionDescriptionLabel: UILabel!
     @IBOutlet public var auctionPriceLabel: UILabel!
     @IBOutlet public var auctionTimeRemainingLabel: UILabel!
+    @IBOutlet public var bidPriceInput: UITextField!
+    @IBOutlet public var bidButton: UIButton!
 
     public var auctionId: Int? = nil
     var presenter: AuctionDetailsPresenter?
@@ -25,6 +27,10 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
         if let id = self.auctionId {
             self.presenter?.loadAuction(id: id)
         }
+    }
+
+    @IBAction public func submitBid(_ sender: UIButton) {
+
     }
 
     public func auctionLoaded(auction: Auction) -> Void {
