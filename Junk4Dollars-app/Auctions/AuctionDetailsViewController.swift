@@ -30,7 +30,27 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
     }
 
     @IBAction public func submitBid(_ sender: UIButton) {
+        if var inputString = bidPriceInput.text {
+            guard(inputString.contains(".")) else {
+                print("PLEASE INPUT DECIMAL")
+                return
+            }
 
+            inputString = inputString.split(separator: ".").joined()
+            let inputNumber: Int? = Int(inputString)
+
+            guard inputNumber != nil else {
+                print("Error converting String to Int")
+                return
+            }
+
+            guard self.auctionId != nil else {
+                print("Auction id was not set properly")
+                return
+            }
+
+            self.presenter?.submitBid(auctionId: self.auctionId!, price: inputNumber!)
+        }
     }
 
     public func auctionLoaded(auction: Auction) -> Void {
