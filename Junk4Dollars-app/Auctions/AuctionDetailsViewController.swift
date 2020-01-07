@@ -32,7 +32,7 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
     @IBAction public func submitBid(_ sender: UIButton) {
         if var inputString = bidPriceInput.text {
             guard(inputString.contains(".")) else {
-                print("PLEASE INPUT DECIMAL")
+                self.displaySimpleAlert(title: "Missing decimal", message: "Please include a decimal in price")
                 return
             }
 
@@ -78,5 +78,13 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
         DispatchQueue.main.async {
             self.bidPriceInput.text = ""
         }
+    }
+
+    private func displaySimpleAlert(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"MISSING\" \"DECIMAL\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
 }

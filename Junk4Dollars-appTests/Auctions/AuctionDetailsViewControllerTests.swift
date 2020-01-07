@@ -162,4 +162,27 @@ class AuctionDetailsViewControllerTests: XCTestCase {
         createDummyExpectation()
         XCTAssertEqual("9099", controller.bidPriceInput?.text)
     }
+
+    func testSubmitBid_whenMissingDecimal_displaysAlert() {
+        stubWithFreshAuction()
+
+        let controller = createController()
+        UIApplication.shared.windows.first?.rootViewController = controller
+
+        controller.auctionId = 1
+
+        controller.viewDidLoad()
+        controller.viewWillAppear(true)
+
+        stubWithAuctionWithBid()
+
+        controller.bidPriceInput?.text = "9099"
+        controller.auctionId = 123
+        controller.submitBid(UIButton())
+
+        createDummyExpectation()
+
+        XCTAssertTrue(controller.presentedViewController is UIAlertController)
+        XCTAssertEqual("Missing decimal", controller.presentedViewController?.title)
+    }
 }
