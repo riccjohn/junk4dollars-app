@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E902991423A40F6300483F5C /* FakeAuctionListViewController.swift */; };
+		E903864623C4DDBA00E72027 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; };
 		E90DD8A823ABEAB90041C059 /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8A723ABEAB90041C059 /* Price.swift */; };
 		E90DD8AB23ABEAEE0041C059 /* PriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8AA23ABEAEE0041C059 /* PriceTests.swift */; };
 		E90DD8AE23AD25260041C059 /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90DD8AD23AD25260041C059 /* TimeTests.swift */; };
@@ -15,7 +16,6 @@
 		E910118E2373541F00018D22 /* AuctionListViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910118D2373541F00018D22 /* AuctionListViewControllerTests.swift */; platformFilter = ios; };
 		E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6B23871E4B00FCC973 /* FakeHttpClient.swift */; platformFilter = ios; };
 		E9196C70238723C800FCC973 /* AsyncHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C6F238723C800FCC973 /* AsyncHttpClient.swift */; };
-		E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9196C71238732D800FCC973 /* JsonHelper.swift */; platformFilter = ios; };
 		E93215D923734E900073D3BD /* Junk4Dollars_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93215D823734E900073D3BD /* Junk4Dollars_appUITests.swift */; platformFilter = ios; };
 		E95A56A623AA9ED00020D8D5 /* AuctionDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56A523AA9ED00020D8D5 /* AuctionDetailsViewController.swift */; };
 		E95A56AE23AADA3F0020D8D5 /* AuctionDetailsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95A56AD23AADA3F0020D8D5 /* AuctionDetailsPresenterTests.swift */; };
@@ -157,6 +157,7 @@
 		E90DD8A623ABEA3E0041C059 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E9196C71238732D800FCC973 /* JsonHelper.swift */,
 				E90DD8A723ABEAB90041C059 /* Price.swift */,
 				E90DD8AF23AD27520041C059 /* Time.swift */,
 			);
@@ -293,7 +294,6 @@
 				E9EC118723982A6C000A8C8B /* Authentication */,
 				E9AA197D2373313E00136975 /* Auctions */,
 				E9BA21172360D9D100127076 /* Info.plist */,
-				E9196C71238732D800FCC973 /* JsonHelper.swift */,
 			);
 			path = "Junk4Dollars-appTests";
 			sourceTree = "<group>";
@@ -482,6 +482,7 @@
 				E96DC74B2398597500D60E49 /* User.swift in Sources */,
 				E96DC755239AB74E00D60E49 /* ApiDependencies.swift in Sources */,
 				E9FEC19E239EDF1D00A26881 /* Endpoints.swift in Sources */,
+				E903864623C4DDBA00E72027 /* JsonHelper.swift in Sources */,
 				E95A56B223AADBF50020D8D5 /* AuctionDetailsView.swift in Sources */,
 				E9BA20FC2360D9D000127076 /* AppDelegate.swift in Sources */,
 				E9E4FAC723A2A12000B58015 /* HttpMethod.swift in Sources */,
@@ -516,7 +517,6 @@
 				E902991523A40F6300483F5C /* FakeAuctionListViewController.swift in Sources */,
 				E9196C6C23871E4B00FCC973 /* FakeHttpClient.swift in Sources */,
 				E9C62328239EF6450036304C /* ApiServicesTests.swift in Sources */,
-				E9196C72238732D800FCC973 /* JsonHelper.swift in Sources */,
 				E95A56B623AAE0130020D8D5 /* AuctionDetailsViewControllerTests.swift in Sources */,
 				E9E4FAD623A2F3CF00B58015 /* AuctionListPresenterTests.swift in Sources */,
 				E910118E2373541F00018D22 /* AuctionListViewControllerTests.swift in Sources */,
