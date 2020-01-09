@@ -20,7 +20,7 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
     }
 
     override public func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+        super.viewWillAppear(animated)
 
         if let id = self.auctionId {
             self.presenter?.loadAuction(id: id)
