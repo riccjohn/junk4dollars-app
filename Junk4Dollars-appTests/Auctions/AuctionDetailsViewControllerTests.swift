@@ -20,41 +20,24 @@ class AuctionDetailsViewControllerTests: XCTestCase {
         XCTAssertEqual("", controller.auctionTimeRemainingLabel.text)
     }
 
-    func testController_SetsLabelsWithAuctionData() {
-
-        let fakeAuction: Dictionary<String, Any> = [
-            "id": 001,
-            "title": "Throne of Eldraine Booster Box",
-            "description": "New",
-            "starting_price": 8500,
-            "ends_at": "2019-11-01T20:35:21.000Z",
-            "created_at": "2019-11-18T20:25:58.247Z",
-            "updated_at": "2019-11-18T20:25:58.247Z"
-        ]
-
-        apiClient.stub(responseAsJson: fakeAuction)
-        AuthenticationDependencies.authentication = authentication
-        ApiDependencies.apiServices = ApiServices(client: apiClient)
-
+    func testController_setsLabelWithAuctionData() {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "AuctionDetailsViewController") as! AuctionDetailsViewController
-
         let _ = controller.view
 
-        controller.auctionId = 001
-        controller.viewDidLoad()
-        controller.viewWillAppear(true)
+        let auction = Auction(identifier: 1, title: "foo", description: "bar", starting_price: 8500, ends_at: "2019-11-01T20:35:21.000Z")
+
+        controller.auctionLoaded(auction: auction )
 
         let expectation = XCTestExpectation()
         DispatchQueue.main.async {
             expectation.fulfill()
         }
 
-        wait(for: [expectation], timeout: 2.0)
+        wait(for: [expectation], timeout: 1.0)
 
-        XCTAssertEqual(fakeAuction["title"] as? String, controller.auctionTitleLabel.text)
-        XCTAssertEqual(fakeAuction["description"] as? String, controller.auctionDescriptionLabel.text)
+        XCTAssertEqual(auction.title as? String, controller.auctionTitleLabel.text)
+        XCTAssertEqual(auction.description as? String, controller.auctionDescriptionLabel.text)
         XCTAssertEqual("$85.00", controller.auctionPriceLabel.text)
-
         XCTAssertEqual("11-01-2019 3:35 PM", controller.auctionTimeRemainingLabel.text)
     }
 }

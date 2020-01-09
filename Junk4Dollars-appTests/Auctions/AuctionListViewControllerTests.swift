@@ -176,12 +176,12 @@ class AuctionListViewControllerTests: XCTestCase {
         controller.viewDidLoad()
         controller.viewWillAppear(true)
 
-        XCTAssertEqual(nil, controller.selectedAuction)
+        XCTAssertEqual(nil, controller.selectedAutionId)
 
-        let selectedAuctionId = 1
-        controller.tableView(UITableView(), didSelectRowAt: [0, selectedAuctionId])
+        let selectedAutionIdId = 1
+        controller.tableView(UITableView(), didSelectRowAt: [0, selectedAutionIdId])
 
-        XCTAssertEqual(fakeAuctions[selectedAuctionId]["id"] as? Int, controller.selectedAuction)
+        XCTAssertEqual(fakeAuctions[selectedAutionIdId]["id"] as? Int, controller.selectedAutionId)
     }
 
     func testSelectingARow_displaysCorrectController() {
@@ -237,12 +237,12 @@ class AuctionListViewControllerTests: XCTestCase {
 
         UIApplication.shared.windows.first?.rootViewController = controller
 
-        let selectedAuction = 0
-        controller.tableView(UITableView(), didSelectRowAt: [0, selectedAuction])
-        apiClient.stub(responseAsJson: fakeAuctions[selectedAuction])
+        let selectedAutionId = 0
+        controller.tableView(UITableView(), didSelectRowAt: [0, selectedAutionId])
+        apiClient.stub(responseAsJson: fakeAuctions[selectedAutionId])
 
         let presentedController = controller.presentedViewController as? AuctionDetailsViewController
 
-        XCTAssertEqual(fakeAuctions[selectedAuction]["id"] as? Int, presentedController?.auctionId)
+        XCTAssertEqual(fakeAuctions[selectedAutionId]["id"] as? Int, presentedController?.auctionId)
     }
 }
