@@ -34,7 +34,6 @@ public struct Time {
         guard let date = dateFormatter.date(from: string) else {
             return nil
         }
-
         return date
     }
 
