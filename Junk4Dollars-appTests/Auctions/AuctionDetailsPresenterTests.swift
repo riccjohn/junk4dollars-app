@@ -24,7 +24,7 @@ class AuctionDetailsPresenterTests: XCTestCase {
         let fakeClient = createClientWithAuction()
         ApiDependencies.apiServices = ApiServices(client: fakeClient)
 
-        let viewController = FakeAuctionDetailsViewController()
+        let viewController = FakeAuctionDetailsView()
         let presenter = AuctionDetailsPresenter(view: viewController)
 
         presenter.loadAuction(id: 123)
