@@ -52,7 +52,13 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
         let auctionOne = dataSource.auctionFor(indexPath: [0, 0])
         let auctionTwo = dataSource.auctionFor(indexPath: [0, 1])
 
-        XCTAssertEqual(auctions[0].identifier, auctionOne.identifier)
-        XCTAssertEqual(auctions[1].identifier, auctionTwo.identifier)
+        XCTAssertEqual(auctions[0].identifier, auctionOne?.identifier)
+        XCTAssertEqual(auctions[1].identifier, auctionTwo?.identifier)
+    }
+
+    func testAuctionFor_returnsNilIfIndexOutOfRange() {
+        let dataSource = AuctionListTableViewDataSource()
+
+        XCTAssertNil(dataSource.auctionFor(indexPath: [0, 1]))
     }
 }

@@ -54,7 +54,7 @@ public class AuctionListViewController: UIViewController, AuctionListView, UITab
 
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) -> Void {
         let auction = self.auctionsDataSource.auctionFor(indexPath: indexPath)
-        self.selectedAutionId = auction.identifier
+        self.selectedAutionId = auction?.identifier
         self.performSegue(withIdentifier: "showAuctionDetailsSegue", sender: self)
     }
 
