@@ -17,4 +17,8 @@ class FakeAuthentication: Authentication {
         let accessToken = "ABC"
         callback(accessToken)
     }
+
+    func checkValidToken() -> Bool {
+        return loggedIn
+    }
 }

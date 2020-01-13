@@ -211,4 +211,58 @@ class ApiServicesTests: XCTestCase {
         XCTAssertEqual(fakeAuction["starting_price"] as? Int, auction?.starting_price)
         XCTAssertEqual(fakeAuction["ends_at"] as? String, auction?.ends_at)
     }
+
+    func testSubmitBid_WhenApiClientReturnsValidJson_TriggersCallbackWithSuccess() {
+        let client = FakeHttpClient()
+        client.stub(responseAsJson: [
+            "id": 555,
+            "title": "Throne of Eldraine Booster Box",
+            "description": "New",
+            "starting_price": 8500,
+            "ends_at": "2019-11-01T20:35:21.000Z",
+            "created_at": "2019-11-18T20:25:58.247Z",
+            "updated_at": "2019-11-18T20:25:58.247Z",
+            "bid": [
+                    "price": 9099,
+                    "created_at": "2019-11-18T20:25:58.247Z"
+                ]
+            ])
+            var isSuccess = false
+            var updatedAuction: Auction?
+
+            ApiServices(client: client).submitBid(auctionId: 555, price: 9099) { apiCallResult in
+                switch apiCallResult {
+                    case .success(let data):
+                        isSuccess = true
+                        updatedAuction = data
+                    default:
+                        break
+                }
+            }
+
+            XCTAssertTrue(isSuccess)
+            XCTAssertNotNil(updatedAuction)
+            XCTAssertEqual(555, updatedAuction?.identifier)
+            XCTAssertEqual(9099, updatedAuction?.bid?.price)
+       }
+
+    func testSubmitBid_WhenAPIClientReturns404WithInvalidJson_TriggersCallbackWithError() {
+        let client = FakeHttpClient()
+        let data = "Not found".data(using: .utf8)
+        let response = HTTPURLResponse(url: URL(string: "foo.com")!, statusCode: 404, httpVersion: nil, headerFields: [:])
+        let error: Error? = nil
+        client.stub(data: data, response: response, error: error)
+        var isError = false
+
+        ApiServices(client: client).submitBid(auctionId: 555, price: 9100) { apiCallResult in
+            switch apiCallResult {
+                case .error:
+                    isError = true
+                default:
+                    break;
+            }
+        }
+
+        XCTAssertTrue(isError)
+    }
 }

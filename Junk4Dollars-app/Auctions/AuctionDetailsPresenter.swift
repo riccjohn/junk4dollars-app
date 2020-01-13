@@ -16,4 +16,15 @@ public class AuctionDetailsPresenter {
             }
         }
     }
+
+    public func submitBid(auctionId: Int, price: Int) -> Void {
+        self.apiServices.submitBid(auctionId: auctionId, price: price) { result in
+            switch result {
+                case .success(let auction):
+                    self.view.auctionLoaded(auction: auction)
+                case .error(let message):
+                    print("An error occurred: \(message)")
+            }
+        }
+    }
 }

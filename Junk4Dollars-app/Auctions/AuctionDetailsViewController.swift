@@ -6,6 +6,8 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
     @IBOutlet public var auctionDescriptionLabel: UILabel!
     @IBOutlet public var auctionPriceLabel: UILabel!
     @IBOutlet public var auctionTimeRemainingLabel: UILabel!
+    @IBOutlet public var bidPriceInput: UITextField!
+    @IBOutlet public var bidButton: UIButton!
 
     public var auctionId: Int? = nil
     var presenter: AuctionDetailsPresenter?
@@ -21,9 +23,35 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
 
     override public func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.updateUIForLogInState()
 
         if let id = self.auctionId {
             self.presenter?.loadAuction(id: id)
+        }
+    }
+
+    @IBAction public func submitBid(_ sender: UIButton) {
+        if var inputString = bidPriceInput.text {
+            guard(inputString.contains(".")) else {
+                self.displaySimpleAlert(title: "Missing decimal", message: "Please include a decimal in price")
+                return
+            }
+
+            inputString = inputString.split(separator: ".").joined()
+            let inputNumber: Int? = Int(inputString)
+
+            guard inputNumber != nil else {
+                print("Error converting String to Int")
+                return
+            }
+
+            guard self.auctionId != nil else {
+                print("Auction id was not set properly")
+                return
+            }
+
+            self.presenter?.submitBid(auctionId: self.auctionId!, price: inputNumber!)
+            self.clearInput()
         }
     }
 
@@ -45,5 +73,35 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
             let endTime = Time(utc: auction.ends_at).local()
             self.auctionTimeRemainingLabel?.text = endTime
         }
+    }
+
+    private func clearInput() -> Void {
+        DispatchQueue.main.async {
+            self.bidPriceInput.text = ""
+        }
+    }
+
+    private
+
+    func displaySimpleAlert(title: String, message: String) -> Void {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+        NSLog("The \"MISSING\" \"DECIMAL\" alert occured.")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    func updateUIForLogInState() {
+        if(self.checkLoggedIn()) {
+            self.bidButton.isHidden = false
+            self.bidPriceInput.isHidden = false
+        } else {
+            self.bidButton.isHidden = true
+            self.bidPriceInput.isHidden = true
+        }
+    }
+
+    func checkLoggedIn() -> Bool {
+        return AuthenticationDependencies.authentication.checkValidToken()
     }
 }

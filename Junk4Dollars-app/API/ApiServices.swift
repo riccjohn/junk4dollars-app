@@ -66,4 +66,29 @@ public class ApiServices {
             }
         }
     }
+
+    public func submitBid(auctionId: Int, price: Int, callback: @escaping ((HttpCallResult<Auction>) -> Void)) -> Void {
+        let endpoint = "\(ApiEndpoints.apiEndpoint)/auctions/\(auctionId)/bid"
+
+        let bidData: Data? = JsonHelper.asJson(dictionary: ["price": price]).data(using: .utf8)
+
+        guard let bid = bidData else {
+            return
+        }
+
+        let request = HttpRequest(httpMethod: .post, endpoint: endpoint, authenticated: true, uploadData: bid)
+
+        client.makeHttpCall(httpRequest: request) {data, _, _ in
+            if let data = data {
+                do {
+                    let auction = try JSONDecoder().decode(Auction.self, from: data)
+                    callback(.success(data: auction))
+                } catch {
+                    callback(.error(message: "Invalid JSON"))
+                }
+            } else {
+                callback(.error(message: "No data returned"))
+            }
+        }
+    }
 }
