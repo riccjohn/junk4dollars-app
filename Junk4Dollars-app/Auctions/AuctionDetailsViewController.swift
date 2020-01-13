@@ -32,10 +32,10 @@ public class AuctionDetailsViewController: UIViewController, AuctionDetailsView 
             self.auctionTitleLabel?.text = auction.title
             self.auctionDescriptionLabel?.text = auction.description
 
-            let price = Price(inCents: auction.starting_price).inDollars()
+            let price = Price(inCents: auction.startingPrice).inDollars()
             self.auctionPriceLabel?.text = price
 
-            guard let endsAt = auction.ends_at else {
+            guard let endsAt = auction.endsAt else {
                 return
             }
 

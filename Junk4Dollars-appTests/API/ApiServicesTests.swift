@@ -208,7 +208,7 @@ class ApiServicesTests: XCTestCase {
         XCTAssertEqual(fakeAuction["id"] as? Int, auction?.identifier)
         XCTAssertEqual(fakeAuction["title"] as? String, auction?.title)
         XCTAssertEqual(fakeAuction["description"] as? String, auction?.description)
-        XCTAssertEqual(fakeAuction["starting_price"] as? Int, auction?.starting_price)
-        XCTAssertTrue(auction?.ends_at is Date)
+        XCTAssertEqual(fakeAuction["starting_price"] as? Int, auction?.startingPrice)
+        XCTAssertTrue(auction?.endsAt is Date)
     }
 }

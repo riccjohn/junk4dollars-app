@@ -7,8 +7,8 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
         let dataSource = AuctionListTableViewDataSource()
 
         let auctions = [
-            Auction(identifier: 1, title: "Title One", description: "foo", starting_price: 1000, ends_at: "2019-11-01T20:35:21.000Z"),
-            Auction(identifier: 2, title: "Title Two", description: "bar", starting_price: 3000, ends_at: "2019-11-01T20:35:21.000Z")
+            Auction(identifier: 1, title: "Title One", description: "foo", startingPrice: 1000, endsAt: "2019-11-01T20:35:21.000Z"),
+            Auction(identifier: 2, title: "Title Two", description: "bar", startingPrice: 3000, endsAt: "2019-11-01T20:35:21.000Z")
         ]
 
         let tableView = UITableView()
@@ -28,8 +28,8 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
         let dataSource = AuctionListTableViewDataSource()
 
         let auctions = [
-            Auction(identifier: 1, title: "Title One", description: "foo", starting_price: 1000, ends_at: "2019-11-01T20:35:21.000Z"),
-            Auction(identifier: 2, title: "Title Two", description: "bar", starting_price: 3000, ends_at: "2019-11-01T20:35:21.000Z")
+            Auction(identifier: 1, title: "Title One", description: "foo", startingPrice: 1000, endsAt: "2019-11-01T20:35:21.000Z"),
+            Auction(identifier: 2, title: "Title Two", description: "bar", startingPrice: 3000, endsAt: "2019-11-01T20:35:21.000Z")
         ]
 
         dataSource.setAuctions(auctions)
@@ -42,8 +42,8 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
 
     func testAuctionFor_returnsAuctionId_givenAnIndexPath() {
         let auctions = [
-            Auction(identifier: 111, title: "Throne of Eldraine Booster Box", description: "New", starting_price: 8500, ends_at: "2019-11-01T20:35:21.000Z"),
-            Auction(identifier: 222, title: "M20 Booster Box", description: "Unopened", starting_price: 8300, ends_at: "2019-11-01T20:35:21.000Z")
+            Auction(identifier: 111, title: "Throne of Eldraine Booster Box", description: "New", startingPrice: 8500, endsAt: "2019-11-01T20:35:21.000Z"),
+            Auction(identifier: 222, title: "M20 Booster Box", description: "Unopened", startingPrice: 8300, endsAt: "2019-11-01T20:35:21.000Z")
         ]
         
         let dataSource = AuctionListTableViewDataSource()

@@ -53,7 +53,7 @@ class AuctionDetailsViewControllerTests: XCTestCase {
     func testController_setsLabelWithAuctionData() {
         let controller = buildController()
 
-        let auction = Auction(identifier: 1, title: "foo", description: "bar", starting_price: 8500, ends_at: "2019-11-01T20:35:21.000Z")
+        let auction = Auction(identifier: 1, title: "foo", description: "bar", startingPrice: 8500, endsAt: "2019-11-01T20:35:21.000Z")
 
         controller.auctionLoaded(auction: auction )
         waitForAsync()
