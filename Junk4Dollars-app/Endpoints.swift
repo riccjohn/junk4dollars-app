@@ -1,5 +1,5 @@
 public class ApiEndpoints {
-    static let apiEndpoint = development
+    static let apiEndpoint = production
 
     private
 
