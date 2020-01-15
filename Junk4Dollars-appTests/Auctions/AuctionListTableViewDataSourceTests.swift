@@ -7,8 +7,8 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
         let dataSource = AuctionListTableViewDataSource()
 
         let auctions = [
-            Auction(identifier: 1, title: "Title One"),
-            Auction(identifier: 2, title: "Title Two")
+            Auction(identifier: 1, title: "Title One", description: "foo", startingPrice: 1000, endsAt: "2019-11-01T20:35:21.000Z"),
+            Auction(identifier: 2, title: "Title Two", description: "bar", startingPrice: 3000, endsAt: "2019-11-01T20:35:21.000Z")
         ]
 
         let tableView = UITableView()
@@ -28,8 +28,8 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
         let dataSource = AuctionListTableViewDataSource()
 
         let auctions = [
-            Auction(identifier: 1, title: "Title One"),
-            Auction(identifier: 2, title: "Title Two")
+            Auction(identifier: 1, title: "Title One", description: "foo", startingPrice: 1000, endsAt: "2019-11-01T20:35:21.000Z"),
+            Auction(identifier: 2, title: "Title Two", description: "bar", startingPrice: 3000, endsAt: "2019-11-01T20:35:21.000Z")
         ]
 
         dataSource.setAuctions(auctions)
@@ -38,5 +38,27 @@ class AuctionListTableViewDataSourceTests: XCTestCase {
         let titleOfFirstCell = dataSource.tableView(tableView, cellForRowAt: indexPathZero)
 
         XCTAssertEqual(auctions[0].title, titleOfFirstCell.textLabel?.text)
+    }
+
+    func testAuctionFor_returnsAuctionId_givenAnIndexPath() {
+        let auctions = [
+            Auction(identifier: 111, title: "Throne of Eldraine Booster Box", description: "New", startingPrice: 8500, endsAt: "2019-11-01T20:35:21.000Z"),
+            Auction(identifier: 222, title: "M20 Booster Box", description: "Unopened", startingPrice: 8300, endsAt: "2019-11-01T20:35:21.000Z")
+        ]
+        
+        let dataSource = AuctionListTableViewDataSource()
+        dataSource.auctions = auctions
+
+        let auctionOne = dataSource.auctionFor(indexPath: [0, 0])
+        let auctionTwo = dataSource.auctionFor(indexPath: [0, 1])
+
+        XCTAssertEqual(auctions[0].identifier, auctionOne?.identifier)
+        XCTAssertEqual(auctions[1].identifier, auctionTwo?.identifier)
+    }
+
+    func testAuctionFor_returnsNilIfIndexOutOfRange() {
+        let dataSource = AuctionListTableViewDataSource()
+
+        XCTAssertNil(dataSource.auctionFor(indexPath: [0, 1]))
     }
 }

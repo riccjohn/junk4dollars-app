@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hVj-or-Vdy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hVj-or-Vdy">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,7 +10,7 @@
         <!--Auctions-->
         <scene sceneID="eM5-6E-PRy">
             <objects>
-                <viewController id="05P-fW-icy" customClass="AuctionListViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AuctionListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="05P-fW-icy" customClass="AuctionListViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p3l-0W-0pk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -18,6 +18,25 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g1V-Mc-QE0">
                                 <rect key="frame" x="0.0" y="127" width="414" height="735"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="auctionCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="UsM-wo-sXA" style="IBUITableViewCellStyleDefault" id="Ahq-RA-zv2">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ahq-RA-zv2" id="qPe-4G-Eg9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UsM-wo-sXA">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.666667938232422"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4I-hU-BoH">
                                 <rect key="frame" x="186" y="98" width="42" height="21"/>
@@ -48,11 +67,88 @@
                         <outlet property="auctionTableView" destination="g1V-Mc-QE0" id="Yzt-Qo-YZc"/>
                         <outlet property="logInOutButton" destination="1Pu-OO-OLs" id="yTq-kQ-deY"/>
                         <outlet property="welcomeLabel" destination="e4I-hU-BoH" id="i5h-yr-j4x"/>
+                        <segue destination="77W-PN-hPt" kind="show" identifier="showAuctionDetailsSegue" id="n1Y-6a-62q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FO9-6n-m64" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2694.202898550725" y="119.86607142857142"/>
+        </scene>
+        <!--Auction Details-->
+        <scene sceneID="ijc-A5-uu1">
+            <objects>
+                <viewController storyboardIdentifier="AuctionDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="77W-PN-hPt" userLabel="Auction Details" customClass="AuctionDetailsViewController" customModule="Junk4Dollars_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bk4-ag-JmX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Auction Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erY-7K-JsD">
+                                <rect key="frame" x="20" y="319" width="374" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="P9k-Zu-Aea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZF9-t4-LW2">
+                                <rect key="frame" x="20" y="348" width="374" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="9II-RR-aKW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZ2-8A-J2a">
+                                <rect key="frame" x="20" y="457" width="105" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="uxt-2V-9cK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqg-CP-S3V">
+                                <rect key="frame" x="178" y="456" width="216" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder_415x210" translatesAutoresizingMaskIntoConstraints="NO" id="fej-Av-aHq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="210"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZF9-t4-LW2" firstAttribute="trailing" secondItem="erY-7K-JsD" secondAttribute="trailing" id="A2F-6L-BsI"/>
+                            <constraint firstItem="ZF9-t4-LW2" firstAttribute="leading" secondItem="erY-7K-JsD" secondAttribute="leading" id="Dfn-1V-0Ez"/>
+                            <constraint firstItem="erY-7K-JsD" firstAttribute="trailing" secondItem="Bk4-ag-JmX" secondAttribute="trailingMargin" id="Hqv-Lh-KU7"/>
+                            <constraint firstItem="ZF9-t4-LW2" firstAttribute="centerX" secondItem="fej-Av-aHq" secondAttribute="centerX" id="NRL-DM-MDp"/>
+                            <constraint firstItem="fej-Av-aHq" firstAttribute="top" secondItem="DgG-SE-Q2e" secondAttribute="top" id="Q28-if-MWF"/>
+                            <constraint firstItem="erY-7K-JsD" firstAttribute="top" secondItem="fej-Av-aHq" secondAttribute="bottom" constant="21" id="TFQ-vb-DPP"/>
+                            <constraint firstItem="ZF9-t4-LW2" firstAttribute="top" secondItem="erY-7K-JsD" secondAttribute="bottom" constant="8" id="bIq-U5-gfE"/>
+                            <constraint firstItem="Vqg-CP-S3V" firstAttribute="leading" secondItem="MZ2-8A-J2a" secondAttribute="trailing" constant="53" id="c7h-Pe-ppU"/>
+                            <constraint firstItem="Vqg-CP-S3V" firstAttribute="top" secondItem="ZF9-t4-LW2" secondAttribute="bottom" constant="14" id="mZ8-XC-eDB"/>
+                            <constraint firstItem="erY-7K-JsD" firstAttribute="leading" secondItem="Bk4-ag-JmX" secondAttribute="leadingMargin" id="niY-Yg-Qhl"/>
+                            <constraint firstItem="ZF9-t4-LW2" firstAttribute="trailing" secondItem="Vqg-CP-S3V" secondAttribute="trailing" id="u67-SQ-nNH"/>
+                            <constraint firstItem="MZ2-8A-J2a" firstAttribute="top" secondItem="ZF9-t4-LW2" secondAttribute="bottom" constant="15" id="yxn-UR-7ug"/>
+                            <constraint firstItem="MZ2-8A-J2a" firstAttribute="leading" secondItem="ZF9-t4-LW2" secondAttribute="leading" id="zB3-Sk-xnQ"/>
+                            <constraint firstItem="fej-Av-aHq" firstAttribute="leading" secondItem="DgG-SE-Q2e" secondAttribute="leading" id="zpN-4a-FT2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="DgG-SE-Q2e"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pi4-FS-s2d"/>
+                    <connections>
+                        <outlet property="auctionDescriptionLabel" destination="ZF9-t4-LW2" id="4ks-1a-9NZ"/>
+                        <outlet property="auctionPriceLabel" destination="MZ2-8A-J2a" id="rdD-Uf-nhN"/>
+                        <outlet property="auctionTimeRemainingLabel" destination="Vqg-CP-S3V" id="BSN-6T-3wx"/>
+                        <outlet property="auctionTitleLabel" destination="erY-7K-JsD" id="LTC-xk-uLc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nUl-q6-R3f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3502.898550724638" y="115.84821428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2Vu-Ta-H1Z">
@@ -73,4 +169,7 @@
             <point key="canvasLocation" x="1785.5072463768117" y="119.86607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="placeholder_415x210" width="415" height="210"/>
+    </resources>
 </document>

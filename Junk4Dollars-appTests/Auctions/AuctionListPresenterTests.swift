@@ -2,7 +2,7 @@ import XCTest
 import Junk4Dollars_app
 
 class AuctionListPresenterTests: XCTestCase {
-    let fakeAuctions = [
+    let fakeAuctions: [Dictionary<String, Any>] = [
         [
             "id": 001,
             "title": "Throne of Eldraine Booster Box",
@@ -20,8 +20,7 @@ class AuctionListPresenterTests: XCTestCase {
             "ends_at": "2019-11-01T20:35:21.000Z",
             "created_at": "2019-11-18T20:25:58.247Z",
             "updated_at": "2019-11-18T20:25:58.247Z"
-        ],
-
+        ]
     ]
 
     func createClientWithAuctions() -> HttpClient {
@@ -29,7 +28,6 @@ class AuctionListPresenterTests: XCTestCase {
         fakeClient.stub(responseAsJson: fakeAuctions)
         return fakeClient
     }
-
 
     func testLoadAuctions_callsAuctionsLoaded() {
         AuthenticationDependencies.authentication = FakeAuthentication()
